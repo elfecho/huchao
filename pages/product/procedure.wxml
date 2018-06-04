@@ -1,0 +1,93 @@
+<!--pages/product/procedure.wxml-->
+<view class="container">
+  <view class="page-body">
+      <view class="con">
+        <view class="item">
+          <view class="img_nav">
+            <image src="{{wxappimg}}/wxappimg/Flow-icon-communication@2x.png"></image>
+          </view>
+          <view class="txt">前期交流</view>
+          <view class="ms">
+            <view class="ms_p">
+              需求调研　　方案制作
+            </view>
+            <view class="ms_p">
+              需求确认　　签订合约
+            </view>
+          </view>
+        </view>
+        <view class="item">
+          <view class="img_nav">
+            <image src="{{wxappimg}}/wxappimg/Flow-icon-planning@2x.png"></image>
+          </view>
+          <view class="txt">产品策划</view>
+          <view class="ms">
+            <view class="ms_p">
+              原型确认　　原型设计
+            </view>
+            <view class="ms_p">
+              UI确认　　　UI设计
+            </view>
+          </view>
+        </view>
+        <view class="item">
+          <view class="img_nav">
+            <image src="{{wxappimg}}/wxappimg/Flow-icon-program@2x.png"></image>
+          </view>
+          <view class="txt">程序实现</view>
+          <view class="ms">
+            <view class="ms_p">
+              系统设计　　程序开发
+            </view>
+            <view class="ms_p">
+              程序确认　多平台开发
+            </view>
+          </view>
+        </view>
+        <view class="item">
+          <view class="img_nav">
+            <image src="{{wxappimg}}/wxappimg/Flow-icon-detect@2x.png"></image>
+          </view>
+          <view class="txt">质量检测</view>
+          <view class="ms">
+            <view class="ms_p">
+              五重检验　　BUG检验
+            </view>
+            <view class="ms_p">
+              逻辑检验　　用户体验
+            </view>
+          </view>
+        </view>
+        <view class="item">
+          <view class="img_nav">
+            <image src="{{wxappimg}}/wxappimg/Flow-icon-delivery@2x.png"></image>
+          </view>
+          <view class="txt">验收交付</view>
+          <view class="ms">
+            <view class="ms_p">
+              确认通过　　支付尾款
+            </view>
+            <view class="ms_p">
+              交付源码　　成功上线
+            </view>
+          </view>
+        </view>
+        <view class="item">
+          <view class="img_nav">
+            <image src="{{wxappimg}}/wxappimg/Flow-icon-sales@2x.png"></image>
+          </view>
+          <view class="txt">售后保证</view>
+          <view class="ms">
+            <view class="ms_p">
+              邮件提交　　售后服务
+            </view>
+            <view class="ms_p">
+              7*24电话提交
+            </view>
+          </view>
+        </view>
+      </view>
+      <button class="mybtn kfbt" open-type='contact'>立即咨询</button>
+    
+  </view>
+</view>

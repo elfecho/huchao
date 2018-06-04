@@ -1,0 +1,88 @@
+/* pages/mine/default.wxss */
+@import "/pages/common/lib/weui.wxss";
+.navigator-arrow {
+  padding-right: 26rpx;
+  position: relative;
+}
+
+.navigator-arrow:after {
+  content: " ";
+  display: inline-block;
+  height: 18rpx;
+  width: 18rpx;
+  border-width: 2rpx 2rpx 0 0;
+  border-color: #cccccc;
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: absolute;
+  top: 50%;
+  margin-top: -8rpx;
+  right: 20rpx;
+}
+
+.info{
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row nowrap;
+  margin:20rpx 0;
+  background: #fff;
+  padding:0 20rpx;
+  height: 130rpx;
+  align-items: center;
+}
+.info image{
+  width:90rpx;
+  height: 90rpx;
+  border-radius: 15rpx;
+}
+.info .desc{
+  flex:1;
+  margin-left: 20rpx;
+}
+.info .desc .name{
+  font-size: 40rpx;
+  color:#333333;
+  font-weight: bolder;
+  line-height: 60rpx;
+}
+.info .desc .tel{
+  color:#808080;
+  font-size: 26rpx;
+  line-height: 48rpx;
+}
+
+.weui-cells .item{
+  padding: 15px 10px;
+}
+.weui-cells .item .weui-cell__bd {
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  height: 40rpx;
+}
+
+.weui-cells .item .img_nav {
+  width: 40rpx;
+  height: 40rpx;
+  text-align: center;
+}
+
+.weui-cells .item .img_nav image {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.weui-cells .item .txt {
+  margin-left: 15rpx;
+}
+
+.weui-cells .item:nth-child(1) .img_nav image {
+  width: 42rpx;
+  height: 39rpx;
+}
+
+.weui-cells .item:nth-child(2) .img_nav image {
+  width: 37rpx;
+  height: 41rpx;
+}

@@ -1,0 +1,50 @@
+.orderlist .item .head{
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #ededed;
+  position:relative;
+}
+
+.orderlist .item .head .status{
+  padding-right: 40rpx;
+}
+
+.orders-list {
+  position: relative;
+  padding: 20rpx 0rpx 20rpx 180rpx;
+}
+.orders-thumb {
+  position: absolute;
+  top: 20rpx;
+  left: 20rpx;
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.orders-pro-name {
+  max-height: 88rpx;
+  overflow: hidden;
+  margin-top: 14rpx;
+}
+
+.orders-pro-price {
+  line-height: 60rpx;
+  color: #888;
+  width: 450rpx;
+}
+.opxing{
+  margin-top: 10rpx;
+}
+.opxing image{
+  width: 40rpx;
+  height: 40rpx;
+  padding-right: 30rpx;
+}
+.txt{
+  margin-top: 20rpx;
+  border-top: 1rpx solid #eee;
+  border-bottom: 1rpx solid #eee;
+}
+.txt textarea{
+  padding: 20rpx;
+  width: 710rpx;
+}

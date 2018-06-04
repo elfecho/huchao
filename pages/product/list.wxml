@@ -1,0 +1,50 @@
+<view class="container">
+  <view class="page-body">
+
+    <view class="botlist">
+      <navigator url="/pages/product/develop" class="item">
+        <view class="img_nav">
+          <image src="{{wxappimg}}/wxappImg/Product-icon-program@2x.png"></image>
+        </view>
+        <view class="txt">小程序开发</view>
+      </navigator>
+      <navigator url="/pages/product/webkite" class="item">
+        <view class="img_nav">
+          <image src="{{wxappimg}}/wxappImg/Product-icon-web@2x.png"></image>
+        </view>
+        <view class="txt">网站建设</view>
+      </navigator>
+      <navigator url="/pages/product/app" class="item">
+        <view class="img_nav">
+          <image src="{{wxappimg}}/wxappImg/Product-icon-app@2x.png"></image>
+        </view>
+        <view class="txt">APP开发</view>
+      </navigator>
+      <navigator url="/pages/product/h5" class="item">
+        <view class="img_nav">
+          <image src="{{wxappimg}}/wxappImg/Product-icon-h5@2x.png"></image>
+        </view>
+        <view class="txt">H5&手机WAP</view>
+      </navigator>
+      <navigator url="/pages/product/spread" class="item">
+        <view class="img_nav">
+          <image src="{{wxappimg}}/wxappImg/Product-icon-generalize@2x.png"></image>
+        </view>
+        <view class="txt">推广销售</view>
+      </navigator>
+      <navigator url="/pages/product/procedure" class="item">
+        <view class="img_nav">
+          <image src="{{wxappimg}}/wxappImg/Product-icon-flow@2x.png"></image>
+        </view>
+        <view class="txt">项目流程</view>
+      </navigator>
+    </view>
+
+  </view>
+
+
+
+
+  <include src="/pages/common/bottom.wxml" />
+
+</view>

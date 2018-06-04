@@ -1,0 +1,235 @@
+@import "/pages/common/lib/weui.wxss";
+
+button {
+  margin-bottom: 30rpx;
+}
+
+button:last-child {
+  margin-bottom: 0;
+}
+
+.page-section-title {
+  padding: 0;
+}
+
+swiper {
+  height: 380rpx;
+  margin-bottom: 20rpx;
+}
+
+swiper-item, swiper-item image {
+  width: 100%;
+  height: 320rpx;
+  border-radius: 15rpx;
+  overflow: hidden;
+}
+
+.page-section-title {
+  margin-top: 60rpx;
+  position: relative;
+}
+
+.project .tit {
+  padding: 0 20rpx;
+  display: flex;
+  height: 70rpx;
+  flex-flow: row nowrap;
+  align-items: center;
+  background: #fff;
+}
+
+.project .tit .text {
+  font-size: 34rpx;
+  color: #333;
+  position: relative;
+  line-height: 34rpx;
+  flex: 1;
+}
+
+.project .tit .text text {
+  color: #808080;
+  font-size: 28rpx;
+  line-height: 34rpx;
+}
+
+.project .tit .more {
+  font-size: 26rpx;
+  color: #999;
+}
+
+.project .classlist .item {
+  padding: 0 20rpx;
+}
+
+.project .classlist .item.on {
+  color: #008fee;
+  border-bottom: 6rpx solid #008fee;
+}
+
+.project .list {
+  padding: 0 20rpx;
+  margin-left: -20rpx;
+}
+
+.project .list .item {
+  float: left;
+  width: 345rpx;
+  background-color: #fff;
+  margin: 20rpx 0 20rpx 20rpx;
+  border-radius: 12rpx;
+  overflow: hidden;
+  box-shadow: 0 5rpx 10rpx #e6e6e6;
+}
+
+.project .list:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.project .list .item image {
+  width: 100%;
+  height: 344rpx;
+}
+
+.project .list .item .con {
+  padding: 10rpx 10rpx 30rpx;
+}
+
+.project .list .item .title {
+  line-height: 30rpx;
+  font-size: 30rpx;
+  height: 60rpx;
+  color: #333;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.project .list .item .desc {
+  margin-top: 20rpx;
+}
+
+.project .list .item .type {
+  font-size: 24rpx;
+  color: #808080;
+  margin-top: 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.project .list .item .txt {
+  text-align: right;
+  font-size: 24rpx;
+  color: #199af0;
+}
+
+.news .tit {
+  padding: 0 20rpx;
+  display: flex;
+  height: 70rpx;
+  flex-flow: row nowrap;
+  align-items: center;
+  background: #fff;
+}
+
+.news .tit .text {
+  font-size: 34rpx;
+  color: #333;
+  position: relative;
+  line-height: 34rpx;
+  flex: 1;
+}
+
+.news .tit .text text {
+  color: #808080;
+  font-size: 28rpx;
+  line-height: 34rpx;
+}
+
+.news .tit .more {
+  font-size: 26rpx;
+  color: #999;
+}
+
+.news .classlist .item {
+  padding: 0 20rpx;
+}
+
+.news .classlist .item.on {
+  color: #008fee;
+  border-bottom: 6rpx solid #008fee;
+}
+
+.news .list {
+  padding: 0 20rpx;
+  margin-left: -20rpx;
+}
+
+.news .list .item {
+  float: left;
+  width: 345rpx;
+  background-color: #fff;
+  margin: 20rpx 0 20rpx 20rpx;
+  border-radius: 12rpx;
+  overflow: hidden;
+  box-shadow: 0 5rpx 10rpx #e6e6e6;
+}
+
+.news .list:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.news .list .item image {
+  width: 100%;
+  height: 245rpx;
+}
+
+.news .list .item .con {
+  padding: 10rpx 10rpx 30rpx;
+}
+
+.news .list .item .title {
+  line-height: 30rpx;
+  font-size: 30rpx;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.news .list .item .desc {
+  margin-top: 20rpx;
+}
+
+.news .list .item .desc .date {
+  font-size: 24rpx;
+  color: #808080;
+  margin-top: 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.news .list .item .desc .type {
+  font-size: 24rpx;
+  color: #808080;
+  margin-top: 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.news .list .item .txt {
+  text-align: right;
+  font-size: 24rpx;
+  color: #199af0;
+}

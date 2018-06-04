@@ -1,0 +1,88 @@
+<!--pages/business/detail.wxml-->
+<view class="container">
+  <view class="page-body">
+    <view class="main">
+      <view class="front">
+        <view class="wrap_top">
+          <view class="wrap_left">
+            <view class="name">{{info.firstName}}</view>
+            <view class="business">
+              <text class="job">{{info.Title}}</text>
+              <text class="territory">{{info.Industry}}</text>
+            </view>
+            <view class="company">{{info.Organization}}</view>
+          </view>
+          <view class="wrap_right">
+            <image src="{{info.Logo}}" mode="aspectFill"></image>
+          </view>
+        </view>
+        <view class="desc">
+          <view class="item">
+            <view class="img_nav">
+              <image src="/images/home-icon-phone@2x.png"></image>
+            </view>
+            <view class="txt" bindtap='tap_tel'>{{info.mobilePhoneNumber}}</view>
+          </view>
+          <view class="item">
+            <view class="img_nav">
+              <image src="/images/home-icon-mails@2x.png"></image>
+            </view>
+            <view class="txt" bindtap='email_tel'>{{info.email}}</view>
+          </view>
+          <view class="item">
+            <view class="img_nav">
+              <image src="/images/home-icon-address@2x.png"></image>
+            </view>
+            <view class="txt" bindtap="place_tel">{{info.Address}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="tel_way {{telTog?'on':''}}" style="top:{{tel_wayY}}rpx;left:{{tel_wayX}}rpx;">
+        <view class="li" bindtap='copy' data-reproduce='{{info.mobilePhoneNumber}}'>复制信息</view>
+        <view class="li" bindtap='makePhoneCall' data-makecon='{{info.mobilePhoneNumber}}'>拨打电话</view>
+        <view class="li" bindtap='savePhoneCall' data-savecon='{{info.mobilePhoneNumber}}' data-firstname='{{info.firstName}}'>保存到通讯录</view>
+      </view>
+      <view class="tel_way {{emailTog?'on':''}}" style="top:{{email_wayY}}rpx;left:{{email_wayX}}rpx;">
+        <view class="li" bindtap='copy' data-reproduce='{{info.email}}'>复制信息</view>
+      </view>
+      <view class="tel_way {{placeTog?'on':''}}" style="top:{{place_wayY}}rpx;left:{{place_wayX}}rpx;">
+        <view class="li" bindtap='copy' data-reproduce='{{info.Address}}'>复制信息</view>
+        <view class="li" bindtap='openMap' data-address="{{info.Address}}" data-company="{{info.Organization}}">地图显示</view>
+      </view>
+      <view class="make {{telTog || emailTog || placeTog?'on':''}}" bindtap='tapMake'></view>
+
+      <view class="back">
+        <view class="code">
+          <image src="/images/code.png"></image>
+        </view>
+        <view class="txt">微信扫一扫二维码，存入名片</view>
+        <view class="line">
+          <view class="item"></view>
+          <view class="item"></view>
+          <view class="item"></view>
+        </view>
+      </view>
+
+      <view class="remark">
+        <view class="tit">
+          <view class="tt">备注信息：</view>
+          <image src="/images/home-icon-pan@2x.png"></image>
+        </view>
+        <view class="desc">
+          <input type="text" value="{{info.NvrFd2}}" placeholder='暂无备注信息...' bindinput='demoInput'></input>
+        </view>
+      </view>
+
+      <view class="floor" wx:if="{{mid==info.meberID}}">
+        <button class="btn1 kfbt" open-type="share" data-itid='aabb'>发送本张名片</button>
+        <navigator class="btn2 kfbt" url='/pages/business/card_edit?id={{info.ID}}' open-type='redirect'>修改本张名片</navigator>
+      </view>
+      <view class="floor" wx:else>
+        <button class="btn1 kfbt" bindtap='collectClick' wx:if="{{info.IntFd1==1}}">名片夹已有该名片</button>
+        <button class="btn1 kfbt" bindtap='collectClick' wx:else>保存至我的名片夹</button>
+        <navigator class="btn2 kfbt" url='/pages/business/list' open-type='redirect'>进入我的名片夹</navigator>
+      </view>
+
+    </view>
+  </view>
+</view>

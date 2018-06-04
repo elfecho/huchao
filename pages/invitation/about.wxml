@@ -1,0 +1,53 @@
+<!--pages/invitation/about.wxml-->
+<view class="container">
+  <view class="page-body">
+    <view class="banner">
+      <image src="{{wxappimg}}/wxappimg/invitation/about_img@2x.png"></image>
+      <view class="weather">
+        <image src="{{wxappimg}}{{weatherImg}}" class="icon"></image>
+        <view class="desc">
+          <view class="degree">{{temp}}</view>
+          <view class="txt">广州 | {{weather.weather}}</view>
+        </view>
+        <navigator url="/pages/index/newindex" class="kfbt mybtn">进入虎超
+        </navigator>
+      </view>
+    </view>
+    <view class="botlist">
+      <view class="tit">关于虎超</view>
+      <view class="list">
+        <navigator url="/pages/invitation/about_team" class="item">
+          <view class="img_nav">
+            <image src="{{wxappimg}}/wxappimg/invitation/about_icon1@2x.png"></image>
+          </view>
+          <view class="txt">团队介绍</view>
+          <view class="navigator-arrow"></view>
+        </navigator>
+        <navigator url="/pages/invitation/history" class="item">
+          <view class="img_nav">
+            <image src="{{wxappimg}}/wxappimg/invitation/about_icon2@2x.png"></image>
+          </view>
+          <view class="txt">发展历程</view>
+          <view class="navigator-arrow"></view>
+        </navigator>
+        <button class="kfbt item" open-type='contact'>
+          <view class="img_nav">
+            <image src="{{wxappimg}}/wxappimg/invitation/about_icon3@2x.png"></image>
+          </view>
+          <view class="txt">联系我们</view>
+          <view class="navigator-arrow"></view>
+        </button>
+        <navigator url="/pages/product/list" class="item">
+          <view class="img_nav">
+            <image src="{{wxappimg}}/wxappimg/invitation/icon_0105.png"></image>
+          </view>
+          <view class="txt">业务体系</view>
+          <view class="navigator-arrow"></view>
+        </navigator>
+
+      </view>
+    </view>
+
+  </view>
+  <include src="/pages/common/invitation_bottom.wxml" />
+</view>

@@ -1,0 +1,137 @@
+/* pages/case/list.wxss */
+
+.header {
+  position: fixed;
+  width: 100%;
+  background: #fff;
+  top:0;
+}
+.prolist .classlist {
+  line-height: 80rpx;
+  border-bottom: 1px solid #eee;
+  height: 80rpx;
+  background-color: #fff;
+  padding: 0rpx 15rpx;
+  align-items: center;
+}
+.prolist .classlist .tit {
+  white-space: nowrap;
+  width: 80rpx;
+  font-size: 28rpx;
+  color:#333;
+}
+.scroll-view_H {
+  white-space: nowrap;
+  max-width: 630rpx;
+}
+
+.scroll-view-item_H {
+  display: inline-block;
+  height: 80rpx;
+  font-size: 32rpx;
+  line-height: 80rpx;
+}
+
+.prolist .classlist .item {
+  padding: 0 20rpx;
+  font-size: 26rpx;
+  color:#808080;
+}
+.prolist .classlist .item.on {
+  color: #008fee;
+  position: relative;
+}
+.prolist .classlist .item.on:after {
+  content:' ';
+  position: absolute;
+  top: 86%;
+  height: 5%;
+  left: 50%;
+  width: 60rpx;
+  margin-left: -30rpx;
+  background: #008fee;
+}
+.prolist .list {
+  padding: 0 20rpx;
+  margin-top: 180rpx;
+  /* display: none; */
+}
+
+.prolist .list.on {
+  display: block;
+}
+
+.prolist .list .fall {
+  -webkit-column-count: 2;
+  column-count: 2;
+  -webkit-column-gap: 1em;
+  column-gap: 1em;
+}
+
+.prolist .list .item {
+  -webkit-column-break-inside: avoid;
+  break-inside: avoid;
+  width: 345rpx;
+  background-color: #fff;
+  margin: 0 0 20rpx 0;
+  border-radius: 12rpx;
+  overflow: hidden;
+  box-shadow: 0 5rpx 10rpx #e6e6e6;
+}
+
+.prolist .list:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.prolist .list .item image {
+  width: 100%;
+  height: 344rpx;
+}
+
+.prolist .list .item .con {
+  padding: 10rpx 10rpx 30rpx;
+}
+
+.prolist .list .item .title {
+  line-height: 30rpx;
+  font-size: 30rpx;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.prolist .list .item .desc {
+  margin-top: 20rpx;
+}
+
+.prolist .list .item .type {
+  font-size: 24rpx;
+  color: #808080;
+  margin-top: 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.prolist .list .item .txt {
+  text-align: right;
+  font-size: 24rpx;
+  color: #199af0;
+}
+
+.prolist .list .item .pro_con {
+  font-size: 24rpx;
+  color: #808080;
+  line-height: 30rpx;
+  max-height: 60rpx;
+  margin-top: 5rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}

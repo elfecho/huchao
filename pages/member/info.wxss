@@ -1,0 +1,178 @@
+/* info.wxss */
+@import "/pages/common/lib/weui.wxss";
+.img_info{
+  padding:5px 15px 0;
+}
+.user_img image{
+  width:80rpx;
+  height:80rpx;
+  border-radius: 50%;
+}
+.name input{
+  width:170rpx;
+  font-size: 28rpx;
+  color:#000;
+}
+.age input{
+  width:105rpx;
+  font-size: 32rpx;
+  color:#000;
+}
+.constellation picker .picker{
+  width:300rpx;
+  height: 60rpx;
+  display: block;
+  line-height: 60rpx;
+  color:#999;
+  text-align: right;
+}
+.label{
+  position: relative;
+}
+.label input{
+  width:170rpx;
+  font-size: 32rpx;
+  color:#000;
+}
+.label .desc{
+  position: absolute;
+  top:60rpx;
+  left:-90rpx;
+  color:#888;
+   font-size: 26rpx; 
+}
+.preserve button{
+  background:#f0189d;
+  color:#fff;
+  margin-top: 80rpx;
+}
+.navigator-arrow {
+  padding-right: 26rpx;
+  position: relative;
+}
+
+.navigator-arrow:after {
+  content: " ";
+  display: inline-block;
+  height: 18rpx;
+  width: 18rpx;
+  border-width: 2rpx 2rpx 0 0;
+  border-color: #888;
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: absolute;
+  top: 50%;
+  margin-top: -8rpx;
+  right: 20rpx;
+}
+.weui-cell{
+  height: 42rpx;
+}
+.weui-cell.img_info{
+  height: auto;
+}
+input{
+  width: 550rpx;
+}
+.popups{
+  position: fixed;
+  top:50%;
+  left:2%; 
+  width:96%;
+  z-index: 55;
+  margin-top:-150rpx;
+  display: none; 
+  /* margin-left:2%;  */
+}
+.myshade{
+  background-color: rgba(0,0,0,0.7); position: fixed;top:0;left:0;width:100%;height:100%;z-index: 33;
+  display: none;
+}
+.popups.on,.myshade.on{
+  display: block;
+}
+/* info.wxss */
+@import "/pages/common/lib/weui.wxss";
+.login .protxt {
+  height: auto;
+  overflow: hidden;
+  margin-top: 1.17647059em;
+}
+.tel input{
+  width:240rpx;
+} 
+.login .tab {
+  padding-top: 10rpx;
+}
+
+.login .tab .tabtitpp {
+  width: 500rpx;
+  margin: 0 auto;
+}
+
+.login .tab .tabtit {
+  float: left;
+  width: 50%;
+  text-align: center;
+  line-height: 60rpx;
+}
+
+.login .tab .tabtit.on {
+  color: #f0189d;
+  border-bottom: 6rpx solid #f0189d;
+}
+
+.login .tab .tabcontent {
+  min-height: 200rpx;
+}
+
+.weui-cell {
+  padding: 0px 15px;
+  height: 88rpx;
+}
+
+.mt0 {
+  margin-top: 0rpx;
+}
+
+.mt10 {
+  margin-top: 10rpx;
+}
+
+.mt15 {
+  margin-top: 15rpx;
+}
+
+.mt20 {
+  margin-top: 20rpx;
+}
+.btn-area {
+  margin-top: 40rpx;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 30rpx;
+  margin-bottom: 50rpx;
+}
+.weui-vcode-btn {
+  color: #f0189d;
+}
+.weui-vcode-btn:active {
+  color: #d92895;
+}
+.wxlogin{
+  padding: 15px;
+  padding-top: 50rpx;
+}
+button image{
+  display: inline-block;
+  width: 60rpx;
+  height: 60rpx;
+  vertical-align: middle;
+  padding-right: 20rpx;
+}
+.button-hover image{
+  opacity: 0.6;
+}
+.cells{
+  padding-top: 10rpx;
+}

@@ -1,0 +1,40 @@
+<view class="container">
+
+  <view class="page-body member">
+
+    <radio-group bindchange="radioChange">
+
+      <block wx:for-items="{{list}}" wx:key="">
+
+        <view class="weui-cells">
+          <view class="weui-cell weui-cell_access">
+            <view class="name">{{item.Receiver}}</view>
+            <view class="tel">{{item.Mobile}}</view>
+            <view class="address">{{item.NvrFd1}}{{item.Address}}</view>
+          </view>
+          <view class="weui-cell weui-cell_access botop">
+            <radio value="{{item.ID}}" checked="{{item.IsDefault}}" color="#f0189d" />
+            <view class="">默认</view>
+            <view class="op">
+              <view class="edit" data-id="{{item.ID}}" bindtap="editClick">编辑</view>
+              <view class="del" data-id="{{item.ID}}" bindtap="delClick">删除</view>
+            </view>
+          </view>
+        </view>
+
+      </block>
+
+
+    </radio-group>
+
+
+    <view class="btn-areaH"></view>
+    <view class="btn-area">
+      <button type="warn" bindtap="newClick">添加新地址</button>
+    </view>
+
+  </view>
+
+  <include src="/pages/common/bottom.wxml" />
+
+</view>

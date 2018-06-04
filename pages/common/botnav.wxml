@@ -1,0 +1,26 @@
+<view class="botnavH"></view>
+<view class="botnav">
+    <navigator class="item {{i=='1' ? 'on':''}}" url="/pages/index/newindex" open-type="{{i=='1' ? 'redirect':'reLaunch'}}">
+        <image src="{{i=='1' ? '/images/icon_homeHL.png':'/images/icon_home.png'}}"></image>
+        <view class="txt">首页</view>
+    </navigator>
+    <navigator class="item {{i=='2' ? 'on':''}}" url="/pages/product/list" open-type="{{i=='1' ? 'navigate':'redirect'}}">
+        <image src="{{i=='2' ? '/images/icon_productHL.png':'/images/icon_product.png'}}"></image>
+        <view class="txt">产品开发</view>
+    </navigator>
+
+    <navigator class="item {{i=='3' ? 'on':''}}" url="/pages/case/list" open-type="{{i=='1' ? 'navigate':'redirect'}}">
+        <image src="{{i=='3' ? '/images/icon_casesHL.png':'/images/icon_cases.png'}}"></image>
+        <view class="txt">成功案例</view>
+    </navigator>
+
+    <navigator class="item {{i=='4' ? 'on':''}}" url="/pages/news/list" open-type="{{i=='1' ? 'navigate':'redirect'}}">
+        <image src="{{i=='4' ? '/images/icon_newsHL.png':'/images/icon_news.png'}}"></image>
+        <view class="txt">新闻咨询</view>
+    </navigator>
+    <navigator class="item {{i=='5' ? 'on':''}}" url="/pages/about/introduce" open-type="{{i=='1' ? 'navigate':'redirect'}}">
+        <image src="{{i=='5' ? '/images/icon_mHL.png':'/images/icon_m.png'}}"></image>
+        <view class="txt">关于我们</view>
+    </navigator>
+
+</view>

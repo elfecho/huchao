@@ -1,0 +1,257 @@
+/* pages/product/h5.wxss */
+
+.banner {
+  width: 100%;
+  height: 296rpx;
+  position: relative;
+}
+
+.banner image {
+  width: 100%;
+  height: 296rpx;
+}
+
+.banner .con {
+  position: absolute;
+  width: 520rpx;
+  top: 80rpx;
+  left: 50%;
+  margin-left: -260rpx;
+}
+
+.banner .con .tit {
+  font-size: 40rpx;
+  color: #fff;
+  text-align: center;
+}
+
+.banner .con .tit text {
+  font-weight: bolder;
+}
+
+.banner .con .desc {
+  margin-top: 20rpx;
+}
+
+.banner .con .desc .con_p {
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 30rpx;
+}
+
+.superiority {
+  padding-top: 25rpx;
+  padding-left: 20rpx;
+  background: #fff;
+}
+
+.superiority .tit {
+  padding-left: 20rpx;
+  font-size: 34rpx;
+  line-height: 34rpx;
+  color: #008fee;
+  border-left: 4rpx solid #008fee;
+}
+
+.superiority .item {
+  padding: 30rpx 20rpx 20rpx 0;
+  border-bottom: 1rpx solid #e6e6e6;
+}
+
+.superiority .item .wrap_tit {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.superiority .item .desc {
+  font-size: 24rpx;
+  color: #808080;
+}
+
+.easy {
+  padding-top: 25rpx;
+  padding-left: 20rpx;
+  background: #fff;
+}
+
+.easy .tit {
+  padding-left: 20rpx;
+  font-size: 34rpx;
+  line-height: 34rpx;
+  color: #008fee;
+  border-left: 4rpx solid #008fee;
+}
+
+.easy .prolist {
+  height: 425rpx;
+  background-color: #fff;
+  padding-right: 20rpx;
+  margin-top: 40rpx;
+  padding-bottom: 50rpx;
+}
+
+.scroll-view_H {
+  white-space: nowrap;
+}
+
+.prolist .item {
+  display: inline-block;
+  width: 324rpx;
+  height: 425rpx;
+  font-size: 32rpx;
+  margin-left: 20rpx;
+  border-radius: 10rpx;
+  margin-bottom:10rpx;
+  box-shadow: 0 5rpx 15rpx #e6e6e6;
+}
+
+.prolist .item .title {
+  font-size: 28rpx;
+  color: #333;
+  text-align: center;
+  padding-top: 50rpx;
+}
+
+.prolist .item .con {
+  display: flex;
+  width: 324rpx;
+  flex-flow: row wrap;
+}
+
+.prolist .item .con .wrap_list {
+  width: 49%;
+  height: 140rpx;
+  padding: 20rpx 0rpx 0 0;
+}
+
+.prolist .item .con .wrap_list .img_nav {
+  width: 70rpx;
+  height: 60rpx;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 60rpx;
+}
+
+.prolist .item .con .wrap_list  .img_nav image {
+  width: 56rpx;
+  height: 49rpx;
+  vertical-align: middle;
+}
+
+.prolist .item .con .wrap_list .txt {
+  font-size: 24rpx;
+  line-height: 24rpx;
+  color: #333;
+  text-align: center;
+  margin-top: 20rpx;
+}
+
+.prolist .item:nth-child(1) .con .wrap_list:nth-child(2) image {
+  width: 44rpx;
+  height: 51rpx;
+}
+
+.prolist .item:nth-child(1) .con .wrap_list:nth-child(3) image {
+  width: 56rpx;
+  height: 50rpx;
+}
+
+.prolist .item:nth-child(1) .con .wrap_list:nth-child(4) image {
+  width: 52rpx;
+  height: 54rpx;
+}
+
+.prolist .item:nth-child(2) .con .wrap_list:nth-child(1) image {
+  width: 50rpx;
+  height: 49rpx;
+}
+
+.prolist .item:nth-child(2) .con .wrap_list:nth-child(2) image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.prolist .item:nth-child(2) .con .wrap_list:nth-child(3) image {
+  width: 58rpx;
+  height: 46rpx;
+}
+
+.prolist .item:nth-child(2) .con .wrap_list:nth-child(4) image {
+  width: 48rpx;
+  height: 49rpx;
+}
+
+.prolist .item:nth-child(3) {
+  position: absolute;
+  top: 0;
+}
+
+.prolist .item .wrap_con {
+  height: 160px;
+}
+
+.prolist .item .wrap_con .wrap_list {
+  padding: 0 20rpx;
+  margin-top:30rpx;
+}
+
+.prolist .item .wrap_con .wrap_list:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.prolist .item .wrap_con .wrap_list .img_nav {
+  float: left;
+  width: 70rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
+.prolist .item .wrap_con .wrap_list image{
+  vertical-align: middle;
+  width: 50rpx;
+  height: 48rpx;
+}
+.prolist .item .wrap_con .wrap_list:nth-child(1) image {
+  width: 50rpx;
+  height: 48rpx;
+}
+.prolist .item .wrap_con .wrap_list:nth-child(2) image {
+  width: 56rpx;
+  height: 48rpx;
+}
+.prolist .item .wrap_con .wrap_list:nth-child(3) image {
+  width: 33rpx;
+  height: 60rpx;
+}
+.prolist .item .wrap_con .wrap_list .txt {
+  float: left;
+  max-width: 180rpx;
+  word-break: break-all;
+  white-space: normal;
+  font-size: 24rpx;
+  line-height: 30rpx;
+  color: #333;
+  padding-left:30rpx;
+}
+
+.prolist .item .wrap_con .wrap_list .txt text {
+  font-size: 24rpx;
+  line-height: 24rpx;
+  color: #333;
+}
+
+.mybtn{
+  width: 100%;
+  height: 100rpx;
+  font-size: 36rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color:#ffffff;
+  background:-webkit-linear-gradient(left, #56ccf2, #2f80ed); 
+}

@@ -1,0 +1,66 @@
+<!--pages/about/culture.wxml-->
+<view class="container">
+  <view class="page-body">
+    <view class="header">
+      <navigator url="/pages/about/introduce" open-type="redirect" class="item">公司介绍</navigator>
+      <navigator url="/pages/about/culture" open-type="redirect" class="item on">企业文化</navigator>
+      <navigator url="/pages/about/course" open-type="redirect" class="item">发展历程</navigator>
+      <navigator url="/pages/about/contact" open-type="redirect" class="item">联系我们</navigator>
+    </view>
+    <view class="con">
+      <view class="item">
+        <view class="desc">
+          <view class="tit">我们的28° 企业</view>
+          <view class="wrap_con">在一个城市生活，每个人都能感受来自城市的温度而在每个企业，员工也能随时感受冷暖。</view>
+        </view>
+        <view class="img_nav">
+          <image src="{{wxappimg}}/wxappimg/Aboutus-img-content3@2x.png"></image>
+          <view class="bg"></view>
+        </view>
+      </view>
+      <view class="item">
+        <view class="desc">
+          <view class="tit">
+            <view class="tit_p">为什么是28° ？</view>
+            <view class="tit_p">企业就如广州之于我们</view>
+          </view>
+          <view class="wrap_con">既不像北京0°般的冰冷，又不同于杭州25°的舒适，它是28°的激情，充满拼搏的热情。。</view>
+        </view>
+        <view class="img_nav">
+          <image src="{{wxappimg}}/wxappimg/Aboutus-img-content4@2x.png"></image>
+          <view class="bg"></view>
+        </view>
+      </view>
+      <view class="item">
+        <view class="desc">
+          <view class="tit">
+            这样的激情四射
+          </view>
+          <view class="wrap_con">团队的凝聚力是汗水与泪水、痛苦与欢笑交织在一起，一个团队是要经过千百次的锤炼才会变的坚不可催。</view>
+        </view>
+        <view class="img_nav">
+          <image src="{{wxappimg}}/wxappimg/Aboutus-img-content5@2x.png"></image>
+          <view class="bg"></view>
+        </view>
+      </view>
+    </view>
+    <view class="warn">
+      <view class="item">
+        <view class="wrap_tit">学习</view>
+        <view class="desc">每位员工积极学习新知识，给予员工学习机会，这里没有等级，伴随员工成长，并挖掘员工潜能。</view>
+      </view>
+      <view class="item">
+        <view class="wrap_tit">进取</view>
+        <view class="desc">每位员工积极学习新知识，给予员工学习机会，这里没有等级，伴随员工成长，并挖掘员工潜能。</view>
+      </view>
+      <view class="item">
+        <view class="wrap_tit">分享</view>
+        <view class="desc">信奉“分享共赢，才能无所不赢”的团队精神让员分享工赢得价值，让顾客赢得好服务，以求未来。</view>
+      </view>
+      <view class="item">
+        <view class="wrap_tit">感恩</view>
+        <view class="desc">要求每位员工应该懂得感恩怀有感激的心才能更好的为客户服务。</view>
+      </view>
+    </view>
+  </view>
+</view>

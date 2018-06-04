@@ -1,0 +1,68 @@
+/* pages/product/app.wxss */
+
+.prolist .classlist {
+  line-height: 100rpx;
+  border-bottom: 1px solid #eee;
+  height: 100rpx;
+  background-color: #fff;
+  padding: 0rpx 15rpx;
+}
+
+.scroll-view_H {
+  white-space: nowrap;
+}
+
+.scroll-view-item {
+  height: 80rpx;
+}
+
+.scroll-view-item_H {
+  display: inline-block;
+  height: 80rpx;
+  font-size: 32rpx;
+  line-height: 80rpx;
+}
+
+.prolist .classlist .item {
+  padding: 0 20rpx;
+}
+
+.prolist .classlist .item.on {
+  color: #008fee;
+  border-bottom: 6rpx solid #008fee;
+}
+
+.list {
+  padding: 20rpx 12rpx;
+}
+
+.list .item {
+  display: none;
+}
+
+.list .item.on {
+  display: block;
+}
+
+.list .item image {
+  width: 100%;
+  height: 623rpx;
+}
+
+.list .item .con {
+  padding: 0 8rpx;
+}
+
+.list .item .con .tit {
+  margin-top: 30rpx;
+  margin-bottom: 8rpx;
+  font-size: 36rpx;
+  color: #333;
+  font-weight: 700;
+}
+
+.list .item .con .desc .con_p {
+  font-size: 28rpx;
+  color: #000;
+  line-height: 40rpx;
+}

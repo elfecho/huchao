@@ -1,0 +1,26 @@
+<!--pages/invitation/invited.wxml-->
+<view class="container">
+  <view class="page-body">
+    <view class="ally {{hasnum!=0?'':'hide'}}">
+
+      <block wx:for="{{list}}" wx:key="">
+        <view class="separate" wx:if="{{index!==0}}"></view>
+        <view class="con">
+          <image src="{{item.Headimgurl==''?'/images/m_default.png':item.Headimgurl}}"></image>
+          <view class="desc">
+            <text>昵称：{{item.NickName}}</text>
+            <text>加入时间：{{item.CreateTimes}}</text>
+          </view>
+        </view>
+      </block>
+      <view class="pustdowntishi">{{dataend==0 ? '数据加载中':''}}</view>
+    </view>
+
+    <view class="em {{hasnum==0?'':'hide'}}">
+      <view class="icon">
+        <image src="/images/icon_none.png"></image>
+        <view class="txt">亲，赶紧邀请小伙伴吧！</view>
+      </view>
+    </view>
+  </view>
+</view>

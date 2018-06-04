@@ -1,0 +1,183 @@
+<import src="/wxParse/wxParse.wxml" />
+<view class="container">
+
+  <view class="em" wx:if="{{info.Status=='下架'||info.ID==0}}">
+    <view class="icon">
+      <image src="/images/icon_none.png"></image>
+      <view class="txt">亲，产品已下架或不存在！</view>
+    </view>
+  </view>
+
+  <view class="page-body prodetail" wx:else>
+
+    <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="#f0189d">
+        <block wx:for="{{info_imglist}}" wx:key="">
+          <swiper-item>
+            <image src="{{item.img}}" class="swiperimg" mode="aspectFill" data-src="{{item.img}}" data-from="banner" bindtap="BannerImgTap"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+    <view class="bgw">
+      <view class="title" bindlongtap="longClick" data-txt="{{info.Title}}">{{info.Title}}</view>
+      <view class="pricep">
+        <view class="price">¥{{info.Price}}</view>
+        <view class="oldprice">¥{{info.Price0}}</view>
+        <view class="sale">{{info.SaleNum}}人已购买</view>
+      </view>
+      <view class="cx" style="display:none;">
+        <view class="left">促销</view>
+        <view class="list">
+          <view class="item">
+            <view class="icon">赠品</view>
+            <view class="txt">520狂欢节.全场满169送价值100元礼包（礼品*礼券）</view>
+          </view>
+          <view class="item">
+            <view class="icon">赠品</view>
+            <view class="txt">520狂欢节.全场满169送价值100元礼包（礼品*礼券）</view>
+          </view>
+        </view>
+      </view>
+      <view class="tb">
+        <view class="item">
+          <view class="icon">
+            <image src="/images/icon_tb1.png"></image>
+          </view>
+          <view class="txt">承诺100%正品</view>
+        </view>
+        <view class="item">
+          <view class="icon">
+            <image src="/images/icon_tb2.png"></image>
+          </view>
+          <view class="txt">发货隐私保护</view>
+        </view>
+        <view class="item">
+          <view class="icon">
+            <image src="/images/icon_tb3.png"></image>
+          </view>
+          <view class="txt">极速送达</view>
+        </view>
+      </view>
+
+    </view>
+
+    <view class="bgw protxt">
+      <view class="tab">
+        <view class="clear">
+          <view class="tabtit {{tabnum==0?'on':''}}" data-num="0" bindtap="tabClick">图文详情</view>
+          <view class="tabtit {{tabnum==1?'on':''}}" data-num="1" bindtap="tabClick">宝贝评价({{info.CommentNum}})</view>
+        </view>
+
+        <view class="tabcontent {{tabnum==0?'':'hide'}}">
+          <view class="wxParse">
+            <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+          </view>
+        </view>
+
+        <view class="tabcontent  {{tabnum==1?'':'hide'}}">
+          <view class="emcomment {{hascommentnum==0?'':'hide'}}">
+            暂无评价！
+          </view>
+          <view class="commentlist  {{hascommentnum!=0?'':'hide'}}">
+            <block wx:for="{{list}}" wx:key="">
+              <view class="item">
+                <view class="img">
+                  <image src="{{item.Img}}"></image>
+                </view>
+                <view class="demo">
+                  <view class="name">{{item.NvrFd1}}</view>
+                  <view class="xing">
+                    <image src="{{item.Score>0?'/images/icon_xHL.png':'/images/icon_x.png'}}"></image>
+                    <image src="{{item.Score>1?'/images/icon_xHL.png':'/images/icon_x.png'}}"></image>
+                    <image src="{{item.Score>2?'/images/icon_xHL.png':'/images/icon_x.png'}}"></image>
+                    <image src="{{item.Score>3?'/images/icon_xHL.png':'/images/icon_x.png'}}"></image>
+                    <image src="{{item.Score>4?'/images/icon_xHL.png':'/images/icon_x.png'}}"></image>
+                  </view>
+                  <view class="time">{{item.mytime}}</view>
+                  <view class="txt">{{item.Details}}</view>
+                  <block wx:if="{{item.Replay != ''}}">
+                    <view class="replay">
+                      <view>【法克街回复】：</view>
+                      <view>{{item.Replay}}</view>
+                    </view>
+                  </block>
+                </view>
+              </view>
+            </block>
+            <view class="pustdowntishi">{{dataend==0 ? '请骚后“脱”我，情趣更多...':'别“脱”了，已经祼了'}}</view>
+          </view>
+        </view>
+
+      </view>
+    </view>
+
+  </view>
+
+  <view class="com-widget-goTop" bindtap="goTop" wx:if="{{floorstatus}}">
+    <view class="icon-gotop">
+      <image src="/images/icon_top.png"></image>
+      顶部
+    </view>
+  </view>
+
+  <view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+  <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+    <view class="mybox">
+      <view class="selXm">
+        <view class="close" bindtap="hideModal">
+          <image src="/images/icon_close.png"></image>
+        </view>
+        <view class="goods">
+          <image src="{{wxappimg}}{{info.Img}}"></image>
+        </view>
+        <view class="title">{{info.Title}}
+          <view class="price">¥{{xmprice}}</view>
+        </view>
+        <view class="list">
+          <view class="xmtitle">规格</view>
+          <block wx:for="{{info_xm}}" wx:key="">
+            <view class="item {{xmcode==item.Code?'on':''}}" bindtap="xmClick" data-code="{{item.Code}}" data-price="{{item.Price}}">{{item.Title}}</view>
+          </block>
+          <view class="xmtitle">数量</view>
+          <view class="item op" bindtap="opdelClick">-</view>
+          <view class="item num">{{opnum}}</view>
+          <view class="item op" bindtap="opaddClick">+</view>
+        </view>
+        <view class="btn-area">
+          <button type="warn" bindtap="btcartClickxm" wx:if="{{optype==0}}">加入购物车</button>
+          <button type="warn" bindtap="btbuyClickxm" wx:if="{{optype!=0}}">立即购买</button>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+  <view class="botnavH"></view>
+  <view class="botnav">
+    <button class="lx kfbt" open-type="contact">
+        <image src="/images/icon_lx.png"></image>
+        <view class="txt">联系客服</view>
+      </button>
+    <navigator class="cart" url="/pages/cart/cart" open-type="reLaunch">
+      <image src="/images/icon_cart.png"></image>
+      <view class="txt">购物车</view>
+      <block wx:if="{{ttnum != ''&&ttnum != '0'}}">
+        <view class="num">{{ttnum}}</view>
+      </block>
+    </navigator>
+
+    <view class="btbuy" bindtap="btbuyClick">
+      立即购买
+    </view>
+    <view class="btcart" bindtap="btcartClick">
+      加入购物车
+    </view>
+
+  </view>
+
+
+
+
+</view>

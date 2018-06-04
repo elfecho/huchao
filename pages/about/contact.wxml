@@ -1,0 +1,74 @@
+<!--pages/about/contact.wxml-->
+<view class="container">
+  <view class="page-body">
+    <view class="header">
+      <navigator url="/pages/about/introduce" open-type="redirect" class="item">公司介绍</navigator>
+      <navigator url="/pages/about/culture" open-type="redirect" class="item">企业文化</navigator>
+      <navigator url="/pages/about/course" open-type="redirect" class="item">发展历程</navigator>
+      <navigator url="/pages/about/contact" open-type="redirect" class="item on">联系我们</navigator>
+    </view>
+    <view class="content">
+      <view class="warn">
+        <view class="item">
+          <view class="wrap_tit">公司附近</view>
+          <view class="desc">
+            <view class="con_p">周边商业:吉盛伟邦、天河城、海印又一城沃尔玛</view>
+            <view class="con_p">(山姆会员店)、新一佳、万达广场</view>
+            <view class="con_p">周边公园：长隆度假区、长隆水上乐园</view>
+            <view class="con_p">周边医院：广东省妇女儿童医院</view>
+            <view class="con_p">周边学校：北京师范大学番禺实验学校、锦绣香江幼儿园</view>
+            <view class="con_p">周边公共交通：303、309、129等</view>
+          </view>
+        </view>
+        <view class="item">
+          <view class="wrap_tit">联系我们</view>
+          <view class="desc">
+            <view class="con_p">公司：广州虎超网络科技有限公司</view>
+            <view class="con_p">地址：中国广东省广州市番禺区天安科技园总部一号楼19层 </view>
+            <view class="con_p">联系电话：
+              <text>020-81680786</text>
+            </view>
+            <view class="con_p">值班工程师电话：
+              <text bindtap='tap_tel'>13480263863（微信同号） 蔡工程师</text>
+              <text bindtap='tap_tel2'>18680281278（微信同号） 李工程师</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 弹窗 -->
+    <view class="delegate {{inviteShow?'on':''}}">
+      <view class="content">
+        <view class="logo">
+          <image src="/images/code.png" bindtap='requestImage'></image>
+        </view>
+        <view class="desc">
+          <text>长按保存图片</text>
+          <text>分享到朋友圈，即可获得幸运值</text>
+        </view>
+        <view class="close" bindtap='tap_close'>
+          <image src="{{wxappimg}}/wxappimg/invitation/my_btn@2x.png"></image>
+        </view>
+      </view>
+      <view class="make2" bindtap='tap_close'></view>
+    </view>
+    <view class="tel_way {{telTog?'on':''}}" style="top:{{tel_wayY}}rpx;left:{{tel_wayX}}rpx;">
+      <view class="li" bindtap='copy' data-tel='13480263863'>复制信息</view>
+      <view class="li" bindtap='makePhoneCall' data-tel='13480263863'>拨打电话</view>
+      <!-- <view class="li" bindtap='gainPhoneCall'>获取微信号</view> -->
+      <view class="li" bindtap='savePhoneCall' data-tel='13480263863' data-name='蔡工程师'>保存到通讯录</view>
+
+    </view>
+    <view class="tel_way {{telTog2?'on':''}}" style="top:{{tel_wayY}}rpx;left:{{tel_wayX}}rpx;">
+      <view class="li" bindtap='copy' data-tel='18680281278'>复制信息</view>
+      <view class="li" bindtap='makePhoneCall' data-tel='18680281278'>拨打电话</view>
+      <!-- <view class="li" bindtap='gainPhoneCall'>获取微信号</view> -->
+      <view class="li" bindtap='savePhoneCall' data-tel='18680281278' data-name='李工程师'>保存到通讯录</view>
+
+    </view>
+    <view class="make {{telTog || telTog2 || placeTog?'on':''}}" bindtap='tapMake'></view>
+    <view class="contact">
+      <button class="kfbt mybtn" open-type='contact'>立刻联系</button>
+    </view>
+  </view>
+</view>

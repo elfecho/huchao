@@ -1,0 +1,157 @@
+<view class="container">
+
+  <view class="page-body member">
+
+    <view class="bgimg">
+
+      <block wx:if="{{mid == ''}}">
+        <view class="userinfo" bindtap="gotoLogin">
+          <image class="userinfo-avatar" src="{{wxappimg}}/wxappimg/m_default.png"></image>
+          <view class="userinfo-nickname">
+            <view class="name">点击登录{{mid}}</view>
+            <view class="label">广州虎超网络科技专属为您定制网站建设，小程序开发设计</view>
+          </view>
+        </view>
+      </block>
+      <block wx:if="{{mid != ''}}">
+        <button class="userbt" open-type="getUserInfo" bindgetuserinfo="minfoClick">
+          <view class="userinfo">
+            <image class="userinfo-avatar" src="{{headimg==''?wxappimg+'/images/m_default.png':headimg}}"></image>
+            <view class="userinfo-nickname">
+              <view class="name">{{nickname}}</view>
+              <view class="label">广州虎超网络科技专属为您定制网站建设，小程序开发设计</view>
+            </view>
+          </view>
+        </button>
+      </block>
+
+    </view>
+    <view class="title">
+      站内功能 ·
+      <text>STATION FUNCTION</text>
+    </view>
+    <view class="weui-cells mt0">
+      <view class="navs">
+        <navigator class="nav-item" url="/pages/news/list" open-type="navigate">
+          <view class="img_nav">
+            <image src="/images/my-icon-consulting@2x.png" class="nav-image"></image>
+          </view>
+          <text>新闻资讯</text>
+        </navigator>
+        <navigator class="nav-item" url="/pages/about/introduce" open-type="navigate">
+          <view class="img_nav">
+            <image src="/images/my-icon-about@2x.png" class="nav-image"></image>
+          </view>
+          <text>关于虎超</text>
+        </navigator>
+        <navigator class="nav-item" url="/pages/about/contact" open-type="navigate">
+          <view class="img_nav">
+            <image src="/images/my-icon-cooperation@2x.png" class="nav-image"></image>
+          </view>
+          <text>联系合作</text>
+        </navigator>
+      </view>
+    </view>
+    <view class="title">
+      便捷链接 ·
+      <text>CONVENIENT LINKS</text>
+    </view>
+    <view class="weui-cells mt0">
+      <view class="linknavs">
+        <navigator class="item" url="/pages/business/index" open-type="navigate">
+          <view class="img_nav">
+            <image src="/images/my-icon-card@2x.png" class="nav-image"></image>
+          </view>
+          <text>虎超名片</text>
+        </navigator>
+        <navigator class="item" url="/pages/invitation/guide" open-type="navigate">
+          <view class="img_nav">
+            <image src="/images/my-icon-invitation@2x.png" class="nav-image"></image>
+          </view>
+          <text>虎超邀请函</text>
+        </navigator>
+        <view class="item" bindtap='openMinip' wx:if="{{1==0}}">
+          <view class="img_nav">
+            <image src="/images/my-icon-fakejie@2x.png" class="nav-image"></image>
+          </view>
+          <text>法克街</text>
+        </view>
+        <navigator class="item" url="/pages/invitation/lucky" open-type="navigate">
+          <view class="img_nav">
+            <image src="/images/my-icon-lucky.png" class="nav-image"></image>
+          </view>
+          <text>幸运数</text>
+        </navigator>
+        <button class="item kfbt" open-type="share">
+          <view class="img_nav">
+            <image src="/images/my-icon-Friendsshare@2x.png" class="nav-image"></image>
+          </view>
+          <text>分享好友</text>
+        </button>
+        <view class="item" bindtap='openMap'>
+          <view class="img_nav">
+            <image src="/images/my-icon-add@2x.png" class="nav-image"></image>
+          </view>
+          <text>导航到这</text>
+        </view>
+        <navigator class="item" url="/pages/invitation/lucky" open-type="navigate" wx:if="{{1==0}}">
+          <view class="img_nav">
+            <image src="/images/my-icon-lucky.png" class="nav-image"></image>
+          </view>
+          <text>幸运数</text>
+        </navigator>
+      </view>
+    </view>
+    <view class="title">
+      我们的系统 ·
+      <text>OUR SYSTEM</text>
+    </view>
+    <view class="weui-cells mt0">
+      <view class="system">
+        <button class="item kfbt" open-type='contact'>
+          <view class="img_nav">
+            <image src="/images/icon-appointment@2x.png" class="nav-image"></image>
+          </view>
+          <text>预约服务</text>
+        </button>
+        <button class="item kfbt" open-type='contact'>
+          <view class="img_nav">
+            <image src="/images/icon-shop@2x.png" class="nav-image"></image>
+          </view>
+          <text>到店系统</text>
+        </button>
+        <button class="item kfbt" open-type='contact'>
+          <view class="img_nav">
+            <image src="/images/icon-education@2x.png" class="nav-image"></image>
+          </view>
+          <text>教育系统</text>
+        </button>
+        <button class="item kfbt" open-type='contact'>
+          <view class="img_nav">
+            <image src="/images/icon-take-out@2x.png" class="nav-image"></image>
+          </view>
+          <text>美食外卖</text>
+        </button>
+        <button class="item kfbt" open-type='contact'>
+          <view class="img_nav">
+            <image src="/images/icon@2x.png" class="nav-image"></image>
+          </view>
+          <text>电商</text>
+        </button>
+        <button class="item kfbt" open-type='contact'>
+          <view class="img_nav">
+            <image src="/images/icon-community@2x.png" class="nav-image"></image>
+          </view>
+          <text>社区系统</text>
+        </button>
+      </view>
+    </view>
+  </view>
+
+  <view class="page-body-line">
+
+  </view>
+
+  <include src="/pages/common/bottom.wxml" />
+
+</view>

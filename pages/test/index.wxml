@@ -1,0 +1,43 @@
+<!-- <import src="/pages/common/botnav.wxml" /> -->
+<!-- <view class="container"> -->
+  <view class="flex box box-lr ">
+    <scroll-view class="flex groups box box-tb" scroll-y="true" scroll-into-view="{{scrollIntoView}}">
+      <!-- <view class="content">
+        <view class="search">
+          <input type="text" placeholder="请输入要搜索的城市" />
+        </view>
+        <view class="city">
+          <view class="txt">热门城市土特产推荐</view>
+          <view class="list">
+            <block wx:for="{{column}}" wx:key="">
+              <navigator class="item" url="/pages/product/list?proclass={{item.Code}}" open-type="redirect"><text>{{item.Name}}</text></navigator>
+            </block>
+          </view>
+        </view>
+      </view> -->
+      <block wx:for="{{groups}}" wx:for-item="group" wx:key="">
+        <view class="flex" id="{{group.groupName}}">
+          <view class="group-name">{{group.groupName}}</view>
+          <view class="flex group-users">
+            <view wx:for="{{group.users}}" wx:for-item="user" wx:for-index="idx" class="user box box-lr" wx:key="">
+              <view class="user-avatar box box-lr box-pack-center box-align-center">
+                <image class="user-avatar-img" src="{{user.avatar}}"></image>
+              </view>
+              <view class="flex user-name">{{user.name}}</view>
+            </view>
+          </view>
+        </view>
+      </block>
+
+      <view class="kong"></view>
+      <view class="maxletter {{mysel == true ? 'on':''}}">{{maxletter}}</view>
+    </scroll-view>
+    <view class="nav box box-tb" bindtouchmove="touchmove" bindtouchend="touchend">
+      <view bindtap="tabLetter" data-index="{{item}}" wx:for="{{letters}}" class="flex box box-align-center box-pack-center letter" wx:key="">
+        <text class="letter-text {{selected == item ? 'letter-actived' : ''}}">{{item}}</text>
+      </view>
+    </view>
+  <!-- </view> -->
+  <!-- <template is="botnav" data="{{...tempitem}}" /> -->
+
+</view>

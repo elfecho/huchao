@@ -1,0 +1,339 @@
+<!--pages/invitation/index.wxml-->
+<view class="container">
+  <view class="page-body">
+    <view class="video_nav">
+      <view class="img_nav {{show==true?'on':''}}" bindtap="play">
+        <image src="{{wxappimg}}/wxappimg/invitation/about_img@2x.png" class="banner"></image>
+        <image src="/images/invitation/home_btn_play@2x.png" class="icon"></image>
+      </view>
+      <video src="{{videourl}}" class="{{show==false?'on':''}}" autoplay='{{autoplay}}' controls="controls" binderror="videoErrorCallback" enable-danmu id="myvideo" preload="meta" bindpause="pause"></video>
+    </view>
+    <view class="prolist">
+      <view class="classlist" id="hehe">
+        <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+          <view class="item scroll-view-item_H {{proclass==1 ? 'on':''}}" bindtap="tapClass" data-code="1">庆典议程</view>
+          <view class="item scroll-view-item_H {{proclass==2 ? 'on':''}}" bindtap="tapClass" data-code="2">幸运抽奖</view>
+          <view class="item scroll-view-item_H {{proclass==3 ? 'on':''}}" bindtap="tapClass" data-code="3">合伙加盟</view>
+          <view class="item scroll-view-item_H {{proclass==4 ? 'on':''}}" bindtap="tapClass" data-code="4">交通指南</view>
+        </scroll-view>
+      </view>
+    </view>
+    <view class="botlist">
+      <view class="item {{proclass==1 ? 'on':''}}">
+        <view class="distance">
+
+          <block wx:for="{{xclist}}" wx:key="">
+            <view class="li">
+              <view class="line">
+                <view class="circle"></view>
+                <view class="time">{{item.time}}</view>
+              </view>
+              <view class="con">
+                <view class="tit">{{item.tit}}</view>
+                <view class="area">{{item.area}}</view>
+                <view class="quantum">{{item.quantum}}</view>
+              </view>
+            </view>
+          </block>
+
+        </view>
+        <view class="floor">
+          <view class="head">
+            <view class="tit">特别鸣谢</view>
+            <view class="code" wx:if="{{1==0}}">
+              <image src="{{wxappimg}}/wxappimg/invitation/fakejie_code.png" bindtap='downloadImage'></image>
+              <view class="txt">法克街成人用品商城</view>
+            </view>
+          </view>
+
+          <image class="bg" src="{{wxappimg}}/wxappimg/invitation/home_img.png"></image>
+        </view>
+        <navigator url="/pages/invitation/enlist" class="suspend">
+          <view class="txt">报名</view>
+        </navigator>
+      </view>
+      <view class="item {{proclass==2 ? 'on':''}}">
+        <view class="lottery">
+          <view class="head">
+            <image src="{{wxappimg}}/wxappimg/invitation/advert@2x.png"></image>
+          </view>
+          <view class="lotteryBox">
+            <view class="box">
+              <view class="li {{pitch==0?'active':''}}">
+                <view class="img_nav">
+                  <image src="{{wxappimg}}/wxappimg/invitation/award06.png"></image>
+                </view>
+                <view class="desc">
+                  <text>丽芝士</text>
+                  <text>饼干</text>
+                </view>
+              </view>
+              <view class="li special_prize {{pitch==1?'active':''}}">
+                <view class="img_nav">
+                  <image src="{{wxappimg}}/wxappimg/invitation/award01.png"></image>
+                </view>
+                <view class="desc">
+                  <text>IPhoneX</text>
+                  <text>256G</text>
+                </view>
+              </view>
+              <view class="li {{pitch==2?'active':''}}">
+                <view class="img_nav">
+                  <image src="{{wxappimg}}/wxappimg/invitation/award07.png"></image>
+                </view>
+                <view class="desc">
+                  <text>谢谢</text>
+                  <text>参与</text>
+                </view>
+              </view>
+
+              <view class="li third_prize {{pitch==9?'active':''}}">
+                <view class="img_nav">
+                  <image src="{{wxappimg}}/wxappimg/invitation/award04.png"></image>
+                </view>
+                <view class="desc">
+                  <text>虎超U盘</text>
+                </view>
+              </view>
+
+              <view class="lottery lotteryDesc">
+                <view class="fortunate">幸运值
+                  <text>{{xyNum}}</text>
+                </view>
+                <view class="txt">满100必得三等奖或以上</view>
+              </view>
+              <view class="li {{pitch==3?'active':''}}">
+                <view class="img_nav">
+                  <image src="{{wxappimg}}/wxappimg/invitation/award05.png"></image>
+                </view>
+                <view class="desc">
+                  <text>虎超</text>
+                  <text>鼠标垫</text>
+                </view>
+              </view>
+              <view class="li {{pitch==8?'active':''}}">
+                <view class="img_nav">
+                  <image src="{{wxappimg}}/wxappimg/invitation/award07.png"></image>
+                </view>
+                <view class="desc">
+                  <text>谢谢</text>
+                  <text>参与</text>
+                </view>
+              </view>
+              <view class="lotteryBtn" bindtap='draw_lottery'>
+                <image src="{{wxappimg}}/wxappimg/invitation/lotterybtn.png"></image>
+                <view class="Countdown" wx:if="{{ttime>0}}">
+                  <text>离抽奖还有</text>
+                  <text>{{ltime}}</text>
+                </view>
+                <view class="Countdown" wx:if="{{ttime==0&&isYz==1}}">
+                  <text class='ed'>已抽奖</text>
+                </view>
+              </view>
+              <view class="li first_prize {{pitch==4?'active':''}}">
+                <view class="img_nav">
+                  <image src="{{wxappimg}}/wxappimg/invitation/award02.png"></image>
+                </view>
+                <view class="desc">
+                  <text>IPad 4</text>
+                  <text>128G</text>
+                </view>
+              </view>
+              <view class="li second_prize {{pitch==7?'active':''}}">
+                <view class="img_nav">
+                  <image src="{{wxappimg}}/wxappimg/invitation/award03.png"></image>
+                </view>
+                <view class="desc">
+                  <text>美的</text>
+                  <text>电饭煲</text>
+                </view>
+              </view>
+              <view class="li {{pitch==6?'active':''}}">
+                <view class="img_nav">
+                  <image src="{{wxappimg}}/wxappimg/invitation/award07.png"></image>
+                </view>
+                <view class="desc">
+                  <text>谢谢</text>
+                  <text>参与</text>
+                </view>
+              </view>
+              <view class="li {{pitch==5?'active':''}}">
+                <view class="img_nav">
+                  <image src="{{wxappimg}}/wxappimg/invitation/award05.png"></image>
+                </view>
+                <view class="desc">
+                  <text>虎超</text>
+                  <text>鼠标垫</text>
+                </view>
+              </view>
+
+            </view>
+          </view>
+          <view class="more">
+
+            <navigator url="/pages/invitation/delivery" wx:if="{{ttime==0&&isYz==1&&isZz==1}}">
+              <view class="desc">选择邮寄完善收货地址</view>
+            </navigator>
+            <view class="desc" wx:else>幸运值越高获得大奖机会越大</view>
+
+            <view class="img_tit">
+              <image src="{{wxappimg}}/wxappimg/invitation/getMore.png"></image>
+            </view>
+            <view class="mybtn">
+
+              <button class="btn1 kfbt" open-type='share' bindtap='checkBmClick'>
+                <image src="{{wxappimg}}/wxappimg/invitation/invite.png"></image>
+              </button>
+              <view class="btn2" bindtap='tap_request'>
+                <image src="{{wxappimg}}/wxappimg/invitation/icon_share.png"></image>
+              </view>
+            </view>
+          </view>
+          <view class="award">
+            <view class="img_tit">
+              <image src="{{wxappimg}}/wxappimg/invitation/activity.png"></image>
+            </view>
+            <view class="wrap_list">
+              <block wx:for="{{jplist}}" wx:key="">
+                <view class="li">
+                  <view class="img_nav">
+                    <image src="{{wxappimg}}{{item.img}}"></image>
+                  </view>
+                  <view class="con">
+                    <view class="ranking">
+                      <image src="{{wxappimg}}{{item.rankimg}}"></image>
+                    </view>
+                    <view class="desc">
+                      <text>{{item.desc}}</text>
+                    </view>
+                    <view class="price">{{item.price}}</view>
+                  </view>
+                </view>
+              </block>
+            </view>
+          </view>
+
+          <view class="roster">
+            <view class="limit {{roster?'':'on'}}">
+              <view class="ros_list" wx:if="{{!roster}}">
+                <swiper autoplay="{{autoplay}}" interval="{{newsinterval}}" duration="{{newsduration}}" vertical="true" circular="true" class="message">
+
+                  <block wx:for="{{awardLog}}" wx:key="">
+                    <swiper-item>
+
+                      <block wx:for-items="{{item.itemlist}}" wx:for-item="page" wx:key="">
+                        <view class="li">
+                          <view class="goods">{{page.NickName}} {{page.Phone}}</view>
+                          <view class="name">{{page.AwardName}}</view>
+                        </view>
+                      </block>
+
+                    </swiper-item>
+                  </block>
+
+                </swiper>
+                <view class="rule">
+                  <view class="ul">
+                    <view class="li">1. 每成功邀请一位新好友即幸运值+1。</view>
+                    <view class="li">2. 幸运值越大获得大奖的机会越大，幸运值满100的用户必得三等奖或以上。</view>
+                    <view class="li">3. 从即日起可累积幸运值，截止日期1月13日18:00，1月14日即可抽取礼品。</view>
+                    <view class="li">4. 填写名片信息即可报名参与抽奖，获奖者可选择现场领奖或邮寄。</view>
+                    <view class="li">5. 最终解释权归虎超科技所有。</view>
+                  </view>
+                </view>
+              </view>
+              <view class="lucky_list" wx:else>
+                <view class="title">
+                  <view class="t1 tt">排名</view>
+                  <view class="t2 tt">用户</view>
+                  <view class="t3 tt">幸运值</view>
+                </view>
+                <scroll-view scroll-y class="msg" bindscrolltolower="scrollMore">
+                  <block wx:for="{{ranking1}}" wx:key="">
+                    <view class="li" data-id='{{item.ID}}' bindtap='oneself'>
+                      <view class="num">{{item.rNum}}</view>
+                      <image src="{{item.Headimgurl}}"></image>
+                      <view class="name">{{item.NickName}}
+                        <text class="oneself" wx:if="{{item.ID==mid}}">自己</text>
+                      </view>
+                      <view class="integrate">{{item.fxcount}}</view>
+                    </view>
+                  </block>
+                  <block wx:for="{{ranking2}}" wx:key="">
+                    <view class="li">
+                      <view class="num">{{item.rNum}}</view>
+                      <image src="{{item.Headimgurl}}"></image>
+                      <view class="name">{{item.NickName}}
+                        <text class="oneself" wx:if="{{item.ID==mid}}">自己</text>
+                      </view>
+                      <view class="integrate">{{item.fxcount}}</view>
+                    </view>
+                  </block>
+                </scroll-view>
+
+                <view class="mylucky" data-id='{{mid}}' bindtap='oneself'>
+                  <view class="num">{{myinfo.rNum}}</view>
+                  <image src="{{myinfo.Headimgurl}}"></image>
+                  <view class="name">{{myinfo.NickName}}</view>
+                  <view class="integrate">{{myinfo.fxcount}}</view>
+                </view>
+
+                <view class="rule">
+                  <view class="ul">
+                    <view class="li">1. 每成功邀请一位新好友即幸运值+1。</view>
+                    <view class="li">2. 幸运值越大获得大奖的机会越大，幸运值满100的用户必得三等奖或以上。</view>
+                    <view class="li">3. 从即日起可累积幸运值，截止日期1月13日18:00，1月14日即可抽取礼品。</view>
+                    <view class="li">4. 填写名片信息即可报名参与抽奖，获奖者可选择现场领奖或邮寄。</view>
+                    <view class="li">5. 最终解释权归虎超科技所有。</view>
+                  </view>
+                </view>
+              </view>
+              <view class="daub"></view>
+            </view>
+          </view>
+
+          <!-- 弹窗 -->
+          <view class="delegate {{inviteShow?'on':''}}">
+            <view class="content" bindtap='requestImage'>
+              <view class="logo">
+                <image src="{{wxappimg}}{{qr}}"></image>
+              </view>
+              <view class="desc">
+                <text>点击图片保存到相册</text>
+                <text>分享到朋友圈，即可获得幸运值</text>
+              </view>
+              <view class="close" bindtap='tap_close'>
+                <image src="{{wxappimg}}/wxappimg/invitation/my_btn@2x.png"></image>
+              </view>
+            </view>
+            <view class="make" bindtap='tap_close'></view>
+          </view>
+        </view>
+        <navigator url="/pages/invitation/enlist" class="suspend">
+          <view class="txt">报名</view>
+        </navigator>
+      </view>
+      <view class="item {{proclass==3 ? 'on':''}}">
+        <view class="league">
+          <image src="{{wxappimg}}/wxappimg/invitation/hcleague.png"></image>
+          <view class="button">
+            <navigator url='/pages/invitation/add_join' class="kfbt btn1">马上加盟虎超</navigator>
+            <button class="kfbt btn2" bindtap='group' data-imgurl="{{hcgroupimg}}">加盟交流群</button>
+          </view>
+          <!-- <button class="kfbt mybtn">导航到这里</button> -->
+          <navigator url="/pages/invitation/add_join" class="suspend">
+            <view class="txt">加盟</view>
+          </navigator>
+        </view>
+      </view>
+      <view class="item {{proclass==4 ? 'on':''}}">
+        <view class="route" bindtap='openMap'>
+          <image src="{{wxappimg}}/wxappimg/invitation/home_img2@2x.png"></image>
+          <button class="kfbt mybtn">导航到这里</button>
+        </view>
+      </view>
+    </view>
+
+  </view>
+  <include src="/pages/common/invitation_bottom.wxml" />
+</view>

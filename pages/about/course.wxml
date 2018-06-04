@@ -1,0 +1,88 @@
+<!--pages/about/course.wxml-->
+<view class="container">
+  <view class="page-body">
+    <view class="header">
+      <navigator url="/pages/about/introduce" open-type="redirect" class="item">公司介绍</navigator>
+      <navigator url="/pages/about/culture" open-type="redirect" class="item">企业文化</navigator>
+      <navigator url="/pages/about/course" open-type="redirect" class="item on">发展历程</navigator>
+      <navigator url="/pages/about/contact" open-type="redirect" class="item">联系我们</navigator>
+    </view>
+    <view class="section">
+      <view class="coming">
+        <view class="tit">未来</view>
+        <view class="txt">In the future</view>
+      </view>
+      <view class="central">
+        <view class="item"></view>
+        <view class="item"></view>
+        <view class="item"></view>
+        <view class="item"></view>
+        <view class="item"></view>
+      </view>
+      <view class="content">
+        <view class="wrap_right">
+          <view class="img_nav">
+            <image src="{{wxappimg}}/wxappimg/Aboutus-img-content6@2x.png"></image>
+            <view class="bg"></view>            
+          </view>
+          <view class="time">
+            <view class="num">2017</view>
+              <image src="{{wxappimg}}/wxappimg/huchiu.jpg"></image>
+          </view>
+          <view class="desc">
+            2017年1月9日0点，万众瞩目的微信第一批小程序正式低调上线用户可以体验到各种各样小程序提供的服务。虎超网络科技推出主营微信小程序业务进攻小程序市场。
+          </view>
+        </view>
+        <view class="clear"></view>
+        <view class="wrap_left">
+          <view class="img_nav">
+            <image src="{{wxappimg}}/wxappimg/Aboutus-img-content7@2x.png"></image>
+            <view class="bg"></view>            
+          </view>
+          <view class="time">
+            <view class="num">2016</view>
+              <image src="{{wxappimg}}/wxappimg/huchiu.jpg"></image>
+          </view>
+          <view class="clear"></view>
+          <view class="desc">
+            虎超网络2016年，囊括“建站开发、营销推广、网络培训的全网营销网络平台公司，其主要服务有网站建设、平台开发微信应用开发、全网营销网络推广网络培训等
+          </view>
+        </view>
+        <view class="clear"></view>
+        <view class="wrap_right">
+          <view class="img_nav">
+            <image src="{{wxappimg}}/wxappimg/Aboutus-img-content8@2x.png"></image>
+            <view class="bg"></view>            
+          </view>
+          <view class="time">
+            <view class="num">2015</view>
+              <image src="{{wxappimg}}/wxappimg/huchiu.jpg"></image>
+          </view>
+          <view class="desc">
+            2015年虎超逐渐进入发展期招募专业开发团队，培养自己独有的技术人群成立起项目团队。由行业老员工，拥有8年开发经验的工程师带领，虎超的发展正日渐壮大。
+          </view>
+        </view>
+        <view class="clear"></view>
+        <view class="wrap_left">
+          <view class="img_nav">
+            <image src="{{wxappimg}}/wxappimg/Aboutus-img-content9@2x.png"></image>
+            <view class="bg"></view>            
+          </view>
+          <view class="time">
+            <view class="num">2012</view>
+              <image src="{{wxappimg}}/wxappimg/huchiu.jpg"></image>
+          </view>
+          <view class="clear"></view>
+          <view class="desc">
+            2012年广州虎超网络科技有限公司广州总部成立于南村上城国际全网价值营销之路全面开启并顺势延展，在许多行业都留下足迹
+          </view>
+        </view>
+        <view class="clear"></view>
+      </view>
+      <view class="origin">
+        <view class="tit">2012年成立至今</view>
+        <view class="txt">In the future</view>
+      </view>
+    </view>
+  </view>
+</view>

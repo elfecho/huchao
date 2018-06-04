@@ -1,0 +1,90 @@
+@import "/pages/common/lib/weui.wxss";
+
+.navigator-arrow {
+  padding-right: 26rpx;
+  position: relative;
+}
+
+.navigator-arrow:after {
+  content: " ";
+  display: inline-block;
+  height: 18rpx;
+  width: 18rpx;
+  border-width: 2rpx 2rpx 0 0;
+  border-color: #888;
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: absolute;
+  top: 50%;
+  margin-top: -8rpx;
+  right: 20rpx;
+}
+
+.weui-cells {
+  padding-top: 10rpx;
+}
+
+.weui-cells:first-child {
+  margin-top: 0rpx;
+}
+
+.weui-cell:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1rpx solid #eee;
+  color: #d9d9d9;
+  left: 15px;
+}
+
+.weui-cell {
+  display: block;
+}
+
+.weui-cell .name {
+  display: inline-block;
+}
+
+.weui-cell .tel {
+  float: right;
+  display: inline-block;
+}
+
+.weui-cell .address {
+  display: block;
+  margin-top: 20rpx;
+  color: #888;
+  font-size: 24rpx;
+}
+
+.botop {
+  font-size: 28rpx;
+  line-height: 44rpx;
+}
+
+.botop view {
+  display: inline-block;
+}
+
+.weui-cell .op {
+  position: absolute;
+  bottom: 20rpx;
+  right: 15px;
+}
+
+.weui-cell .op .edit {
+  margin-right: 60rpx;
+}
+
+.btn-area{
+  position: fixed;
+  bottom: 120rpx;
+}
+.btn-areaH{
+  font-size: 0px;
+  line-height: 999rpx;
+  overflow: hidden;
+  height: 120rpx;
+}

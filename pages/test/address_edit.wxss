@@ -1,0 +1,156 @@
+@import "/pages/common/lib/weui.wxss";
+
+.navigator-arrow {
+  padding-right: 26rpx;
+  position: relative;
+}
+
+.navigator-arrow:after {
+  content: " ";
+  display: inline-block;
+  height: 18rpx;
+  width: 18rpx;
+  border-width: 2rpx 2rpx 0 0;
+  border-color: #888;
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: absolute;
+  top: 50%;
+  margin-top: -8rpx;
+  right: 20rpx;
+}
+
+.login .protxt {
+  height: auto;
+  overflow: hidden;
+  margin-top: 1.17647059em;
+}
+
+.login .tab {
+  padding-top: 10rpx;
+}
+
+.login .tab .tabtitpp {
+  width: 500rpx;
+  margin: 0 auto;
+}
+
+.login .tab .tabtit {
+  float: left;
+  width: 50%;
+  text-align: center;
+  line-height: 60rpx;
+}
+
+.login .tab .tabtit.on {
+  color: #f0189d;
+  border-bottom: 6rpx solid #f0189d;
+}
+
+.login .tab .tabcontent {
+  min-height: 200rpx;
+}
+
+.weui-cell {
+  padding: 0px 15px;
+  height: 88rpx;
+}
+
+.mt0 {
+  margin-top: 0rpx;
+}
+
+.mt10 {
+  margin-top: 10rpx;
+}
+
+.mt15 {
+  margin-top: 15rpx;
+}
+
+.mt20 {
+  margin-top: 20rpx;
+}
+
+.btn-area {
+  margin-top: 40rpx;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 30rpx;
+  margin-bottom: 50rpx;
+}
+
+.weui-vcode-btn {
+  color: #f0189d;
+}
+
+.weui-vcode-btn:active {
+  color: #d92895;
+}
+
+.wxlogin {
+  padding: 15px;
+  padding-top: 50rpx;
+}
+
+button image {
+  display: inline-block;
+  width: 60rpx;
+  height: 60rpx;
+  vertical-align: middle;
+  padding-right: 20rpx;
+}
+
+.button-hover image {
+  opacity: 0.6;
+}
+
+.btn-area {
+  position: fixed;
+  bottom: 0rpx;
+}
+
+.btn-areaH {
+  font-size: 0px;
+  line-height: 999rpx;
+  overflow: hidden;
+  height: 120rpx;
+}
+@import "/selectarea/selectarea.wxss";
+
+button {
+  margin: 30px;
+}
+
+.txt {
+  text-align: center;
+}
+
+.code {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.gesture {
+  width: 90%;
+  text-indent: 20rpx;
+  margin: 0 auto;
+  padding: 20rpx 0;
+  border: 1px solid rgb(25, 167, 24);
+  margin-bottom: 30rpx;
+}
+
+.selcity {
+  display: block;
+  height: 1.4rem;
+  text-overflow: clip;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: UICTFontTextStyleBody;
+  min-height: 1.4rem;
+  line-height: 1.4rem;
+  font-size: 32rpx;
+}
+.selcity.em {
+  color: #888;
+}

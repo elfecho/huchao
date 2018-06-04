@@ -1,0 +1,74 @@
+/* pages/invitation/about_team.wxss */
+
+.banner image {
+  width: 100%;
+  height: 350rpx;
+}
+
+.team {
+  background: #fff;
+}
+
+.team .tit {
+  font-size: 32rpx;
+  color: #333;
+  padding: 30rpx 0 0 30rpx;
+  font-weight: 700;
+}
+
+.team .list .item {
+  border-bottom: 2rpx solid #f9f9f9;
+}
+
+.team .list .item .wrap_head {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+}
+
+.team .list .item .wrap_head .title {
+  font-size: 28rpx;
+  color: #000;
+  padding-left: 30rpx;
+  flex: 1;
+}
+
+.team .list .item .wrap_head .title text {
+  font-size: 20rpx;
+  color: #808080;
+  margin-left: 20rpx;
+}
+
+.team .list .item .wrap_head .arrow {
+  margin-right: 30rpx;
+}
+
+.team .list .item .wrap_head .arrow image {
+  width: 10rpx;
+  height: 20rpx;
+}
+
+.team .list .item .wrap_head .arrow image.up {
+  width: 10rpx;
+  height: 20rpx;
+}
+
+.team .list .item .wrap_head .arrow image.down {
+  width: 20rpx;
+  height: 10rpx;
+}
+
+.team .list .item .con {
+  padding: 0 30rpx;
+  font-size: 24rpx;
+  color: #333;
+  line-height: 36rpx;
+  padding-bottom: 20rpx;
+  display: none;
+}
+
+.team .list .item .con.on {
+  display: block;
+}

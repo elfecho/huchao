@@ -1,0 +1,120 @@
+<!--pages/invitation/enlist.wxml-->
+<view class="container">
+  <view class="page-body">
+    <block wx:if="{{isbm==0}}">
+      <view class="page-section page-section-spacing swiper" wx:if="{{list.length>0}}">
+        <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="#333333">
+          <block wx:for="{{list}}" wx:key="">
+            <swiper-item>
+              <view class="main">
+                <view class="front">
+                  <view class="wrap_top">
+                    <view class="wrap_left">
+                      <view class="name">{{item.firstName}}</view>
+                      <view class="business">
+                        <text class="job">{{item.Title}}</text>
+                        <text class="territory">{{item.Industry}}</text>
+                      </view>
+                      <view class="company">{{item.Organization}}</view>
+                    </view>
+                    <view class="wrap_right">
+                      <image src="{{wxappimg}}{{item.Logo}}" mode="aspectFill"></image>
+                    </view>
+                  </view>
+                  <view class="desc">
+                    <view class="item">
+                      <view class="img_nav">
+                        <image src="/images/home-icon-phone@2x.png"></image>
+                      </view>
+                      <view class="txt" bindtap='tap_tel'>{{item.mobilePhoneNumber}}</view>
+                    </view>
+                    <view class="item">
+                      <view class="img_nav">
+                        <image src="/images/home-icon-mails@2x.png"></image>
+                      </view>
+                      <view class="txt" bindtap='email_tel'>{{item.email}}</view>
+                    </view>
+                    <view class="item">
+                      <view class="img_nav">
+                        <image src="/images/home-icon-address@2x.png"></image>
+                      </view>
+                      <view class="txt" bindtap="place_tel">{{item.Address}}</view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class="sub">
+                <button class="kfbt mybtn" bindtap="{{isbm==1?'':'sendCardBmClick'}}" data-itid='{{item.ID}}'>{{isbm==1?'您已报名':'选择该名片报名'}}</button>
+              </view>
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+      <view class="main" wx:else>
+        <view class="wrap_con">
+          <view class="tit">我们不见不散</view>
+          <view class="time">2018/01/14</view>
+          <navigator url="/pages/business/card_add" class="kfbt btn1">创建名片报名</navigator>
+          <navigator url="/pages/invitation/add_enlist" class="kfbt btn2">简单报名</navigator>
+        </view>
+      </view>
+    </block>
+    <view class="main" wx:else>
+      <view class="wrap_con">
+        <view class="tit">我们不见不散</view>
+        <view class="time">2018/01/14</view>
+        <view class="img_nav">
+          <image src="{{wxappimg}}/wxappimg/invitation/icon_sign.png"></image>
+        </view>
+        <view class="txt">您已报名</view>
+      </view>
+      <view class="wrap_con2">
+        <view class="info">
+          <view class="infoImg">
+            <image src="{{headimg==''?wxappimg+'/images/m_default.png':headimg}}"></image>
+          </view>
+          <view class="desc">
+            <view class="tt">{{bmInfo.MNickName}}</view>
+            <view class="tt">手机：{{bmInfo.MPhone}}</view>
+
+            <view class="tt">是否出席：
+              <radio-group bindchange="paytypeChange">
+                <radio value="1" color="#00b00f" checked="{{paytype==1?true:false}}" />是
+                <radio value="0" color="#00b00f" checked="{{paytype==0?true:false}}" />否
+              </radio-group>
+            </view>
+
+          </view>
+        </view>
+        <view class="kfbt mybtn" bindtap='tapVoucher'>我的凭证</view>
+      </view>
+
+    </view>
+    <view class="delegate {{hh_show?'on':''}}">
+      <view class="content">
+        <view class="logo">
+          <image src="{{wxappimg}}/wxappimg/invitation/logo@2x.png"></image>
+        </view>
+        <view class="t1">参会证</view>
+        <view class="t2">乔迁庆典·虎超小程序发布会</view>
+        <view class="t3">
+          {{bmInfo.MNickName}}
+          <text>嘉宾</text>
+        </view>
+        
+        <view class="t4">手机:{{bmInfo.MPhone}}</view>
+        <view class="floor">
+          <image src="{{wxappimg}}{{qr}}" bindtap='requestImage'></image>
+          <!-- <view class="f1">广州虎超网络科技有限公司</view>
+          <view class="f2">GuangZhou HuiChiu Network Co.,Ltd</view> -->
+        </view>
+        <view class="close" bindtap='tap_close'>
+          <image src="{{wxappimg}}/wxappimg/invitation/my_btn@2x.png"></image>
+        </view>
+      </view>
+
+      <view class="ddd" bindtap='tap_close'></view>
+    </view>
+
+  </view>
+</view>

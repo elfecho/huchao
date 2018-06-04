@@ -1,0 +1,247 @@
+/* pages/invitation/enlist.wxss */
+@import "/pages/common/front.wxss";
+.main {
+  padding: 0 20rpx;
+}
+
+.main .wrap_con {
+  margin-top: 20rpx;
+  width: 100%;
+  padding: 30rpx 0;
+  background: #fff;
+  border-radius: 10rpx;
+  box-shadow: 9rpx 14rpx 30rpx #f5f5f5;
+}
+
+.main .wrap_con .tit {
+  font-size: 30rpx;
+  color: #333;
+  text-align: center;
+}
+
+.main .wrap_con .time {
+  font-size: 28rpx;
+  color: #333;
+  text-align: center;
+}
+
+.main .wrap_con .btn1{
+  width: 610rpx;
+  height: 60rpx;
+  background: #00c200;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 60rpx;
+  margin: 40rpx auto 0;
+  box-shadow: 4rpx 6rpx 12rpx #e6e6e6;
+}
+.main .wrap_con .btn2{
+  width: 610rpx;
+  height: 60rpx;
+  background: rgba(0,0,0,0);
+  border-radius: 10rpx;
+  font-size: 24rpx;
+  color: #999797;
+  text-align: center;
+  line-height: 60rpx;
+  margin: 10rpx auto;
+}
+.main .wrap_con .img_nav{
+  width: 204rpx;
+  height: 233rpx;
+  text-align: center;
+  margin:15rpx auto 10rpx;
+}
+.main .wrap_con image{
+  width: 204rpx;
+  height: 233rpx;
+  text-align: center;
+  margin:0 auto;
+}
+.main .wrap_con .txt{
+  font-size: 28rpx;
+  line-height: 36rpx;
+  color:#808080;
+  text-align: center;
+}
+.main .wrap_con2 {
+  margin-top: 50rpx;
+  width: 100%;
+  padding: 20rpx 0 30rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  box-shadow: 9rpx 14rpx 30rpx #f5f5f5;
+}
+.main .wrap_con2 .info{
+  width:610rpx;
+  margin: 0 auto;
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row nowrap;
+}
+.main .wrap_con2 .info .infoImg{
+  position: relative;
+  width: 115rpx;
+  height: 115rpx;
+}
+.main .wrap_con2 .info image{
+  width: 115rpx;
+  height: 115rpx;
+  position: absolute;
+  top:-40rpx;
+  border-radius: 20rpx;
+
+}
+.main .wrap_con2 .info .desc{
+  margin-left:30rpx;
+}
+.main .wrap_con2 .info .desc .tt{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color:#333232;
+}
+.main .wrap_con2 .mybtn{
+  width: 610rpx;
+  height: 60rpx;
+  background: #00c200;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 60rpx;
+  margin: 20rpx auto 0;
+  box-shadow: 4rpx 6rpx 12rpx #e6e6e6;
+}
+swiper {
+  height: 620rpx;
+}
+
+.sub {
+  padding: 20rpx 40rpx;
+}
+
+.sub .mybtn {
+  width: 100%;
+  height: 80rpx;
+  background: #00c200;
+  font-size: 30rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 80rpx;
+  margin: 10rpx 0 0;
+  border-radius: 10rpx;
+  box-shadow: 0 0 30rpx #e6e6e6;
+}
+
+
+.delegate {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 88888888888;
+}
+
+.delegate.on {
+  display: block;
+}
+
+.delegate .content {
+  position: absolute;
+  top: 260rpx;
+  left: 20rpx;
+  width: 710rpx;
+  height: 718rpx;
+  z-index: 100000;
+  background: url(https://hc.fakejie.com/wxappimg/invitation/my_img1@2x.png) no-repeat center center;
+  background-size: 710rpx 718rpx;
+}
+
+.delegate .content {
+  text-align: center;
+}
+
+.delegate .content .logo {
+  width: 184rpx;
+  height: 80rpx;
+  padding: 30rpx 0;
+  margin: 0 auto;
+}
+
+.delegate .content .logo image {
+  width: 184rpx;
+  height: 80rpx;
+}
+
+.delegate .content .t1 {
+  font-size: 50rpx;
+  color: #333;
+}
+
+.delegate .content .t2 {
+  font-size: 30rpx;
+  color: #333;
+}
+
+.delegate .content .t3 {
+  font-size: 40rpx;
+  color: #333;
+  margin-top: 45rpx;
+  padding-top:25rpx;
+  border-top:2rpx solid #f7f7f7;
+}
+
+.delegate .content .t3 text {
+  color: #0d2033;
+  font-size: 28rpx;
+}
+
+.delegate .content .t4 {
+  font-size: 28rpx;
+  color: #0d2033;
+}
+.delegate .content .floor {
+  margin-top: 20rpx;
+}.delegate .content .floor image{
+  width:164rpx;
+  height: 164rpx;
+}
+.delegate .content .floor .f1 {
+  font-size: 26rpx;
+  color: #333;
+  margin-top: 170rpx;
+}
+
+.delegate .content .floor .f2 {
+  font-size: 20rpx;
+  color: #333;
+}
+
+.delegate .content .close {
+  position: absolute;
+  top: -70rpx;
+  right: 0;
+}
+
+.delegate .content .close image {
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.delegate .ddd {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 88888;
+}
+
+radio-group{
+  display: inline-block;
+}

@@ -1,0 +1,62 @@
+<!--pages/test/slide.wxml-->
+<view style="white-space: nowrap;" class="seceGroupBtn" bindtouchstart="touchstart" bindtouchmove="touchmove" bindtouchend="touchend" wx:if="{{mpThing[0]}}">
+  <view class="seceGroupBtn_in_box seceGroupBtn_in_box1" data-goodsId="{{mpThing[mpThing.length-1].goods_id}}" wx:if="{{yFlage&&mpThing.length>2}}" data-id="{{mpThing.length-1}}" bindtap="navSeceGroup">
+    <view class="imageBox_t">
+      <image src="{{mpThing[mpThing.length-1].goods_img}}" mode="widthFix"></image>
+    </view>
+    <view class="titleNameBox">
+      <view class="titleNameBox_l">秒拼</view>
+      <view class="titleNameBox_r">{{mpThing[mpThing.length-1].goods_name}}</view>
+    </view>
+    <view class="priceBox">
+      <view class="priceBox_l">
+        <text class="fontFh">￥</text>{{mpThing[mpThing.length-1].goods_price}}
+      </view>
+      <view class="priceBox_r">
+        <text>已售{{mpThing[mpThing.length-1].sales}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="seceGroupBtn_in_box {{indexSeceGroupSty[index]}} {{opacitySty[index]}} {{indexUn[index]}}" wx:for="{{mpThing}}" data-id="{{index+1}}" data-goodsId="{{item.goods_id}}" style="margin-left: 0rpx;" bindtap="navSeceGroup">
+    <view class="imageBox_t">
+      <image src="{{item.goods_img}}" mode="widthFix"></image>
+    </view>
+    <view class="titleNameBox">
+      <view class="titleNameBox_l">秒拼</view>
+      <view class="titleNameBox_r">{{item.goods_name}}</view>
+    </view>
+    <view class="priceBox">
+      <view class="priceBox_l">
+        <text class="fontFh">￥</text>{{item.goods_price}}
+      </view>
+      <view class="priceBox_r">
+        <text>已售{{item.sales}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view wx:if="{{zFlage&&mpThing.length>2}}" data-goodsId="{{mpThing[0].goods_id}}" class="seceGroupBtn_in_box seceGroupBtn_in_box3" data-id="0" bindtap="navSeceGroup">
+    <view class="imageBox_t">
+      <image src="{{mpThing[0].goods_img}}" mode="widthFix"></image>
+    </view>
+    <view class="titleNameBox">
+      <view class="titleNameBox_l">秒拼</view>
+      <view class="titleNameBox_r">{{mpThing[0].goods_name}}</view>
+    </view>
+    <view class="priceBox">
+      <view class="priceBox_l">
+        <text class="fontFh">￥</text>{{mpThing[0].goods_price}}
+      </view>
+      <view class="priceBox_r">
+        <text>已售{{mpThing[0].sales}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 触控点模块 -->
+<view class="pointingStick_box" wx:if="{{mpThing[0]}}">
+  <view class="contentButtonBox">
+    <view class="contentButtonBox_in_box {{buttonFlag[index]}}" wx:for="{{buttonFlag}}" data-id="{{index}}" bindtap="touchRadus"></view>
+  </view>
+</view>

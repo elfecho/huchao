@@ -1,0 +1,31 @@
+<!--pages/member/technical.wxml-->
+<view class="container">
+  <view class="page-body">
+    <view class="main">
+      <view class="tit">{{info.Title}}</view>
+      <view class="content">
+        
+        <text class="con_p">
+        {{info.Demo}}
+        </text>
+
+      </view>
+      <button class="kfbt btn" bindtap='down'>申请使用小程序</button>
+    </view>
+    <view class="info {{show==1?'on':''}}">
+      <view class="con">
+        <view class="item">
+          <input type="text" placeholder='告诉我们你的小程序开发需求' bindinput='changeDemo'></input>
+        </view>
+        <view class="item">
+          <input type="text" placeholder='请填写手机号码，我们讲尽快和你取得联系' maxlength='11' bindinput='changeTel'></input>
+        </view>
+        <view class="sub">
+          <button class="kfbt reset" bindtap='up'>取消</button>
+          <button class="kfbt submit" bindtap='saveClick'>提交</button>
+        </view>
+      </view>
+      <view class="make"></view>
+    </view>
+  </view>
+</view>

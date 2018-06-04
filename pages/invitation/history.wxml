@@ -1,0 +1,45 @@
+<!--pages/invitation/history.wxml-->
+<view class="container">
+  <view class="page-body history">
+    <view class="banner">
+      <image src="{{wxappimg}}/wxappimg/invitation/about_img@2x.png"></image>
+    </view>
+    <view class="history">
+      <view class="tit">发展历程</view>
+      <view class="content">
+        <view class="item">
+          <view class="time">2018</view>
+          <view class="desc">
+            <view class="txt">正式搬入虎超总部大厦</view>
+          </view>
+        </view>
+        <view class="item">
+          <view class="time">2017</view>
+          <view class="desc">
+            <view class="txt">正式上线法克街小程序成人电商</view>
+            <view class="txt">发展用户数量3万+</view>
+            <view class="txt">为全球70,629,343商户提供服务</view>
+          </view>
+        </view>
+        <view class="item">
+          <view class="time">2016</view>
+          <view class="desc">
+            <view class="txt">成为腾讯官方云市场服务商</view>
+          </view>
+        </view>
+        <view class="item">
+          <view class="time">2015</view>
+          <view class="desc">
+            <view class="txt">荣获首批微信开发者资质认证</view>
+          </view>
+        </view>
+        <view class="item">
+          <view class="time">2014</view>
+          <view class="desc">
+            <view class="txt">杨锦超创立广州虎超网络科技有限公司</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

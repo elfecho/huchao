@@ -1,0 +1,77 @@
+<!--pages/product/spread.wxml-->
+<view class="container">
+  <view class="page-body">
+    <view class="banner">
+      <image src="{{wxappimg}}/wxappimg/Generalize-img-banner@2x.png"></image>
+      <view class="con">
+        <view class="tit">虎超团队，专业网站SEO优化</view>
+        <view class="desc">
+          <view class="con_p">五合一立体优化企业网站</view>
+          <view class="con_p">一次消费，长期维护</view>
+        </view>
+      </view>
+    </view>
+    <view class="advantage">
+      <view class="tit">网站SEO优化优势</view>
+      <view class="con">
+        <view class="item">
+          <view class="title">网民获取信息的主要工具</view>
+          <view class="desc">根据CNNIC的统计，大约有90%的网民不会记忆网址去登陆网站而是通过查询引擎检索关键词访问检索到的网站。</view>
+          <view class="bgimg">
+            <image src="{{wxappimg}}/wxappimg/Generalize-icon-tool@2x.png"></image>
+          </view>
+        </view>
+        <view class="item">
+          <view class="title">网站长久排名靠前</view>
+          <view class="desc">SEO优化一旦上去会保持很长时间的位置，不会像竞价推广一样担心没有钱了排名会掉下来。</view>
+          <view class="bgimg">
+            <image src="{{wxappimg}}/wxappimg/Generalize-icon-ranking@2x.png"></image>
+          </view>
+        </view>
+        <view class="item">
+          <view class="title">自然检索结果可信度更高</view>
+          <view class="desc">在搜索结果页面上方都有付费广告用户对付费广告有不信任和排斥，更信赖自然搜索结果。</view>
+          <view class="bgimg">
+            <image src="{{wxappimg}}/wxappimg/Generalize-icon-credibility@2x.png"></image>
+          </view>
+        </view>
+        <view class="item">
+          <view class="title">全国区域展示</view>
+          <view class="desc">相关推广词一旦上线后，全国范围用户都可以搜索到，不用担心如果投放了区域，其他地区用户搜索不到全面覆盖客户。</view>
+          <view class="bgimg">
+            <image src="{{wxappimg}}/wxappimg/Generalize-icon-map@2x.png"></image>
+          </view>
+        </view>
+        <view class="item">
+          <view class="title">高效的网络推广渠道</view>
+          <view class="desc">搜索引擎会为网站带来最有明确需求的客户。通过网站联盟的数据来看，SEO带来流量的转换率高达60%以上</view>
+          <view class="bgimg">
+            <image src="{{wxappimg}}/wxappimg/Generalize-icon-channel@2x.png"></image>
+          </view>
+        </view>
+        <view class="item">
+          <view class="title">不用担心无效点击</view>
+          <view class="desc">各大平台展示后，客户可随意点击，不担心恶意，或无效点击。按年费计算，有效控制成本20%以上。</view>
+          <view class="bgimg">
+            <image src="{{wxappimg}}/wxappimg/Generalize-icon-shield@2x.png"></image>
+          </view>
+        </view>
+        <view class="item">
+          <view class="title">排名靠前链接点击量更高</view>
+          <view class="desc">多数网民在检索时，只点击搜索首页的前几位网站。搜索结果3页以后的内容，几乎无人问津。</view>
+          <view class="bgimg">
+            <image src="{{wxappimg}}/wxappimg/Generalize-icon-Clickonthe@2x.png"></image>
+          </view>
+        </view>
+        <view class="item">
+          <view class="title">高性价比</view>
+          <view class="desc">一比多用最佳的网络平台，关键词不限制，不按点击收费。低成本投入，使网络营销效果最佳。</view>
+          <view class="bgimg">
+            <image src="{{wxappimg}}/wxappimg/Generalize-icon-performance@2x.png"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <button class="kfbt mybtn" open-type='contact'>立即咨询</button>
+  </view>
+</view>

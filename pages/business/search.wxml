@@ -1,0 +1,44 @@
+<!--pages/business/search.wxml-->
+<view class="container">
+  <view class="page-body">
+    <view class="head">
+      <view class="search">
+        <icon type="search" size='18' />
+        <input type="text" placeholder="搜索公司/联系人" confirm-type="search" bindconfirm="searchClick" bindinput="valueChange" />
+      </view>
+    </view>
+    <view class="con" wx:if="{{data_have}}">
+      <navigator url="/pages/index/newindex" redirect class="wrap_item">
+        <view class="headimg">
+          <image src="/images/m_default.png"></image>
+        </view>
+        <view class="info">
+          <view class="name">柯博文</view>
+          <view class="tt">UI设计师</view>
+          <view class="tt">广州虎超网络科技有限公司</view>
+        </view>
+        <view class="time">
+          <view class="date">2017-12-09</view>
+          <view class="type">0人已存</view>
+        </view>
+      </navigator>
+      <navigator url="/pages/index/newindex" redirect class="wrap_item">
+        <view class="headimg">
+          <image src="/images/m_default.png"></image>
+        </view>
+        <view class="info">
+          <view class="name">柯博文</view>
+          <view class="tt">UI设计师</view>
+          <view class="tt">广州虎超网络科技有限公司</view>
+        </view>
+        <view class="time">
+          <view class="date">2017-12-09</view>
+          <view class="type">0人已存</view>
+        </view>
+      </navigator>
+    </view>
+    <view class="no_data" wx:else>
+      <view class="txt">暂无数据</view>
+    </view>
+  </view>
+</view>

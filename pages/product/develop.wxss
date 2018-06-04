@@ -1,0 +1,170 @@
+/* pages/product/develop.wxss */
+
+.prolist .classlist {
+  line-height: 100rpx;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+  height: 100rpx;
+  background-color: #fff;
+  padding: 0rpx 15rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.scroll-view_H {
+  white-space: nowrap;
+}
+
+.scroll-view-item {
+  height: 80rpx;
+}
+
+.scroll-view-item_H {
+  display: inline-block;
+  height: 80rpx;
+  font-size: 32rpx;
+  line-height: 80rpx;
+}
+
+.prolist .classlist .item {
+  padding: 0 20rpx;
+}
+
+.prolist .classlist .item.on {
+  color: #008fee;
+  border-bottom: 6rpx solid #008fee;
+}
+
+.content {
+  margin-top: 100rpx;
+}
+
+.content .list {
+  display: none;
+}
+
+.content .list.on {
+  display: block;
+}
+
+.superiority {
+  padding-top: 25rpx;
+  padding-left: 20rpx;
+  background: #fff;
+}
+
+.superiority .tit {
+  padding-left: 20rpx;
+  font-size: 34rpx;
+  line-height: 34rpx;
+  color: #008fee;
+  border-left: 4rpx solid #008fee;
+}
+
+.superiority .item {
+  padding: 30rpx 20rpx 20rpx 0;
+  border-bottom: 1rpx solid #e6e6e6;
+}
+
+.superiority .item .wrap_tit {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.superiority .item .desc {
+  font-size: 24rpx;
+  color: #808080;
+}
+
+.superiority .item .con_p {
+  font-size: 24rpx;
+  color: #808080;
+}
+
+.mybtn {
+  width: 100%;
+  height: 100rpx;
+  font-size: 36rpx;
+  line-height: 100rpx;
+  text-align: center;
+  margin-top: 50rpx;
+  color: #fff;
+  background: -webkit-linear-gradient(left, #56ccf2, #2f80ed);
+}
+
+.develop {
+  padding-top: 25rpx;
+  padding-left: 20rpx;
+  background: #fff;
+}
+
+.develop .tit {
+  padding-left: 20rpx;
+  font-size: 36rpx;
+  line-height: 34rpx;
+  color: #008fee;
+  border-left: 4rpx solid #008fee;
+}
+
+.develop .desc {
+  font-size: 26rpx;
+  color: #333;
+  margin-top: 30rpx;
+  padding-right:20rpx;
+}
+
+.develop .con {
+  margin-top: 50rpx;
+  padding: 0 20rpx;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.develop .con .item {
+  width: 295rpx;
+  padding: 50rpx 25rpx;
+  border-right: 1rpx solid #e6e6e6;
+  border-bottom: 1rpx solid #e6e6e6;
+}
+
+.develop .con .item:nth-child(even) {
+  border-right: none;
+}
+
+.develop .con .item:nth-last-child(1), .develop .con .item:nth-last-child(2) {
+  border-bottom: none;
+}
+
+.develop .con .item image {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 0 auto;
+  display: block;
+}
+
+.develop .con .item .txt {
+  color: #3081ed;
+  font-size: 28rpx;
+  margin-top: 20rpx;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.develop .con .item .ms {
+  font-size: 24rpx;
+  color: #5e6c76;
+  margin-top: 10rpx;
+  text-align: center;
+}
+
+.develop .con .item .price {
+  font-size: 24rpx;
+  margin-top: 5rpx;
+  text-align: center;
+  font-weight: bolder;
+  background: -webkit-linear-gradient(left, #56ccf2, #2f80ed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

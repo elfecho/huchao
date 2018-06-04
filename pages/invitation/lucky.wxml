@@ -1,0 +1,26 @@
+<!--pages/invitation/lucky.wxml-->
+<view class="container">
+  <view class="page-body">
+    <view class="main">
+      <view class="header">
+        <image src="{{wxappimg}}/wxappimg/invitation/img3@2x.png"></image>
+        <view class="txt">LUCKY NUMBER</view>
+      </view>
+      <view class="content">
+        <view class="input">
+          <input type="number" bindinput="pChange" class="tt" placeholder='开始值' placeholder-style="font-size:32rpx;"></input>
+          <image src="{{wxappimg}}/wxappimg/invitation/img4@2x.png"></image>
+          <input type="number" bindinput="qChange" placeholder='结束值' placeholder-style="font-size:32rpx;"></input>
+        </view>
+        <view class="desc">抽取我的幸运值</view>
+        <view class="down">
+          <image src="{{wxappimg}}/wxappimg/invitation/icon_down@2x.png"></image>
+        </view>
+      </view>
+      <view class="fruit">
+        <view class="txt">{{num}}</view>
+        <image src="{{wxappimg}}/wxappimg/invitation/btn@2x.png" bindtap='tapbegin'></image>
+      </view>
+    </view>
+  </view>
+</view>

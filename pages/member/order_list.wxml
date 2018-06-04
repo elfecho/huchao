@@ -1,0 +1,66 @@
+<view class="container">
+
+  <view class="page-body member">
+    <view class="classlist bgw">
+      <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+        <view class="item scroll-view-item_H {{tabnum==0 ? 'on':''}}" bindtap="tapClass" data-code="0">全部</view>
+        <view class="item scroll-view-item_H {{tabnum==1 ? 'on':''}}" bindtap="tapClass" data-code="1">待付款</view>
+        <view class="item scroll-view-item_H {{tabnum==2 ? 'on':''}}" bindtap="tapClass" data-code="2">待收货</view>
+        <view class="item scroll-view-item_H {{tabnum==3 ? 'on':''}}" bindtap="tapClass" data-code="3">已完成</view>
+        <view class="item scroll-view-item_H {{tabnum==4 ? 'on':''}}" bindtap="tapClass" data-code="4">已取消</view>
+        <view class="item scroll-view-item_H {{tabnum==-1 ? 'on':''}}" bindtap="tapClass" data-code="-1">退换/售后</view>
+      </scroll-view>
+    </view>
+
+    <view class="has {{hasnum>0?'':'hide'}}">
+      <view class="orderlist">
+        <block wx:for-items="{{list}}" wx:key="">
+          <view class="item">
+            <navigator url="/pages/member/order_detail?ordercode={{item.OrderCode}}" class="head">
+              订单号：{{item.OrderCode}}
+              <view class="fr status">{{item.Status}}</view>
+              <view class="navigator-arrow"></view>
+            </navigator>
+            <block wx:for-items="{{item.itemlist}}" wx:for-item="page" wx:key="">
+              <view class="orders-list">
+                <navigator url="/pages/member/order_detail?ordercode={{item.OrderCode}}">
+                  <image class="orders-thumb" src="{{wxappimg}}{{page.DemoImg}}"></image>
+                </navigator>
+                <navigator url="/pages/member/order_detail?ordercode={{item.OrderCode}}" class="orders-pro-name">{{page.Name}}</navigator>
+                <view class="pcolor">{{page.Specification}}</view>
+                <navigator url="/pages/member/order_detail?ordercode={{item.OrderCode}}" class="orders-pro-price">
+                  ￥{{page.Price}}
+                  <view class="orders-count-num fr">×{{page.Count}}</view>
+                </navigator>
+                <block wx:if="{{(item.Status == '确认收货'||item.Status == '已完成')&&!page.Commented}}">
+                  <navigator class="gotoComment" url="/pages/member/order_comment?itemid={{page.ID}}">去评价</navigator>
+                </block>
+              </view>
+            </block>
+            <block wx:if="{{item.Status == '未处理'&&item.PayWay != '0'&&item.PayStatus == '未付'}}">
+              <navigator class="bot" url="/pages/order/orderpay?ordercode={{item.OrderCode}}">
+                合计：￥{{item.Total}}
+                <view class="fr status">去支付</view>
+              </navigator>
+            </block>
+
+          </view>
+        </block>
+      </view>
+
+      <view class="pustdowntishi">{{dataend==0 ? '请骚后“脱”我，情趣更多...':'别“脱”了，已经祼了'}}</view>
+
+    </view>
+
+    <view class="em {{hasnum==0?'':'hide'}}">
+      <view class="icon">
+        <image src="/images/icon_none.png"></image>
+        <view class="txt">亲，伦家心里空空的，赶快去下单吧！</view>
+      </view>
+    </view>
+
+  </view>
+
+  <include src="/pages/common/bottom.wxml" />
+
+</view>

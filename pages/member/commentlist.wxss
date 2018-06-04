@@ -1,0 +1,145 @@
+@import "/pages/common/lib/weui.wxss";
+
+.navigator-arrow {
+  position:absolute;
+  right: -6rpx;
+  top: 38rpx;
+}
+
+.navigator-arrow:after {
+  content: " ";
+  display: inline-block;
+  height: 18rpx;
+  width: 18rpx;
+  border-width: 2rpx 2rpx 0 0;
+  border-color: #888;
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: absolute;
+  top: 50%;
+  margin-top: -8rpx;
+  right: 20rpx;
+}
+
+.mt0 {
+  margin-top: 0rpx;
+}
+
+.em .icon {
+  text-align: center;
+  padding-top: 200rpx;
+}
+
+.em .icon image {
+  width: 240rpx;
+  height: 236rpx;
+}
+
+.em .icon .txt {
+  color: #888;
+  margin-top: 20rpx;
+}
+
+.orderlist .item {
+  background-color: #fff;
+  padding: 0 20rpx;
+  margin-top:28rpx;
+}
+.orderlist .item:first-child{
+  margin-top:0rpx;
+}
+
+.orderlist .item .head{
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #ededed;
+  position:relative;
+}
+
+.orderlist .item .head .status{
+  padding-right: 40rpx;
+}
+
+.orderlist .item .orders-list {
+  position: relative;
+  padding: 20rpx 0rpx 20rpx 180rpx;
+  border-bottom: 1rpx solid #ededed;
+  min-height: 150rpx;
+}
+.orderlist .item .orders-list:last-child{
+  border-bottom:none;
+}
+
+.orders-thumb {
+  position: absolute;
+  top: 20rpx;
+  left: 20rpx;
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.orders-pro-name {
+  max-height: 88rpx;
+  overflow: hidden;
+}
+
+.orders-pro-price {
+  line-height: 60rpx;
+  color: #888;
+  width: 450rpx;
+}
+
+.orders-count-num {
+  line-height: 40rpx;
+  color: #888;
+  position: absolute;
+  right: 20rpx;
+  top: 72rpx;
+}
+
+.pustdowntishi {
+  text-align: center;
+  color: #999;
+  clear: both;
+  font-size: 24rpx;
+  line-height: 60rpx;
+}
+.gotoComment {
+  position: absolute;
+  right: 20rpx;
+  bottom: 0rpx;
+  color: #f0189d;
+  font-size: 24rpx;
+  padding: 20rpx 0rpx;
+}
+
+
+.scroll-view_H {
+  white-space: nowrap;
+}
+
+.scroll-view-item {
+  height: 80rpx;
+}
+
+.scroll-view-item_H {
+  display: inline-block;
+  height: 80rpx;
+  font-size: 32rpx;
+  line-height: 80rpx;
+}
+
+.classlist .item {
+  padding: 0 20rpx;
+}
+
+.classlist .item.on {
+  color: #f0189d;
+  border-bottom: 6rpx solid #f0189d;
+}
+.pcolor{
+  font-size: 24rpx;
+  color: #999;
+  line-height: 60rpx;
+  max-height: 60rpx;
+  overflow: hidden;
+}

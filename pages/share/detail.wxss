@@ -1,0 +1,135 @@
+@import "/wxParse/wxParse.wxss";
+
+swiper {
+  height: 750rpx;
+}
+
+.prodetail {
+}
+
+image {
+width:365px;
+height:500px;
+}
+
+.prodetail .title {
+  padding: 15rpx;
+  line-height: 40rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+  margin-top: 10rpx;
+}
+
+.prodetail .pricep {
+  padding: 15rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.prodetail .price {
+  display: inline-block;
+  font-size: 24rpx;
+  color: #f0189d;
+}
+
+.prodetail .oldprice {
+  display: inline-block;
+  font-size: 28rpx;
+  color: #999;
+  text-decoration: line-through;
+  margin-left: 20rpx;
+}
+
+.prodetail .sale {
+  display: inline-block;
+  font-size: 24rpx;
+  color: #999;
+  padding-left: 20rpx;
+}
+
+.prodetail .cx {
+  border-top: 2rpx #999 dotted;
+  padding: 20rpx;
+  height: auto;
+  overflow: hidden;
+}
+
+.prodetail .cx .left {
+  float: left;
+  width: 80rpx;
+  text-align: center;
+}
+
+.prodetail .cx .list {
+  float: right;
+  width: 620rpx;
+  font-size: 22rpx;
+}
+
+.prodetail .cx .list .item {
+  line-height: 46rpx;
+}
+
+.prodetail .cx .list .icon {
+  display: inline-block;
+  padding: 4rpx 8rpx;
+  background-color: #f0189d;
+  color: #fff;
+  border-radius: 8rpx;
+  margin-right: 10rpx;
+  line-height: 30rpx;
+}
+
+.prodetail .protxt {
+  margin-top: 40rpx;
+  height: auto;
+  overflow: hidden;
+}
+
+.prodetail .tab .tabtit {
+  float: left;
+  width: 50%;
+  text-align: center;
+  line-height: 60rpx;
+}
+
+.prodetail .tab .tabtit.on {
+  color: #f0189d;
+  border-bottom: 6rpx solid #f0189d;
+}
+
+.prodetail .tab .tabcontent {
+  min-height: 200rpx;
+}
+
+.bigWrap {
+  
+}
+
+.com-widget-goTop {
+  position: fixed;
+  bottom: 125px;
+  right: 5px;
+  background: rgba(0, 0, 0, 0.48);
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 500;
+}
+
+.com-widget-goTop .icon-gotop {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 68px;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+.com-widget-goTop .icon-gotop image{
+  width: 30rpx;
+  height: 32rpx;
+  position: absolute;
+  top: 16rpx;
+  left: 36rpx;
+}

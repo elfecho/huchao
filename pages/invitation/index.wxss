@@ -1,0 +1,1105 @@
+/* pages/invitation/index.wxss */
+
+.video_nav {
+  width: 100%;
+  height: 420rpx;
+}
+
+.video_nav .img_nav {
+  position: relative;
+  background: #000;
+  display: none;
+}
+
+.video_nav .img_nav.on {
+  display: block;
+}
+
+.video_nav .img_nav .banner {
+  width: 100%;
+  height: 420rpx;
+  opacity: 0.7;
+}
+
+.video_nav .img_nav .icon {
+  width: 90rpx;
+  height: 90rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -45rpx;
+  margin-left: -45rpx;
+  display: block;
+}
+
+.video_nav .img_nav .desc {
+  text-align: center;
+  position: absolute;
+  width: 436rpx;
+  left: 50%;
+  top: 70rpx;
+  margin-left: -218rpx;
+  overflow: hidden;
+  line-height: 50rpx;
+}
+
+.video_nav .img_nav .desc .tit {
+  font-size: 42rpx;
+  color: #fff;
+  font-weight: 700;
+}
+
+.video_nav .img_nav .desc .time {
+  font-size: 30rpx;
+  color: #fff;
+  margin-top: 10rpx;
+}
+
+.video_nav video {
+  width: 100%;
+  height: 420rpx;
+  display: none;
+}
+
+.video_nav video.on {
+  display: block;
+}
+
+.scroll-view_H {
+  width: 100%;
+  /* height: 92vh; */
+  position: relative;
+}
+
+.prolist .classlist {
+  line-height: 100rpx;
+  border-bottom: 1px solid #eee;
+  height: 100rpx;
+  background-color: #fff;
+  padding: 0rpx 15rpx;
+}
+
+.scroll-view-item {
+  height: 100rpx;
+}
+
+.scroll-view-item_H {
+  display: inline-block;
+  height: 100rpx;
+  font-size: 32rpx;
+  line-height: 100rpx;
+}
+
+.prolist .classlist .item {
+  width: 25%;
+  color: #999;
+  text-align: center;
+}
+
+.prolist .classlist .item.on {
+  color: #333;
+  position: relative;
+}
+
+.prolist .classlist .item.on:after {
+  content: '';
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  margin-left: -20rpx;
+  height: 5%;
+  width: 40rpx;
+  background: #00c200;
+}
+
+.botlist .item {
+  display: none;
+}
+
+.botlist .item.on {
+  display: block;
+}
+
+.botlist .item .distance .li {
+  position: relative;
+  padding: 67rpx 0 0 67rpx;
+}
+
+.botlist .item .distance .li .line {
+  position: absolute;
+  top: 10rpx;
+  left: 67rpx;
+  font-size: 28rpx;
+  color: #000;
+}
+
+.botlist .item .distance .li  .time {
+  font-size: 28rpx;
+  color: #000;
+}
+
+.botlist .item .distance .li .line .circle {
+  position: absolute;
+  top: 18rpx;
+  left: -25rpx;
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 50%;
+  background: #333;
+}
+
+.botlist .item .distance .li .line .circle:after {
+  content: ' ';
+  position: absolute;
+  top: 10rpx;
+  left: 5rpx;
+  width: 2rpx;
+  height: 280rpx;
+  background: #eee;
+}
+
+.botlist .item .distance .li .con {
+  width: 580rpx;
+  height: 160rpx;
+  border-radius: 10rpx;
+  background: #fff;
+  padding: 30rpx 20rpx;
+  box-shadow: 9rpx 14rpx 30rpx #f5f5f5;
+}
+
+.botlist .item .distance .li .con .tit {
+  font-size: 28rpx;
+  color: #000;
+  line-height: 56rpx;
+}
+
+.botlist .item .distance .li .con .area {
+  font-size: 26rpx;
+  color: #aaa;
+  line-height: 54rpx;
+}
+
+.botlist .item .distance .li .con .quantum {
+  font-size: 26rpx;
+  color: #aaa;
+  line-height: 54rpx;
+  padding-left: 45rpx;
+  position: relative;
+  background: url(https://hc.fakejie.com/wxappimg/invitation/home_icon@2x.png) no-repeat left center;
+  background-size: 28rpx 28rpx;
+}
+
+.floor {
+  position: relative;
+  margin-top: 60rpx;
+  background: #fff;
+}
+
+.floor .head {
+  /* position: absolute;
+  top: 30rpx;
+  left: 0;
+  width: 100%; */
+  padding-top: 30rpx;
+  text-align: center;
+}
+
+.floor .head .tit {
+  color: #222;
+  font-size: 32rpx;
+  text-align: center;
+  margin: 20rpx;
+  font-weight: 600;
+  letter-spacing: 6rpx;
+}
+
+.floor image.bg {
+  width: 100%;
+  height: 390rpx;
+}
+
+.floor .code {
+  text-align: center;
+  margin-top: 20rpx;
+}
+
+.floor .code image {
+  width: 173rpx;
+  height: 173rpx;
+}
+
+.botlist .item .league {
+  margin-top: 15rpx;
+  position: relative;
+}
+
+.botlist .item .league image {
+  width: 100%;
+  height: 3065rpx;
+}
+.botlist .item .league .button{
+  position: absolute;
+  left:134rpx;
+  bottom: 180rpx;
+
+}
+.botlist .item .league .button .btn1{
+  width:488rpx;
+  height:86rpx;
+  background: #f8d91c;
+  background-size: 488rpx 86rpx;
+  text-align: center;
+  line-height: 86rpx;
+  color:#e14015;
+  font-size: 52rpx;
+  font-weight: bolder;
+  letter-spacing:8rpx;
+  transform: skew(-20deg);
+  margin-bottom:220rpx;
+  margin-left:10rpx;
+}
+.botlist .item .league .button .btn2{
+  width:150rpx;
+  height:34rpx;
+  background: url(https://hc.fakejie.com/wxappimg/invitation/atn1.png);
+  background-size: 150rpx 34rpx;
+  text-align: center;
+  line-height: 34rpx;
+  color:#d83a3b;
+  font-size: 24rpx;
+}
+.botlist .item .route {
+  margin-top: 15rpx;
+  position: relative;
+}
+
+.botlist .item .route image {
+  width: 100%;
+  height: 1138rpx;
+}
+
+.botlist .item .route .mybtn {
+  position: absolute;
+  bottom: 80rpx;
+  left: 50%;
+  margin-left: -310rpx;
+  background: #00c200;
+  width: 620rpx;
+  height: 60rpx;
+  border-radius: 10rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #fffefe;
+}
+
+.lottery {
+  margin-top: 15rpx;
+  background: #fac61f;
+}
+
+.lottery .head {
+  padding-top: 18rpx;
+  margin: 0rpx auto;
+  text-align: center;
+}
+
+.lottery .head image {
+  width: 620rpx;
+  height: 350rpx;
+}
+
+.lotteryBox {
+  /* height: 5.1rem; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lotteryBox .box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem;
+}
+
+.lotteryBox .box .li {
+  position: relative;
+  width: 30%;
+  height: 114rpx;
+  margin-bottom: 20rpx;
+  margin-right: 15rpx;
+  border: 2rpx solid #0a0205;
+  border-radius: 10rpx;
+  background: #fff;
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  box-shadow: 7rpx 6rpx 0 #edaf00;
+}
+
+.lotteryBox .box .li.active {
+  background: #ff1652;
+  color: #fff;
+}
+
+.lotteryBox .box .li.special_prize {
+  position: relative;
+}
+
+.lotteryBox .box .li.special_prize:after {
+  content: ' ';
+  position: absolute;
+  top: -25rpx;
+  right: -20rpx;
+  width: 125rpx;
+  height: 40rpx;
+  background: url(https://hc.fakejie.com/wxappimg/invitation/special_prize02.png) no-repeat center center;
+  background-size: 125rpx 40rpx;
+}
+
+.lotteryBox .box .li.first_prize {
+  position: relative;
+}
+
+.lotteryBox .box .li.first_prize:after {
+  content: ' ';
+  position: absolute;
+  top: -25rpx;
+  right: -20rpx;
+  width: 125rpx;
+  height: 40rpx;
+  background: url(https://hc.fakejie.com/wxappimg/invitation/first_prize02.png) no-repeat center center;
+  background-size: 125rpx 40rpx;
+}
+
+.lotteryBox .box .li.second_prize {
+  position: relative;
+}
+
+.lotteryBox .box .li.second_prize:after {
+  content: ' ';
+  position: absolute;
+  top: -25rpx;
+  right: -20rpx;
+  width: 125rpx;
+  height: 40rpx;
+  background: url(https://hc.fakejie.com/wxappimg/invitation/second_prize02.png) no-repeat center center;
+  background-size: 125rpx 40rpx;
+}
+
+.lotteryBox .box .li.third_prize {
+  position: relative;
+}
+
+.lotteryBox .box .li.third_prize:after {
+  content: ' ';
+  position: absolute;
+  top: -25rpx;
+  right: -20rpx;
+  width: 125rpx;
+  height: 40rpx;
+  background: url(https://hc.fakejie.com/wxappimg/invitation/third_prize02.png) no-repeat center center;
+  background-size: 125rpx 40rpx;
+}
+
+.lotteryBox .box .lottery {
+  position: relative;
+  width: 30.8%;
+  height: 114rpx;
+  margin-bottom: 15rpx;
+  margin-right: 10rpx;
+  border-radius: 10rpx;
+}
+
+.lotteryBox .box .li .img_nav {
+  width: 83rpx;
+  height: 97rpx;
+  line-height: 97rpx;
+  text-align: center;
+}
+
+.lotteryBox .box .li image {
+  width: 120rpx;
+  height: 120rpx;
+  vertical-align: middle;
+  margin-top: -17rpx;
+  margin-left: -20rpx;
+  padding-left: 10rpx;
+}
+
+/* 
+.lotteryBox .box .li:nth-child(1) image {
+  width: 83rpx;
+  height: 97rpx;
+  padding-left: 10rpx;
+}
+
+.lotteryBox .box .li:nth-child(2) image {
+  margin-top: -20rpx;
+  width: 62rpx;
+  height: 122rpx;
+}
+
+.lotteryBox .box .li:nth-child(3) image {
+  margin-top: -26rpx;
+  width: 87rpx;
+  height: 125rpx;
+}
+
+.lotteryBox .box .li:nth-child(4) image {
+  width: 86rpx;
+  height: 83rpx;
+}
+
+.lotteryBox .box .li:nth-child(6) image {
+  width: 104rpx;
+  height: 70rpx;
+}
+
+.lotteryBox .box .li:nth-child(7) image {
+  width: 114rpx;
+  height: 90rpx;
+}
+
+.lotteryBox .box .li:nth-child(9) image {
+  width: 114rpx;
+  height: 90rpx;
+}
+
+.lotteryBox .box .li:nth-child(10) image {
+  width: 80rpx;
+  height: 95rpx;
+}
+
+.lotteryBox .box .li:nth-child(11) image {
+  width: 114rpx;
+  height: 90rpx;
+}
+
+.lotteryBox .box .li:nth-child(12) image {
+  width: 99rpx;
+  height: 79rpx;
+} */
+
+.lotteryBox .box .li .desc {
+  text-align: center;
+  margin-left: 12rpx;
+  width: 120rpx;
+}
+
+.lotteryBox .box .li .desc text {
+  display: block;
+}
+
+.lotteryBox .box .lotteryDesc {
+  text-align: center;
+}
+
+.lotteryBox .box .lotteryDesc .fortunate {
+  font-size: 36rpx;
+  font-weight: bolder;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-color: #0a0205;
+  -webkit-text-stroke-width: 1.5rpx;
+  text-fill-color: white;
+  text-stroke-color: #0a0205;
+  text-stroke-width: 10rpx;
+  line-height: 60rpx;
+}
+
+.lotteryBox .box .lotteryDesc .fortunate text {
+  font-size: 54rpx;
+}
+
+.lotteryBox .box .lotteryDesc .txt {
+  font-size: 20rpx;
+  color: #333;
+}
+
+.lotteryBox .box .lotteryBtn {
+  position: relative;
+  width: 30.8%;
+  height: 114rpx;
+  margin-bottom: 15rpx;
+  margin-right: 10rpx;
+}
+
+.lotteryBox .box .lotteryBtn image {
+  position: absolute;
+  top: -20rpx;
+  left: 0;
+  width: 230rpx;
+  height: 140rpx;
+}
+
+.lotteryBox .box .lotteryBtn .Countdown {
+  position: absolute;
+  width: 225rpx;
+  height: 75rpx;
+  background: rgba(0, 0, 0, 0.7);
+  top: -20rpx;
+  left: 0;
+  border-radius: 20rpx;
+  padding: 30rpx 0;
+}
+
+.lotteryBox .box .lotteryBtn .Countdown text {
+  font-size: 32rpx;
+  line-height: 42rpx;
+  color: #fefefe;
+  text-align: center;
+  display: block;
+}
+.lotteryBox .box .lotteryBtn .Countdown text.ed {
+  font-size: 32rpx;
+  line-height: 42rpx;
+  color: #fefefe;
+  text-align: center;
+  display: block;
+  margin-top: 16rpx;
+}
+
+.lottery .more .desc {
+  font-size: 24rpx;
+  color: #333;
+  text-align: center;
+}
+
+.lottery .more .img_tit {
+  width: 285rpx;
+  height: 44rpx;
+  margin: 40rpx auto;
+  position: relative;
+}
+
+.lottery .more .img_tit::before {
+  content: '';
+  position: absolute;
+  width: 38rpx;
+  height: 34rpx;
+  top: 0;
+  left: -44rpx;
+  background: url(https://hc.fakejie.com/wxappimg/invitation/double_icon.png) no-repeat center center;
+  background-size: 38rpx 34rpx;
+}
+
+.lottery .more .img_tit::after {
+  content: '';
+  position: absolute;
+  width: 38rpx;
+  height: 34rpx;
+  top: 10rpx;
+  right: -44rpx;
+  background: url(https://hc.fakejie.com/wxappimg/invitation/double_icon.png) no-repeat center center;
+  background-size: 38rpx 34rpx;
+}
+
+.lottery .more .img_tit image {
+  width: 285rpx;
+  height: 44rpx;
+}
+
+.lottery .more .mybtn {
+  display: flex;
+  display: -webkit-flex;
+  padding: 0 70rpx;
+  width: 610rpx;
+  flex-flow: row nowrap;
+}
+
+.lottery .more .mybtn .btn1 image {
+  width: 270rpx;
+  height: 76rpx;
+}
+
+.lottery .more .mybtn .btn2 {
+  margin-left: 70rpx;
+}
+
+.lottery .more .mybtn .btn2 image {
+  width: 270rpx;
+  height: 76rpx;
+}
+
+.lottery .award .img_tit {
+  width: 164rpx;
+  height: 44rpx;
+  margin: 40rpx auto;
+  position: relative;
+}
+
+.lottery .award .img_tit::before {
+  content: '';
+  position: absolute;
+  width: 38rpx;
+  height: 34rpx;
+  top: 0;
+  left: -44rpx;
+  background: url(https://hc.fakejie.com/wxappimg/invitation/double_icon.png) no-repeat center center;
+  background-size: 38rpx 34rpx;
+}
+
+.lottery .award .img_tit::after {
+  content: '';
+  position: absolute;
+  width: 38rpx;
+  height: 34rpx;
+  top: 10rpx;
+  right: -44rpx;
+  background: url(https://hc.fakejie.com/wxappimg/invitation/double_icon.png) no-repeat center center;
+  background-size: 38rpx 34rpx;
+}
+
+.lottery .award .img_tit image {
+  width: 164rpx;
+  height: 44rpx;
+}
+
+.lottery .award .wrap_list {
+  padding: 0 25rpx;
+}
+
+.lottery .award .wrap_list .li {
+  width: 700rpx;
+  height: 345rpx;
+  background: url(https://hc.fakejie.com/wxappimg/invitation/prize_bg.png) no-repeat center center;
+  background-size: 700rpx 345rpx;
+  margin-top: 30rpx;
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row nowrap;
+}
+
+.lottery .award .wrap_list .li .img_nav {
+  width: 280rpx;
+  height: 280rpx;
+  line-height: 280rpx;
+  text-align: center;
+  padding: 32rpx 20rpx;
+}
+
+.lottery .award .wrap_list .li .img_nav image {
+  width: 145rpx;
+  height: 290rpx;
+  vertical-align: middle;
+}
+
+.lottery .award .wrap_list .li:nth-child(1) .img_nav image {
+  width: 145rpx;
+  height: 290rpx;
+}
+
+.lottery .award .wrap_list .li:nth-child(2) .img_nav image {
+  width: 277rpx;
+  height: 278rpx;
+}
+
+.lottery .award .wrap_list .li:nth-child(3) .img_nav image {
+  width: 275rpx;
+  height: 216rpx;
+}
+
+.lottery .award .wrap_list .li:nth-child(4) .img_nav image {
+  width: 245rpx;
+  height: 264rpx;
+}
+
+.lottery .award .wrap_list .li .con {
+  margin-left: 10rpx;
+}
+
+.lottery .award .wrap_list .li .ranking {
+  padding: 70rpx 0 0 0;
+}
+
+.lottery .award .wrap_list .li .ranking image {
+  width: 258rpx;
+  height: 42rpx;
+}
+
+.lottery .award .wrap_list .li:nth-child(1) .ranking image {
+  width: 258rpx;
+  height: 42rpx;
+}
+
+.lottery .award .wrap_list .li:nth-child(2) .ranking image {
+  width: 278rpx;
+  height: 42rpx;
+}
+
+.lottery .award .wrap_list .li:nth-child(3) .ranking image {
+  width: 350rpx;
+  height: 42rpx;
+}
+
+.lottery .award .wrap_list .li:nth-child(4) .ranking image {
+  width: 350rpx;
+  height: 42rpx;
+}
+
+.lottery .award .wrap_list .li .desc {
+  font-size: 40rpx;
+  line-height: 50rpx;
+  color: #f33b3c;
+  margin-top: 20rpx;
+}
+
+.lottery .award .wrap_list .li .desc text {
+  display: block;
+}
+
+.lottery .award .wrap_list .li .price {
+  font-size: 30rpx;
+  color: #f33b3c;
+  margin-top: 20rpx;
+}
+
+.lottery .roster {
+  padding: 0 20rpx 100rpx;
+  margin-top: 60rpx;
+}
+
+.lottery .roster .limit {
+  width: 710rpx;
+  height: 620rpx;
+  position: relative;
+}
+
+.ros_list {
+  width: 660rpx;
+  height: 615rpx;
+  background: url(https://hc.fakejie.com/wxappimg/invitation/myroster.png) no-repeat center center;
+  background-size: 650rpx 615rpx;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+}
+
+.ros_list .message {
+  height: 364rpx;
+  padding: 80rpx 75rpx;
+}
+
+.ros_list .message .li {
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row nowrap;
+  height: 45rpx;
+  align-items: center;
+}
+
+.ros_list .message .li .goods {
+  flex: 1;
+  font-size: 24rpx;
+  color: #e9433a;
+}
+
+.ros_list .message .li .name {
+  font-size: 24rpx;
+  color: #e9433a;
+}
+
+.limit .rule {
+  width: 660rpx;
+  height: 418rpx;
+  background: url(https://hc.fakejie.com/wxappimg/invitation/myrule.png) no-repeat center center;
+  background-size: 710rpx 416rpx;
+  position: absolute;
+  bottom: 0;
+  left: 0rpx;
+  z-index: 5;
+}
+
+.limit .rule .ul {
+  padding-top: 160rpx;
+  margin: 0 auto;
+  max-width: 580rpx;
+}
+
+.limit .rule .li {
+  font-size: 24rpx;
+  color: #fdd113;
+}
+
+.lottery .roster .limit {
+  width: 710rpx;
+  height: 990rpx;
+  position: relative;
+}
+
+.lottery .roster .limit.on {
+  width: 710rpx;
+  height: 624rpx;
+  position: relative;
+}
+
+.lucky_list {
+  width: 650rpx;
+  height: 980rpx;
+  background: url(https://hc.fakejie.com/wxappimg/invitation/myseniority.png) no-repeat center center;
+  background-size: 650rpx 980rpx;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+}
+
+.lucky_list .title {
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 110rpx 20rpx 0;
+}
+
+.lucky_list .title .tt {
+  font-size: 24rpx;
+  color: #333;
+}
+
+.lucky_list .title .t1 {
+  width: 100rpx;
+  text-align: right;
+}
+
+.lucky_list .title .t2 {
+  flex: 1;
+  text-align: center;
+}
+
+.lucky_list .title .t3 {
+  width: 100rpx;
+  text-align: center;
+}
+
+.lucky_list .msg {
+  width: 540rpx;
+  padding: 10rpx 60rpx 0;
+  height: 364rpx;
+}
+
+.lucky_list .msg .li {
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  height: 80rpx;
+}
+
+.lucky_list .msg .li .num {
+  font-size: 24rpx;
+  color: #4d4c4b;
+  width: 60rpx;
+  margin-right: 20rpx;
+  text-align: center;
+}
+
+.mylucky .num {
+  margin-left: 40rpx;
+  margin-right: 20rpx;
+}
+
+.lucky_list .msg .li:nth-child(1) .num {
+  color: #f33b3c;
+}
+
+.lucky_list .msg .li:nth-child(2) .num {
+  color: #f38d3b;
+}
+
+.lucky_list .msg .li:nth-child(3) .num {
+  color: #f3ac3b;
+}
+
+.lucky_list .msg .li image {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 10rpx;
+}
+
+.lucky_list .msg .li .name {
+  font-size: 24rpx;
+  color: #333;
+  flex: 1;
+  margin-left: 20rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lucky_list .msg .li .name .oneself {
+  background: #fac61f;
+  color: #fff;
+  font-size: 26rpx;
+  width: 120rpx;
+  height: 40rpx;
+  text-align: center;
+  padding: 5rpx 10rpx;
+}
+
+.lucky_list .msg .li .integrate {
+  font-size: 30rpx;
+  color: #4d4d4d;
+  font-style: italic;
+  margin-right: 4rpx;
+}
+
+.lucky_list .msg .li:nth-child(1) .integrate,
+.lucky_list .msg .li:nth-child(2) .integrate,
+.lucky_list .msg .li:nth-child(3) .integrate {
+  color: #f33b3c;
+}
+
+.mylucky {
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  height: 80rpx;
+  background: #fff;
+  position: absolute;
+  width: 100%;
+  top: 520rpx;
+  z-index: 888;
+  border-radius: 0 0 10rpx 10rpx;
+}
+
+.mylucky .num {
+  font-size: 32rpx;
+  color: #333;
+  width: 80rpx;
+  text-align: center;
+  font-style: italic;
+}
+
+.mylucky image {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 10rpx;
+}
+
+.mylucky .name {
+  font-size: 24rpx;
+  color: #333;
+  flex: 1;
+  margin-left: 20rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mylucky .integrate {
+  margin-right: 54rpx;
+  font-size: 30rpx;
+  color: #4d4d4d;
+  font-style: italic;
+}
+
+.daub {
+  width: 710rpx;
+  height: 510rpx;
+  background: url(https://hc.fakejie.com/wxappimg/invitation/money_bg@2x.png) no-repeat center center;
+  background-size: 710rpx 510rpx;
+  position: absolute;
+  bottom: -60rpx;
+  left: 0rpx;
+  z-index: 2;
+}
+
+.delegate {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 8888;
+}
+
+.delegate.on {
+  display: block;
+}
+
+.delegate .content {
+  position: absolute;
+  top: 260rpx;
+  left: 20rpx;
+  width: 710rpx;
+  height: 640rpx;
+  z-index: 100000;
+  background: #fff;
+  border-radius: 10rpx;
+}
+
+.delegate .content {
+  text-align: center;
+}
+
+.delegate .content .logo {
+  width: 370rpx;
+  height: 370rpx;
+  padding: 30rpx 0;
+  margin: 0 auto;
+}
+
+.delegate .content .logo image {
+  width: 370rpx;
+  height: 370rpx;
+}
+
+.delegate .content .desc {
+  font-size: 30rpx;
+  color: #333;
+  text-align: center;
+}
+
+.delegate .content .desc text {
+  display: block;
+}
+
+.delegate .content .close {
+  position: absolute;
+  top: -70rpx;
+  right: 0;
+}
+
+.delegate .content .close image {
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.delegate .make {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 88888;
+}
+
+.suspend {
+  position: fixed;
+  bottom: 150rpx;
+  right: 30rpx;
+  width: 110rpx;
+  height: 110rpx;
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #00c200;
+  box-shadow: 0 10rpx 24rpx rgba(0, 0, 0, 0.3);
+  z-index: 77;
+}
+
+.suspend .txt {
+  font-size: 32rpx;
+  color:#fff;
+  font-weight: bolder;
+}

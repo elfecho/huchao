@@ -1,0 +1,118 @@
+/* pages/business/detail.wxss */
+@import "/pages/common/front.wxss";
+
+.back {
+  margin: 30rpx 0rpx;
+  height: 415rpx;
+  background: #fff;
+  border-radius: 15rpx;
+  position: relative;
+  box-shadow: 0 0 30rpx #e6e6e6;
+}
+
+.back .code {
+  width: 206rpx;
+  height: 206rpx;
+  padding-top: 30rpx;
+  margin: 0rpx auto;
+}
+
+.back .code image {
+  width: 206rpx;
+  height: 206rpx;
+}
+
+.back .txt {
+  font-size: 22rpx;
+  text-align: center;
+  color: #808080;
+  line-height: 60rpx;
+}
+
+.back .line {
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row nowrap;
+  align-items: flex-end;
+}
+
+.back .line .item {
+  display: inline-block;
+}
+
+.back .line .item:nth-child(1) {
+  width: 345rpx;
+  height: 20rpx;
+  background-color: #18aaac;
+  z-index: 1;
+}
+
+.back .line .item:nth-child(2) {
+  width: 0rpx;
+  height: 0rpx;
+  border-top: 20rpx solid rgba(0, 0, 0, 0);
+  border-right: 20rpx solid rgba(0, 0, 0, 0);
+  border-bottom: 20rpx solid #18aaac;
+  border-left: 20rpx solid rgba(0, 0, 0, 0);
+  transform: translate(-20rpx, 0rpx);
+  z-index: 2;
+}
+
+.back .line .item:nth-child(3) {
+  width: 425rpx;
+  height: 16rpx;
+  background: #f1dfa0;
+  margin-left: -100rpx;
+  z-index: 0;
+}
+
+.remark .tit {
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row nowrap;
+}
+
+.remark .tit .tt {
+  color: #333;
+  flex: 1;
+  font-size: 30rpx;
+}
+
+.remark .tit image {
+  width: 20rpx;
+  height: 20rpx;
+}
+
+.remark .desc input {
+  color: #808080;
+  font-size: 24rpx;
+}
+
+.floor {
+  margin-top: 80rpx;
+}
+
+.floor .btn1 {
+  width: 100%;
+  height: 80rpx;
+  background: #00b00f;
+  font-size: 30rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 80rpx;
+  margin: 10rpx 0 0;
+  border-radius: 10rpx;
+  box-shadow: 0 0 30rpx #e6e6e6;
+}
+
+.floor .btn2 {
+  width: 100%;
+  height: 80rpx;
+  background: rgba(0, 0, 0, 0);
+  font-size: 30rpx;
+  color: #b3b3b3;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 10rpx;
+  margin: 10rpx 0;
+}

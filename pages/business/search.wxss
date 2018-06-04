@@ -1,0 +1,100 @@
+/* pages/business/search.wxss */
+
+.head {
+  width: 100%;
+  height: 60rpx;
+  background: #f2f2f2;
+  padding: 15rpx 20rpx;
+  display: flex;
+  flex-flow: row nowrap;
+  box-shadow: 0 5rpx 15rpx #e5e5e5;
+}
+
+.head .search {
+  background: #fff;
+  width: 710rpx;
+  height: 60rpx;
+  display: flex;
+  border-radius: 60rpx;
+  border: 1rpx solid #ccc;
+}
+
+.head .search icon {
+  width: 28rpx;
+  height: 26rpx;
+  margin: 12rpx 20rpx 12rpx 40rpx;
+}
+
+.head .search input {
+  float: left;
+  width: 530rpx;
+  height: 60rpx;
+  font-size: 28rpx;
+  color: #808080;
+}
+
+
+.con {
+  padding: 0 20rpx;
+  background: #fff;
+}
+
+.con .wrap_item:nth-last-child(1) {
+  border-bottom: none;
+}
+
+.wrap_item {
+  height: 100rpx;
+  padding: 30rpx 0;
+  display: flex;
+  display: -webkit-flex;
+  background: #fff;
+  align-items: center;
+  border-bottom: 2rpx solid #f2f2f2;
+}
+
+.wrap_item .headimg {
+  margin-right: 30rpx;
+}
+
+.wrap_item .headimg image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+
+.wrap_item .info {
+  width: 450rpx;
+}
+
+.wrap_item .info .name {
+  font-size: 30rpx;
+  color: #333;
+  font-weight: 700;
+}
+
+.wrap_item .info .tt {
+  max-width: 288rpx;
+  font-size: 24rpx;
+  color: #666;
+  line-height: 26rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.wrap_item .time {
+  height: 100rpx;
+  text-align: right;
+}
+
+.wrap_item .time .date {
+  font-size: 22rpx;
+  color: #808080;
+}
+
+.wrap_item .time .type {
+  margin-top: 30rpx;
+  font-size: 24rpx;
+  color: #00b00f;
+}

@@ -1,0 +1,21 @@
+<view class="container">
+
+  <view class="page-body">
+
+    <view class="page-section">
+      <view class="weui-msg__icon-area">
+        <icon class="icon-box-img" type="waiting" size="93"></icon>
+      </view>
+      <view class="weui-msg__title">微信支付</view>
+      <view class="price">{{total}}</view>
+      <view class="desc">订单编码：{{ordercode}}</view>
+      <view class="btn-area">
+        <button type="warn" bindtap="requestPayment" loading="{{loading}}">立即支付</button>
+      </view>
+    </view>
+
+    <include src="/pages/common/bottom.wxml" />
+
+  </view>
+
+</view>

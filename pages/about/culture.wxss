@@ -1,0 +1,118 @@
+/* pages/about/culture.wxss */
+
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  background: #fff;
+  height: 100rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+
+.header .item {
+  width: 25%;
+  font-size: 30rpx;
+  color: #333;
+  text-align: center;
+  height: 94rpx;
+  line-height: 94rpx;
+}
+
+.header .item.on {
+  font-size: 30rpx;
+  color: #199af0;
+  border-bottom: 6rpx solid #199af0;
+}
+
+.con {
+  padding-left: 20rpx;
+  background: #fff;
+}
+
+.con .item {
+  display: flex;
+  flex-flow: row nowrap;
+  padding-top: 90rpx;
+}
+
+.con .item .desc {
+  border-bottom: 1rpx solid #e6e6e6;
+}
+
+.con .item .desc .tit {
+  font-size: 30rpx;
+  color: #000;
+}
+
+.con .item .desc .tit .tit_p {
+  font-size: 30rpx;
+  line-height: 32rpx;
+  color: #000;
+}
+
+.con .item .desc .wrap_con {
+  font-size: 26rpx;
+  color: #808080;
+  padding-top: 10rpx;
+}
+
+.con .item .img_nav {
+  position: relative;
+  width: 288rpx;
+  height: 242rpx;
+  padding-left: 20rpx;
+  padding-right: 40rpx;
+}
+
+.con .item .img_nav image {
+  position: relative;
+  width: 288rpx;
+  height: 242rpx;
+  z-index: 55;
+}
+
+.con .item .img_nav .bg {
+  width: 252rpx;
+  height: 214rpx;
+  background: #91d2db;
+  position: absolute;
+  top: -46rpx;
+  right: -39rpx;
+  z-index: 2;
+}
+
+.con .item:nth-child(2) .img_nav .bg {
+  background: #99abcf;
+}
+
+.con .item:nth-child(3) .img_nav .bg {
+  background: #b7ddcf;
+}
+
+.warn {
+  padding-top: 25rpx;
+  padding-left: 20rpx;
+  background: #fff;
+}
+
+.warn .tit {
+  padding-left: 20rpx;
+  font-size: 34rpx;
+  line-height: 34rpx;
+  color: #008fee;
+  border-left: 4rpx solid #008fee;
+}
+
+.warn .item {
+  padding: 30rpx 20rpx 20rpx 0;
+  border-bottom: 1rpx solid #e6e6e6;
+}
+
+.warn .item .wrap_tit {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.warn .item .desc {
+  font-size: 24rpx;
+  color: #808080;
+}

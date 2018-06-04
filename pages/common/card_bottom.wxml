@@ -1,0 +1,21 @@
+<view class="botnavH"></view>
+<view class="botnav_card">
+    <navigator class="item {{i=='1' ? 'on':''}}" url="/pages/business/index" open-type="{{i=='1' ? 'redirect':'reLaunch'}}">
+        <image src="{{i=='1' ? '/images/home-icon-h-home@2x.png':'/images/home-icon-home@2x.png'}}"></image>
+        <view class="txt">首页</view>
+    </navigator>
+    <navigator class="item {{i=='2' ? 'on':''}}" url="/pages/business/list" open-type="{{i=='1' ? 'navigate':'redirect'}}">
+        <image src="{{i=='2' ? '/images/home-icon-h-card@2x.png':'/images/home-icon-card@2x.png'}}"></image>
+        <view class="txt">名片夹</view>
+    </navigator>
+
+    <navigator class="item {{i=='3' ? 'on':''}}" url="/pages/business/overt" open-type="{{i=='1' ? 'navigate':'redirect'}}">
+        <image src="{{i=='3' ? '/images/home-icon-h-open@2x.png':'/images/home-icon-open@2x.png'}}"></image>
+        <view class="txt">公开库</view>
+    </navigator>
+    <navigator class="item {{i=='4' ? 'on':''}}" url="/pages/business/default" open-type="{{i=='1' ? 'navigate':'redirect'}}">
+        <image src="{{i=='4' ? '/images/home-icon-h-my@2x.png':'/images/home-icon-my@2x.png'}}"></image>
+        <view class="txt">个人中心</view>
+    </navigator>
+
+</view>

@@ -1,0 +1,6 @@
+/* pages/test/canvas.wxss */
+.canvas_area canvas{
+  width:100%;
+  height:750rpx;
+   /* background: #EAE9B9;  */
+}

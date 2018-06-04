@@ -1,0 +1,474 @@
+/* pages/business/list.wxss */
+
+.head {
+  width: 100%;
+  height: 60rpx;
+  background: #f2f2f2;
+  padding: 15rpx 20rpx;
+  display: flex;
+  flex-flow: row nowrap;
+  box-shadow: 0 5rpx 15rpx #e5e5e5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 88;
+}
+
+.head .search {
+  background: #fff;
+  width: 710rpx;
+  height: 60rpx;
+  display: flex;
+  border-radius: 60rpx;
+  border: 1rpx solid #ccc;
+}
+
+.head .search icon {
+  width: 28rpx;
+  height: 26rpx;
+  margin: 12rpx 20rpx 12rpx 40rpx;
+}
+
+.head .search input {
+  float: left;
+  width: 530rpx;
+  height: 60rpx;
+  font-size: 28rpx;
+  color: #808080;
+}
+
+.content {
+  background: #eee;
+  margin-top: 90rpx;
+  /* padding-bottom: 900rpx; */
+}
+
+.nav {
+  position: fixed;
+  right: 0rpx;
+  padding: 10rpx 0 20rpx;
+  top: 10%;
+  width: 50rpx;
+  /* border:1rpx solid #8f8f8f; *//* border-radius:24rpx; */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav .top {
+  width: 50rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+}
+
+.nav .top image {
+  width: 30rpx;
+  height: 20rpx;
+  vertical-align: middle;
+}
+
+.letter {
+  width: 50rpx;
+  height: 50rpx;
+  font-size: 30rpx;
+}
+
+.letter-text {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 50%;
+  font-size: 24rpx;
+}
+
+.letter-actived {
+  /* background-color: #ccc; */
+  color: #00b00f;
+}
+
+.mycard .wrap_top .icon {
+  height: 80rpx;
+  display: flex;
+  display: -webkit-flex;
+  background: #fff;
+  align-items: center;
+  border-bottom: 2rpx solid #f2f2f2;
+}
+
+.mycard .wrap_top .icon image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.mycard .wrap_top .icon .txt {
+  font-size: 30rpx;
+  color: #333;
+}
+
+.con {
+  padding: 0 20rpx;
+  background: #fff;
+}
+
+.con .wrap_item:nth-last-child(1) {
+  border-bottom: none;
+}
+
+.wrap_item {
+  height: 100rpx;
+  padding: 30rpx 0;
+  display: flex;
+  display: -webkit-flex;
+  background: #fff;
+  align-items: center;
+  border-bottom: 2rpx solid #f2f2f2;
+}
+
+.wrap_item .headimg {
+  margin-right: 30rpx;
+}
+
+.wrap_item .headimg image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+
+.wrap_item .info {
+  width: 450rpx;
+}
+
+.wrap_item .info .name {
+  font-size: 30rpx;
+  color: #333;
+  font-weight: 700;
+}
+
+.wrap_item .info .tt {
+  max-width: 288rpx;
+  font-size: 24rpx;
+  color: #666;
+  line-height: 26rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.wrap_item .time {
+  height: 100rpx;
+  text-align: right;
+}
+
+.wrap_item .time .date {
+  font-size: 22rpx;
+  color: #808080;
+}
+
+.wrap_item .time .type {
+  margin-top: 30rpx;
+  font-size: 24rpx;
+  color: #00b00f;
+}
+
+.groups {
+  /*height: 100%;*/
+}
+
+.group-name {
+  padding: 10rpx 30rpx;
+  height: 25rpx;
+  line-height: 25rpx;
+  color: #8f8f8f;
+  background: #f5f5f5;
+}
+
+.group-users {
+  background-color: #fff;
+}
+
+.user {
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0 30rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.user-avatar {
+  border-right: 1px solid #eee;
+  width: 100rpx;
+}
+
+.user-avatar-img {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+}
+
+.user-name {
+  padding-left: 30rpx;
+}
+
+.kong {
+  width: 100%;
+  height: 100rpx;
+}
+
+.kong .number {
+  text-align: center;
+  font-size: 28rpx;
+  color: #333;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.maxletter {
+  position: fixed;
+  width: 100rpx;
+  height: 100rpx;
+  background: #333;
+  top: 50%;
+  left: 50%;
+  margin-top: -50rpx;
+  margin-left: -50rpx;
+  border-radius: 20rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 70rpx;
+  transition: 0.55s all;
+  opacity: 0;
+}
+
+.maxletter image {
+  width: 64rpx;
+  height: 70rpx;
+  vertical-align: middle;
+}
+
+.maxletter.on {
+  opacity: 0.8;
+}
+
+page {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+/*伸缩盒子模型*/
+
+.box {
+  display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+  display: -moz-box; /* 老版本语法: Firefox (buggy) */
+  display: -ms-flexbox; /* 混合版本语法: IE 10 */
+  display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+  display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+/*从左至右*/
+
+.box-lr {
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+
+/*从右至左*/
+
+.box-rl {
+  -webkit-box-pack: end;
+  -webkit-box-direction: reverse;
+  -webkit-box-orient: horizontal;
+  -moz-flex-direction: row-reverse;
+  -webkit-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+/*从上至下*/
+
+.box-tb {
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+/*从下至上*/
+
+.box-bt {
+  -webkit-box-pack: end;
+  -webkit-box-direction: reverse;
+  -webkit-box-orient: vertical;
+  -moz-flex-direction: column-reverse;
+  -webkit-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+/*主轴居中*/
+
+.box-pack-center {
+  -webkit-box-pack: center;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+/*主轴居左*/
+
+.box-pack-start {
+  -webkit-box-pack: start;
+  -moz-justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+/*主轴居右*/
+
+.box-pack-end {
+  -webkit-box-pack: end;
+  -moz-justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+/*主轴左右不留白*/
+
+.box-pack-between {
+  -webkit-box-pack: justify;
+  -moz-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+/*主轴左右留白*/
+
+.box-pack-between {
+  -moz-justify-content: space-around;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+
+/*交叉轴居中对齐*/
+
+.box-align-center {
+  -webkit-box-align: center;
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+/*交叉轴居左对齐*/
+
+.box-align-start {
+  -webkit-box-align: start;
+  -moz-align-items: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+}
+
+/*交叉轴居右对齐*/
+
+.box-align-end {
+  -webkit-box-align: end;
+  -moz-align-items: end;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+}
+
+/**单个指定的子元素自定义对齐方式，可以不同于其他子元素对齐方式**/
+
+/**指定子元素居中对齐**/
+
+.self-align-center {
+  align-self: center;
+  -webkit-align-self: center;
+  margin: 0 auto;
+}
+
+/**指定子元素顶部对齐**/
+
+.self-align-start {
+  align-self: flex-start;
+  -webkit-align-self: flex-start;
+}
+
+/**指定子元素底部对齐**/
+
+.self-align-end {
+  align-self: flex-end;
+  -webkit-align-self: flex-end;
+}
+
+/**指定子元素拉伸**/
+
+.self-align-stretch {
+  align-self: stretch;
+  -webkit-align-self: stretch;
+}
+
+/**子元素换行**/
+
+.box-wrap {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+/**子元素不换行**/
+
+.box-nowrap {
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+/*允许子元素伸展（1倍）*/
+
+.flex {
+  -moz-flex-grow: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+
+/*允许子元素收缩(1倍)*/
+
+.shrink {
+  -moz-flex-shrink: 1;
+  -webkit-flex-shrink: 1;
+  flex-shrink: 1;
+}
+
+/**水平居中*/
+
+.box-center-center {
+  display: -webkit-box;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  display: -moz-box;
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  text-align: center;
+}
+
+/**垂直居中*/
+
+.box-center-center-v {
+  display: -webkit-box;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  display: -moz-box;
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+}

@@ -1,0 +1,57 @@
+/* pages/invitation/add_enlist.wxss */
+.main {
+  padding: 0 20rpx;
+}
+
+.main .wrap_con {
+  margin-top: 20rpx;
+  width: 100%;
+  padding: 30rpx 0;
+  background: #fff;
+  border-radius: 10rpx;
+  box-shadow: 9rpx 14rpx 30rpx #f5f5f5;
+}
+
+.main .wrap_con .tit {
+  font-size: 30rpx;
+  color: #333;
+  text-align: center;
+}
+
+.main .wrap_con .time {
+  font-size: 28rpx;
+  color: #333;
+  text-align: center;
+}
+.main .wrap_con .info{
+  padding:0 20rpx;
+}
+.main .wrap_con .info .item .wrap_tit{
+  font-size: 24rpx;
+  color:#333333;
+  line-height: 40rpx;
+  margin-top:30rpx;
+}
+.main .wrap_con .info .item .wrap_txt{
+  height: 60rpx;
+  line-height: 60rpx;
+  border-bottom: 2rpx solid #f9f9f9;
+}
+.main .wrap_con .info .item .wrap_txt input{
+  font-size: 24rpx;
+  color:#999999;
+}
+
+
+.main .wrap_con .btn1{
+  width: 610rpx;
+  height: 60rpx;
+  background: #00c200;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 60rpx;
+  margin: 80rpx auto 0;
+  box-shadow: 4rpx 6rpx 12rpx #e6e6e6;
+}

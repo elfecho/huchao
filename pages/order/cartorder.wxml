@@ -1,0 +1,78 @@
+<view class="container">
+
+  <view class="page-body car_list">
+
+    <view class="weui-cells__title">填写收货人信息
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <radio-group bindchange="addressChange">
+        <label class="weui-cell weui-check__label" wx:for="{{address_list}}" wx:key="{{item.ID}}">
+          <view class="weui-cell__hd">
+            <radio value="{{item.ID}}" checked="{{item.checked}}" color="#f0189d" />
+          </view>
+          <view class="weui-cell__bd">{{item.NvrFd1}}{{item.Address}}(收货人：{{item.Receiver}}，电话：{{item.Mobile}})</view>
+        </label>
+      </radio-group>
+      <view class="weui-cell weui-cell_link">
+        <view class="weui-cell__bd" bindtap="newClick">添加新地址</view>
+      </view>
+    </view>
+
+    <view class="weui-cells__title">选择付款方式</view>
+    <view class="weui-cells weui-cells_after-title">
+      <radio-group bindchange="paytypeChange">
+        <label class="weui-cell weui-check__label">
+          <view class="weui-cell__hd">
+            <radio value="3" checked="true" color="#f0189d" />
+          </view>
+          <view class="weui-cell__bd">微信支付</view>
+        </label>
+        <label class="weui-cell weui-check__label" wx:if="{{recpayisopen==1}}">
+          <view class="weui-cell__hd">
+            <radio value="0" color="#f0189d" />
+          </view>
+          <view class="weui-cell__bd">货到付款 <text class="txt">(加运费6元)</text> </view>
+        </label>
+      </radio-group>
+    </view>
+
+    <view class="weui-cells__title">给法克街留言</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cells_form">
+        <view class="weui-cell__bd">
+          <input placeholder="可输入备注信息"  bindinput="demoChange" />
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells__title">确认商品信息
+      <navigator open-type="navigateBack" class="frlink">
+        返回修改购物车</navigator>
+    </view>
+    <view class="orders-box bgw">
+      <view wx:for="{{cartsel_list}}" wx:key="index" class="orders-list">
+        <image class="orders-thumb" src="{{wxappimg}}{{item.ProImg}}"></image>
+        <view class="orders-pro-name">{{item.ProName}}</view>
+        <view class="pcolor">{{item.NvrFd2}}</view>
+        <view class="orders-pro-price">￥{{item.ProPrice}}
+          <view class="orders-count-num fr">×{{item.Num}}</view>
+        </view>
+      </view>
+    </view>
+
+
+    <view class="bottom">
+      <view class="bt" bindtap="btSaveOrder">提交订单</view>
+      <view class="info">合计
+        <view class="ttprice">¥{{totalPrice}}
+        <block wx:if="{{paytype == 0}}">
+        <text>+ 6元(货到付款)</text>
+        </block>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+
+</view>

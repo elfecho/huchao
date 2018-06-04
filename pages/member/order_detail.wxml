@@ -1,0 +1,75 @@
+<view class="container">
+
+  <view class="page-body member">
+
+    <view class="weui-cells__title">订单信息</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_access">
+        <view class="name">收货人：{{info.Receiver}}</view>
+        <view class="tel">{{info.Mobile}}</view>
+        <view class="address">{{info.Address}}</view>
+      </view>
+      <view class="weui-cell weui-cell_access botop">
+        <view bindlongtap="longClick" data-txt="{{info.OrderCode}}">订单编号：{{info.OrderCode}}</view>
+        <view>订单日期：{{info.NvrFd5}}</view>
+        <view>支付方式：{{info.NvrFd6}}</view>
+        <view>订单总额：{{info.NvrFd8}}</view>
+        <view class="watermark">
+          <image src="/images/plan.png"></image>
+          <view class="txt">{{info.Status}}</view>
+        </view>
+        <block wx:if="{{wlcom != ''}}">
+          <view>物流公司：{{info.NvrFd4}}</view>
+          <view bindlongtap="longClick" data-txt="{{wlcode}}">物流单号：{{wlcode}}</view>
+        </block>
+      </view>
+      <view class="op_bt">
+        <navigator url="/pages/order/orderpay?ordercode={{info.OrderCode}}" class="topay" wx:if="{{info.NvrFd7}}" open-type="redirect">{{info.NvrFd7}}</navigator>
+        <block wx:if="{{info.Status == '未处理'}}">
+          <button type="default" bindtap="cancelClick">取消订单</button>
+        </block>
+        <block wx:if="{{info.Status == '已发货'}}">
+          <button type="warn" bindtap="sfClick">确认收货</button>
+        </block>
+      </view>
+      <block wx:if="{{wlcom != ''}}">
+        <view class="weui-cell weui-cell_link" bindtap="seeWL">
+          <view class="weui-cell__bd">查看物流轨迹</view>
+        </view>
+        <block wx:for="{{wlinfo}}" wx:key="">
+          <view class="wlitem {{index==0?'on':''}}">
+            <text class="time">[{{item.AcceptTime}}]</text>
+            <view class="txt">
+              {{item.AcceptStation}}
+            </view>
+          </view>
+        </block>
+      </block>
+    </view>
+
+    <view class="weui-cells__title">订单详情
+    </view>
+    <view class="orders-box bgw">
+      <block wx:for="{{info_itemlist}}" wx:key="index">
+        <view class="orders-list">
+          <navigator url="/pages/product/detail?id={{item.ProductID}}">
+            <image class="orders-thumb" src="{{wxappimg}}{{item.DemoImg}}"></image>
+          </navigator>
+          <navigator url="/pages/product/detail?id={{item.ProductID}}" class="orders-pro-name">{{item.Name}}</navigator>
+          <view class="pcolor">{{item.Specification}}</view>
+          <view class="orders-pro-price">￥{{item.Price}}
+            <view class="orders-count-num">×{{item.Count}}</view>
+          </view>
+          <block wx:if="{{(info.Status == '确认收货'||info.Status == '已完成')&&!item.Commented}}">
+            <navigator class="gotoComment" url="/pages/member/order_comment?itemid={{item.ID}}">去评价</navigator>
+          </block>
+        </view>
+      </block>
+    </view>
+
+
+  </view>
+
+ <include src="/pages/common/bottom.wxml" />
+
+</view>

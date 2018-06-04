@@ -1,0 +1,85 @@
+<!--pages/business/list.wxml-->
+<view class="container">
+  <view class="head">
+    <view class="search">
+      <icon type="search" size='18' />
+      <input type="text" placeholder="搜索公司/联系人" confirm-type="search" bindconfirm="searchClick" bindinput="valueChange"  value='{{kw}}' />
+    </view>
+  </view>
+  <view class="content flex box box-lr ">
+    <scroll-view class="flex groups box box-tb" scroll-y="true" scroll-into-view="{{scrollIntoView}}">
+
+      <view class="mycard" id="top">
+        <view class="wrap_top">
+          <view class="icon">
+            <image src="/images/home-icon-h-card@2x.png"></image>
+            <view class="txt">我的名片</view>
+          </view>
+          <view class="con">
+            <block wx:for="{{mylist}}" wx:for-item="user" wx:for-index="idx" wx:key="">
+              <navigator url="/pages/business/detail?id={{user.ID}}" class="wrap_item">
+                <view class="headimg">
+                  <image src="{{user.HeadImg}}"></image>
+                </view>
+                <view class="info">
+                  <view class="name">{{user.firstName}}</view>
+                  <view class="tt">{{user.Title}}</view>
+                  <view class="tt">{{user.Organization}}</view>
+                </view>
+                <view class="time">
+                  <view class="date">{{user.NvrFd1}}</view>
+                  <view class="type" wx:if="{{1==0}}">{{user.num}}人已存</view>
+                </view>
+              </navigator>
+            </block>
+          </view>
+
+        </view>
+      </view>
+      <block wx:for="{{groups}}" wx:for-item="group" wx:key="">
+        <view class="flex" id="{{group.groupName}}">
+          <view class="group-name">{{group.groupName}}</view>
+          <view class="con">
+            <block wx:for="{{group.users}}" wx:for-item="user" wx:for-index="idx" wx:key="">
+              <navigator url="/pages/business/detail?id={{user.ID}}" class="wrap_item">
+                <view class="headimg">
+                  <image src="{{user.HeadImg}}"></image>
+                </view>
+                <view class="info">
+                  <view class="name">{{user.firstName}}</view>
+                  <view class="tt">{{user.Title}}</view>
+                  <view class="tt">{{user.Organization}}</view>
+                </view>
+                <view class="time">
+                  <view class="date">{{user.NvrFd1}}</view>
+                  <view class="type" wx:if="{{1==0}}">{{user.num}}人已存</view>
+                </view>
+              </navigator>
+            </block>
+          </view>
+        </view>
+      </block>
+      <view class="kong">
+        <view class="number">{{num}}位联系人</view>
+      </view>
+      <view class="maxletter {{mysel == true ? 'on':''}}">
+        <block wx:if="{{maxletter == 'top'}}">
+          <image src="/images/icon_top.png"></image>
+        </block>
+        <block wx:else>
+          {{maxletter}}
+        </block>
+      </view>
+    </scroll-view>
+    <view class="nav box box-tb" bindtouchmove="touchmove" bindtouchend="touchend">
+      <view class="top" bindtap='tabLetter' data-index="top">
+        <image src="/images/icon_top2.png"></image>
+      </view>
+      <view bindtap="tabLetter" data-index="{{item}}" wx:for="{{letters}}" class="flex box box-align-center box-pack-center letter" wx:key="">
+        <text class="letter-text {{selected == item ? 'letter-actived' : ''}}">{{item}}</text>
+      </view>
+    </view>
+
+  </view>
+  <include src="/pages/common/card_bottom.wxml" />
+</view>

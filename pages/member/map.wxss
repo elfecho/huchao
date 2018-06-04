@@ -1,0 +1,15 @@
+.page-section-gap {
+  padding: 0rpx;
+}
+.icon{
+  position: fixed;
+  left:20rpx;
+  bottom:30rpx;
+  z-index: 55;
+  width: 60rpx;
+  height:60rpx;
+}
+.icon image{
+  width: 60rpx;
+  height:60rpx;
+}

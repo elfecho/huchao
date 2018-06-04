@@ -1,0 +1,114 @@
+/* pages/hc/webkite.wxss */
+@import "/pages/common/lib/weui.wxss";
+
+.banner image {
+  width: 100%;
+  height: 400rpx;
+  display: blcok;
+}
+
+.exploit .classlist {
+  line-height: 100rpx;
+  border-bottom: 1px solid #eee;
+  height: 100rpx;
+  background-color: #fff;
+  padding: 0rpx 15rpx;
+}
+
+.scroll-view_H {
+  white-space: nowrap;
+}
+
+.scroll-view-item {
+  height: 80rpx;
+}
+
+.scroll-view-item_H {
+  display: inline-block;
+  height: 80rpx;
+  font-size: 32rpx;
+  line-height: 80rpx;
+}
+
+.exploit .classlist .item {
+  padding: 0 20rpx;
+}
+
+.exploit .classlist .item.on {
+  color: #008fee;
+  border-bottom: 6rpx solid #008fee;
+}
+
+.exploit .list {
+  margin-top: 0rpx;
+  padding: 0 14rpx;
+}
+
+.exploit .list .item {
+  width: 100%;
+  display: none;
+  padding-left: 70rpx;
+  margin-top: 20rpx;
+  position: relative;
+}
+
+.exploit .list .item .bgimg {
+  width: 588rpx;
+  height: 504rpx;
+  background: -webkit-linear-gradient(top, #199af0, #61c7f6);
+  position: absolute;
+  top: 10rpx;
+  right: 0;
+  z-index: -1;
+}
+
+.exploit .list .item.on {
+  display: block;
+}
+
+.exploit .list .item .tit {
+  border-left: 5rpx solid #008fee;
+  padding-left: 20rpx;
+  height: 40rpx;
+  color: #008fee;
+  font-size: 36rpx;
+  line-height: 40rpx;
+  font-weight: bolder;
+  margin-bottom: 20rpx;
+  margin-left: 20rpx;
+}
+
+.exploit .list .item image {
+  width: 638rpx;
+  height: 547rpx;
+  margin-top: 68rpx;
+}
+
+.exploit .list .item .desc {
+  max-width: 570rpx;
+  padding-left: 20rpx;
+}
+
+.exploit .list .item .desc .con_p {
+  font-size: 24rpx;
+  color: #686868;
+  line-height: 36rpx;
+  margin-top: 25rpx;
+}
+
+.back {
+  position: fixed;
+  width: 80rpx;
+  height: 80rpx;
+  z-index: 888;
+  left: 20rpx;
+  bottom: 40rpx;
+  background: #83bbe2;
+  border-radius: 50%;
+}
+
+.back image {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 8rpx;
+}

@@ -1,0 +1,47 @@
+<!--pages/news/detail.wxml-->
+<import src="/wxParse/wxParse.wxml" />
+<view class="container">
+  <view class="page-body">
+    <view class="main">
+      <view class="tit">{{info.NvrFd1}}
+      </view>
+      <view class="item">
+        <text class="time">虎超科技：{{info.TextFd1}}</text>
+        <text class="read">阅读数： {{info.IntFd1}}</text>
+      </view>
+      <view class="item">
+        <text>标签：{{info.NvrFd2}}</text>
+      </view>
+      <view class="content">
+        <view class="wxParse">
+          <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+        </view>
+      </view>
+    </view>
+    <view class="recommend">
+      <view class="tit">相关阅读</view>
+      <view class="proclass">
+        <block wx:for="{{rlist}}" wx:key="" >
+        <navigator url="/pages/news/detail?id={{item.ID}}" class="item" open-type='redirect'>
+          <view class="box">
+            <view class="left">
+              <image src="{{wxappimg}}{{item.NvrFd9}}"></image>
+            </view>
+            <view class="right">
+              <view class="caption">{{item.NvrFd1}}</view>
+              <view class="desc">{{item.time}}</view>
+            </view>
+          </view>
+        </navigator>
+        </block>
+      </view>
+    </view>
+    <button class="kfbt mybtn" open-type="share">
+      <image src="{{wxappimg}}/wxappimg/new-icon-sharing@2x.png"></image>
+      <view class="txt">分享案例</view>
+    </button>
+    <navigator url="/pages/index/newindex" class="shortcut_nav" open-type="reLaunch">
+      <image src="/images/home.png"></image>
+    </navigator>
+  </view>
+</view>

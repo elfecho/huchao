@@ -1,0 +1,33 @@
+<!--pages/invitation/add_enlist.wxml-->
+<view class="container">
+  <view class="page-body">
+    <view class="main">
+      <view class="wrap_con">
+        <view class="tit">合伙加盟</view>
+        <view class="time">资源共享，互利共赢</view>
+        <view class="info">
+          <view class="item">
+            <view class="wrap_tit">姓名</view>
+            <view class="wrap_txt">
+              <input placeholder='请输入您的名字（必填）' bindinput='nameChange' value='{{name}}'></input>
+            </view>
+          </view>
+          <view class="item">
+            <view class="wrap_tit">电话</view>
+            <view class="wrap_txt">
+              <input placeholder='请输入您的手机号码（必填）' bindinput='telChange' value='{{tel}}'></input>
+            </view>
+          </view>
+          <view class="item">
+            <view class="wrap_tit">备注</view>
+            <view class="wrap_txt">
+              <input placeholder='填写您想要说的内容（选填）' bindinput='demoChange' value='{{demo}}'></input>
+            </view>
+          </view>
+        </view>
+        <button class="kfbt btn1" bindtap="saveClick">立即加盟</button>
+      </view>
+    </view>
+
+  </view>
+</view>

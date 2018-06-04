@@ -1,0 +1,223 @@
+/* pages/invitation/my.wxss */
+
+.navigator-arrow {
+  padding-right: 26rpx;
+  position: relative;
+}
+
+.navigator-arrow:after {
+  content: " ";
+  display: inline-block;
+  height: 18rpx;
+  width: 18rpx;
+  border-width: 2rpx 2rpx 0 0;
+  border-color: #4d4d4d;
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: absolute;
+  top: 50%;
+  margin-top: -8rpx;
+  right: 20rpx;
+}
+
+.bgimg {
+  text-align: center;
+  width: 100%;
+  height: 360rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background: #fff;
+}
+
+.bgimg image.bg {
+  width: 100%;
+  height: 360rpx;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.bgimg .kh {
+  font-size: 24rpx;
+  color: #808080;
+  margin-top: 14rpx;
+}
+
+.userinfo {
+  position: relative;
+  margin-top: 40rpx;
+  text-align: center;
+}
+
+.userinfo-avatar {
+  width: 150rpx;
+  height: 150rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  display: block;
+  background-color: #eee;
+}
+
+.userinfo-nickname {
+  color: #333;
+  font-size: 28rpx;
+}
+
+.botlist {
+  margin-top: 30rpx;
+  padding: 0 20rpx;
+}
+
+.botlist .tit {
+  font-size: 30rpx;
+  color: #333;
+}
+
+.botlist .list .item {
+  display: flex;
+  display: -webkit-flex;
+  width: 100%;
+  height: 100rpx;
+  flex-flow: row nowrap;
+  align-items: center;
+  background: #fff;
+  border-bottom: 1rpx solid #f9f9f9;
+}
+
+.botlist .list .item .img_nav {
+  width: 46rpx;
+  height: 46rpx;
+  margin-left: 20rpx;
+}
+
+.botlist .list .item .img_nav image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.botlist .list .item:nth-child(1) .img_nav image {
+  width: 45rpx;
+  height: 33rpx;
+}
+
+.botlist .list .item:nth-child(2) .img_nav image {
+  width: 41rpx;
+  height: 41rpx;
+}
+
+.botlist .list .item:nth-child(3) .img_nav image {
+  width: 35rpx;
+  height: 41rpx;
+}
+
+.botlist .list .item .txt {
+  margin-left: 30rpx;
+  flex: 1;
+}
+
+.delegate {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.delegate.on {
+  display: block;
+}
+
+.delegate .content {
+  position: absolute;
+  top: 260rpx;
+  left: 20rpx;
+  width: 710rpx;
+  height: 718rpx;
+  z-index: 100000;
+  background: url(https://hc.fakejie.com/wxappimg/invitation/my_img1@2x.png) no-repeat center center;
+  background-size: 710rpx 718rpx;
+}
+
+.delegate .content {
+  text-align: center;
+}
+
+.delegate .content .logo {
+  width: 184rpx;
+  height: 80rpx;
+  padding: 30rpx 0;
+  margin: 0 auto;
+}
+
+.delegate .content .logo image {
+  width: 184rpx;
+  height: 80rpx;
+}
+
+.delegate .content .t1 {
+  font-size: 50rpx;
+  color: #333;
+}
+
+.delegate .content .t2 {
+  font-size: 30rpx;
+  color: #333;
+}
+
+.delegate .content .t3 {
+  font-size: 40rpx;
+  color: #333;
+  margin-top: 45rpx;
+  padding-top:25rpx;
+  border-top:2rpx solid #f7f7f7;
+}
+
+.delegate .content .t3 text {
+  color: #0d2033;
+  font-size: 28rpx;
+}
+
+.delegate .content .t4 {
+  font-size: 28rpx;
+  color: #0d2033;
+}
+.delegate .content .floor {
+  margin-top: 20rpx;
+}.delegate .content .floor image{
+  width:164rpx;
+  height: 164rpx;
+}
+.delegate .content .floor .f1 {
+  font-size: 26rpx;
+  color: #333;
+  margin-top: 170rpx;
+}
+
+.delegate .content .floor .f2 {
+  font-size: 20rpx;
+  color: #333;
+}
+
+.delegate .content .close {
+  position: absolute;
+  top: -70rpx;
+  right: 0;
+}
+
+.delegate .content .close image {
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.delegate .make {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 88888;
+}

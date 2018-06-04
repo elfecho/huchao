@@ -1,0 +1,75 @@
+<!--pages/invitation/my.wxml-->
+<view class="container">
+  <view class="page-body">
+    <view class="bgimg">
+
+      <block wx:if="{{mid == ''}}">
+        <view class="userinfo" bindtap="gotoLogin">
+          <image class="userinfo-avatar" src="{{wxappimg}}/images/m_default.png"></image>
+          <text class="userinfo-nickname">点击登录{{mid}}</text>
+        </view>
+      </block>
+      <block wx:if="{{mid != ''}}">
+        <button class="userbt" open-type="getUserInfo" bindgetuserinfo="minfoClick">
+          <view class="userinfo">
+            <view>
+              <image class="userinfo-avatar" src="{{headimg==''?wxappimg+'/images/m_default.png':headimg}}"></image>
+              <text class="userinfo-nickname">{{nickname}}</text>
+            </view>
+          </view>
+        </button>
+      </block>
+      <view class="kh">虎超一直在你身边</view>
+    </view>
+    <view class="botlist">
+      <view class="list">
+        <navigator url="/pages/business/index" class="item">
+          <view class="img_nav">
+            <image src="{{wxappimg}}/wxappimg/invitation/my_icon1@2x.png"></image>
+          </view>
+          <view class="txt">我的名片</view>
+          <view class="navigator-arrow"></view>
+        </navigator>
+        <view class="item" bindtap='tapVoucher'>
+          <view class="img_nav">
+            <image src="{{wxappimg}}/wxappimg/invitation/my_icon3@2x.png"></image>
+          </view>
+          <view class="txt">参会凭证</view>
+          <view class="navigator-arrow"></view>
+        </view>
+        <navigator url="/pages/index/newindex" class="item">
+          <view class="img_nav">
+            <image src="{{wxappimg}}/wxappimg/invitation/my_icon2@2x.png"></image>
+          </view>
+          <view class="txt">进入虎超</view>
+          <view class="navigator-arrow"></view>
+        </navigator>
+      </view>
+    </view>
+    <view class="delegate {{show?'on':''}}">
+      <view class="content">
+        <view class="logo">
+          <image src="{{wxappimg}}/wxappimg/invitation/logo@2x.png"></image>
+        </view>
+        <view class="t1">参会证</view>
+        <view class="t2">乔迁庆典·虎超小程序发布会</view>
+        <view class="t3">
+          {{bmInfo.MNickName}}
+          <text>嘉宾</text>
+        </view>
+        <view class="t4">手机:{{bmInfo.MPhone}}</view>
+        <view class="floor">
+          <image src="{{wxappimg}}{{qr}}" bindtap='requestImage'></image>
+          <!-- <view class="f1">广州虎超网络科技有限公司</view>
+          <view class="f2">GuangZhou HuiChiu Network Co.,Ltd</view> -->
+        </view>
+        <view class="close" bindtap='tap_close'>
+          <image src="{{wxappimg}}/wxappimg/invitation/my_btn@2x.png"></image>
+        </view>
+      </view>
+
+      <view class="make" bindtap='tap_close'></view>
+    </view>
+  </view>
+  <include src="/pages/common/invitation_bottom.wxml" />
+</view>

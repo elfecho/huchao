@@ -1,0 +1,172 @@
+<!--pages/card/card_edit.wxml-->
+<view class="container">
+  <view class="page-body">
+    <view class="main">
+      <view class="front">
+        <view class="wrap_top">
+          <view class="wrap_left">
+            <view class="name">{{info.firstName==''?'我的名字':info.firstName}}</view>
+            <view class="business">
+              <text class="job">{{info.Title==''?'职务':info.Title}}</text>
+              <text class="territory">{{info.Industry==''?'行业':info.Industry}}</text>
+            </view>
+            <view class="company">{{info.Organization==''?'公司名称':info.Organization}}</view>
+          </view>
+          <view class="wrap_right">
+            <image src="{{info.Logo==''?'/images/add_logo.png':info.Logo}}" mode="aspectFill" bindtap="chooseImage"></image>
+          </view>
+        </view>
+        <view class="desc">
+          <view class="item">
+            <view class="img_nav">
+              <image src="/images/home-icon-phone@2x.png"></image>
+            </view>
+            <view class="txt">{{info.mobilePhoneNumber}}</view>
+          </view>
+          <view class="item">
+            <view class="img_nav">
+              <image src="/images/home-icon-mails@2x.png"></image>
+            </view>
+            <view class="txt">{{info.email}}</view>
+          </view>
+          <view class="item">
+            <view class="img_nav">
+              <image src="/images/home-icon-address@2x.png"></image>
+            </view>
+            <view class="txt">{{info.Address}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells">
+
+      <view class="weui-cell weui-cell_access">
+        <view class="weui-cell__bd">名字</view>
+        <view class="weui-cell__ft">
+          <span style="vertical-align:middle;">
+            <input type="text" value="{{info.firstName}}" placeholder='请输入姓名(必填)' bindinput='firstNameChange' />
+          </span>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_access">
+        <view class="weui-cell__bd">电话</view>
+        <view class="weui-cell__ft">
+          <span style="vertical-align:middle;">
+            <input type="text" value="{{info.mobilePhoneNumber}}" placeholder='请输入联系电话(必填)' bindinput='mobilePhoneNumberChange' />
+          </span>
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells">
+      <view class="weui-cell weui-cell_access">
+        <view class="weui-cell__bd">公司</view>
+        <view class="weui-cell__ft">
+          <span style="vertical-align:middle;">
+            <input type="text" value="{{info.Organization}}" placeholder='请输入公司/单位(必填)' bindinput='OrganizationChange' />
+          </span>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_access">
+        <view class="weui-cell__bd">职务</view>
+        <view class="weui-cell__ft">
+          <span style="vertical-align:middle;">
+            <input type="text" value="{{info.Title}}" placeholder='请输入部门/职务(必填)' bindinput='TitleChange' />
+          </span>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_access">
+        <view class="weui-cell__bd">邮箱</view>
+        <view class="weui-cell__ft">
+          <span style="vertical-align:middle;">
+            <input type="text" value="{{info.email}}" placeholder='请输入邮箱' bindinput='emailChange' />
+          </span>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_access">
+        <view class="weui-cell__bd">行业</view>
+        <view class="weui-cell__ft" wx:if="{{1==0}}">
+          <span style="vertical-align:middle;">
+            <input type="text" bindtap='tap_open' value="{{tradeName}}" placeholder='请输入行业' disabled />
+          </span>
+        </view>
+        <view class="navigator-arrow" wx:if="{{1==0}}"></view>
+        <view class="weui-cell__ft">
+          <span style="vertical-align:middle;">
+            <input type="text" value="{{info.Industry}}" placeholder='请输入行业' bindinput='IndustryChange' />
+          </span>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_access" wx:if="{{1==0}}">
+        <view class="weui-cell__bd">所在城市</view>
+        <view class="weui-cell__ft">
+          <span style="vertical-align:middle;">
+            <input type="text" value="{{SchoolName}}" placeholder='请输入所在城市' disabled bindtap="choosearea" />
+            <picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+              <view class="picker">
+                <block wx:if='{{region[0]}}'>
+                  {{region[0]}}{{region[1]}}{{region[2]}}
+                </block>
+                <block wx:else>
+                  请选择省市区
+                </block>
+              </view>
+            </picker>
+          </span>
+        </view>
+        <view class="navigator-arrow"></view>
+      </view>
+      <view class="weui-cell weui-cell_access">
+        <view class="weui-cell__bd">详细地址</view>
+        <view class="weui-cell__ft">
+          <span style="vertical-align:middle;">
+            <input type="text" value="{{info.Address}}" placeholder='请输入详细地址' bindinput='AddressChange' />
+
+          </span>
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells">
+      <view class="weui-cell weui-cell_access">
+        <view class="weui-cell__bd">是否出席典礼</view>
+        <view class="weui-cell__ft">
+        
+          <radio-group bindchange="paytypeChange">
+            <radio value="1" color="#00b00f" />是
+            <radio value="0" color="#00b00f" />否
+          </radio-group>
+
+        </view>
+      </view>
+    </view>
+    <!-- 弹出框 -->
+    <view class="wxapp-modal {{modal?'on':''}}">
+      <view class="content">
+        <view class="head">
+          <view class="txt">请选择所属行业</view>
+          <view class="close" bindtap='tap_close'>X</view>
+        </view>
+        <view class="wrap_con">
+          <view class="wrap_left">
+            <scroll-view scroll-y style="height: 900rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+              <block wx:for="{{trade}}" wx:key="">
+                <view class="item {{pitch==item.id?'active':''}}" bindtap='tap_trade' data-id="{{item.id}}">{{item.name}}</view>
+              </block>
+            </scroll-view>
+          </view>
+          <view class="wrap_right">
+            <scroll-view scroll-y style="height: 900rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+              <block wx:for="{{trade[pitch].minute}}" wx:for-item='minute' wx:key="">
+                <view class="item" bindtap="tap_minute" data-minute='{{minute}}'>{{minute}}</view>
+              </block>
+            </scroll-view>
+          </view>
+        </view>
+      </view>
+      <view class="mask" bindtap='tap_close'></view>
+    </view>
+    <view class="floor">
+      <button class="btn1 kfbt" bindtap='saveClick' loading="{{loading}}">保存名片并报名</button>
+      <button class="btn2 kfbt" bindtap='delClick' wx:if="{{id>0}}">删除名片</button>
+    </view>
+  </view>
+</view>

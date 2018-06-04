@@ -1,0 +1,31 @@
+<import src="/wxParse/wxParse.wxml" />
+  <view class="container">
+
+    <view class="page-body prodetail">
+
+      <view class="bgw">
+        <view class="title">{{info.NvrFd1}}</view>
+        <view class="pricep">
+          <view class="price">浏览{{info.IntFd1}}次</view>
+          <view class="sale">{{info.TextFd1}}</view>
+        </view>
+
+        <view class="wxParse">
+          <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+        </view>
+
+      </view>
+
+    </view>
+
+
+
+    <view class="com-widget-goTop" bindtap="goTop" wx:if="{{floorstatus}}">
+      <view class="icon-gotop">
+        <image src="/images/icon_top.png"></image>
+        顶部
+      </view>
+    </view>
+
+
+  </view>

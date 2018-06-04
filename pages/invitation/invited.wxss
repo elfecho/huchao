@@ -1,0 +1,68 @@
+/* pages/invitation/invited.wxss */
+.navbar{  
+  flex: none;  
+  display: flex; 
+  background: #fff;  
+  z-index: 5;
+}  
+.navbar .item{  
+  position: relative;  
+  flex: auto;  
+  text-align: center;  
+  line-height: 80rpx;  
+}  
+.navbar .item.active{  
+  color: #FF3464;  
+}  
+.navbar .item.active:after{  
+  content: "";  
+  display: block;  
+  position: absolute;  
+  bottom: 0;  
+  left: 0;  
+  right: 0;  
+  height: 5rpx;  
+  background: #FF3464;  
+}   
+
+.ally .con{
+  padding:40rpx;
+  background-color:#fff;
+}
+.ally .con image{
+  width:110rpx;
+  height:110rpx;
+  float:left;
+  border-radius: 50%;
+}
+.ally .con .desc{
+  float:left;
+  margin-left:50rpx;
+  margin-top: 20rpx;
+}
+.ally .desc text{
+  display: block;
+  line-height: 40rpx;
+  height: 40rpx;
+}
+.ally .con:after{
+  content:" ";        
+  display:block;        
+  height:0;        
+  clear:both;        
+  visibility:hidden;   
+}
+.em .icon {
+  text-align: center;
+  padding-top: 200rpx;
+}
+
+.em .icon image {
+  width: 240rpx;
+  height: 236rpx;
+}
+
+.em .icon .txt {
+  color: #888;
+  margin-top: 20rpx;
+}

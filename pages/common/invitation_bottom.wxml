@@ -1,0 +1,24 @@
+<view class="botnavH"></view>
+<view class="botnav_invitation">
+  <navigator class="item {{i=='1' ? 'on':''}}" url="/pages/invitation/index" open-type="{{i=='1' ? 'redirect':'reLaunch'}}">
+    <view class="img_nav">
+      <image src="{{i=='1' ? '/images/invitation/tab_home_sel@2x.png':'/images/invitation/tab_home_nor@2x.png'}}"></image>
+    </view>
+    <view class="txt">Home</view>
+  </navigator>
+
+  <navigator class="item {{i=='3' ? 'on':''}}" url="/pages/invitation/my" open-type="{{i=='1' ? 'navigate':'redirect'}}">
+    <view class="img_nav">
+      <image src="{{i=='3' ? '/images/invitation/tab_my_sel@2x.png':'/images/invitation/tab_my_nor@2x.png'}}"></image>
+    </view>
+    <view class="txt">My</view>
+  </navigator>
+
+  <navigator class="item {{i=='2' ? 'on':''}}" url="/pages/invitation/about" open-type="{{i=='1' ? 'navigate':'redirect'}}">
+    <view class="img_nav">
+      <image src="{{i=='2' ? '/images/invitation/tab_about_sel@2x.png':'/images/invitation/tab_About_nor@2x.png'}}"></image>
+    </view>
+    <view class="txt">About</view>
+  </navigator>
+
+</view>

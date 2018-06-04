@@ -1,0 +1,80 @@
+@import "/pages/common/lib/weui.wxss";
+
+.login .protxt {
+  height: auto;
+  overflow: hidden;
+  margin-top: 1.17647059em;
+}
+
+.login .tab {
+  padding-top: 10rpx;
+}
+
+.login .tab .tabtitpp {
+  width: 500rpx;
+  margin: 0 auto;
+}
+
+.login .tab .tabtit {
+  float: left;
+  width: 50%;
+  text-align: center;
+  line-height: 60rpx;
+}
+
+.login .tab .tabtit.on {
+  color: #f0189d;
+  border-bottom: 6rpx solid #f0189d;
+}
+
+.login .tab .tabcontent {
+  min-height: 200rpx;
+}
+
+.weui-cell {
+  padding: 0px 15px;
+  height: 88rpx;
+}
+
+.mt0 {
+  margin-top: 0rpx;
+}
+
+.mt10 {
+  margin-top: 10rpx;
+}
+
+.mt15 {
+  margin-top: 15rpx;
+}
+
+.mt20 {
+  margin-top: 20rpx;
+}
+.btn-area {
+  margin-top: 40rpx;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 30rpx;
+  margin-bottom: 50rpx;
+}
+.weui-vcode-btn {
+  color: #f0189d;
+}
+.weui-vcode-btn:active {
+  color: #d92895;
+}
+.wxlogin{
+  padding: 15px;
+  padding-top: 50rpx;
+}
+button image{
+  display: inline-block;
+  width: 60rpx;
+  height: 60rpx;
+  vertical-align: middle;
+  padding-right: 20rpx;
+}
+.button-hover image{
+  opacity: 0.6;
+}

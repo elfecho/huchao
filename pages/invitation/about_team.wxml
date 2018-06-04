@@ -1,0 +1,32 @@
+<!--pages/invitation/about_team.wxml-->
+<view class="container">
+  <view class="page-body">
+    <view class="banner">
+      <image src="{{wxappimg}}/wxappimg/invitation/about_img@2x.png"></image>
+    </view>
+    <view class="team">
+      <view class="tit">团队介绍</view>
+      <view class="list">
+        <block wx:for="{{list}}" wx:key="">
+          <view class="item">
+            <view class="wrap_head" bindtap='summaryshow' data-de='{{item.current}}'>
+              <view class="title">
+                {{item.name}}
+                <text>{{item.job}}</text>
+              </view>
+              <view class="arrow">
+                <block wx:if="{{develop!=item.current}}">
+                  <image class="up" src="{{wxappimg}}/wxappimg/invitation/about_btn_nor@2x.png"></image>
+                </block>
+                <block wx:if="{{develop==item.current}}">
+                  <image class="down" src="{{wxappimg}}/wxappimg/invitation/about_btn_sel@2x.png"></image>
+                </block>
+              </view>
+            </view>
+            <view class="con {{develop==item.current?'on':''}}">{{item.con}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

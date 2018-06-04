@@ -1,0 +1,80 @@
+<view class="container login">
+
+  <view class="page-body prodetail">
+
+    <view class="bgw protxt">
+      <view class="tab">
+        <view class="clear tabtitpp">
+          <view class="tabtit {{config.clicknum==0?'on':''}}" bindtap="tabTitleClick" data-id="0">快速登录</view>
+          <view class="tabtit {{config.clicknum==1?'on':''}}" bindtap="tabTitleClick" data-id="1">密码登录</view>
+        </view>
+      </view>
+    </view>
+
+
+    <view class="tabcc0 {{config.clicknum==0?'':'hide'}}">
+      <view class="bgw wxlogin">
+        <text>使用微信登录</text>
+        <button type="primary" loading="{{loading}}" bindtap="wxloginClick">
+          <image src="/images/wechat_w.png"></image>微信登录</button>
+      </view>
+
+      <view class="weui-cells weui-cells_form">
+        <view class="weui-cell">
+          <view class="weui-cell__hd">
+            <label class="weui-label">手机登录</label>
+          </view>
+          <view class="weui-cell__bd">
+            <input type="number" placeholder="请输入手机号" value="{{phone}}" name="phone" bindinput="phoneChange" />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_vcode">
+          <view class="weui-cell__hd">
+            <label class="weui-label">验证码</label>
+          </view>
+          <view class="weui-cell__bd">
+            <input type="number" placeholder="请输入验证码" name="code" bindinput="codeChange" />
+          </view>
+          <view class="weui-cell__ft">
+            <view class="weui-vcode-btn" bindtap="sendMSM" data-time="{{ltime}}">{{clock}}</view>
+          </view>
+        </view>
+      </view>
+
+      <view class="btn-area">
+        <button type="warn" loading="{{loading2}}" bindtap="phoneQClick">验证并登录</button>
+      </view>
+    </view>
+
+    <view class="tabcc1 {{config.clicknum==1?'':'hide'}}">
+      <view class="weui-cells weui-cells_form">
+        <view class="weui-cell">
+          <view class="weui-cell__hd">
+            <label class="weui-label">账号登录</label>
+          </view>
+          <view class="weui-cell__bd">
+            <input type="number" placeholder="请输入手机号" name="phone2" bindinput="phoneChange2" />
+          </view>
+        </view>
+        <view class="weui-cell weui-cells_form">
+          <view class="weui-cell__hd">
+            <label class="weui-label">登录密码</label>
+          </view>
+          <view class="weui-cell__bd">
+            <input type="number" password="true" placeholder="请输入密码" name="pw" bindinput="pwChange" />
+          </view>
+        </view>
+      </view>
+
+      <view class="btn-area">
+        <button type="warn" loading="{{loading3}}" bindtap="pwloginClick">登录</button>
+      </view>
+    </view>
+
+
+
+  </view>
+
+ <include src="/pages/common/bottom.wxml" />
+
+</view>

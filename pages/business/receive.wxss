@@ -1,0 +1,181 @@
+/* pages/card/receive.wxss */
+@import "/pages/common/front.wxss";
+
+.back {
+  margin: 30rpx 0rpx;
+  height: 415rpx;
+  background: #fff;
+  border-radius: 15rpx;
+  position: relative;
+  box-shadow: 0 0 30rpx #e6e6e6;
+}
+
+.back .code {
+  width: 206rpx;
+  height: 206rpx;
+  padding-top: 30rpx;
+  margin: 0rpx auto;
+}
+
+.back .code image {
+  width: 206rpx;
+  height: 206rpx;
+}
+
+.back .txt {
+  font-size: 22rpx;
+  text-align: center;
+  color: #808080;
+  line-height: 60rpx;
+}
+
+.back .line {
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row nowrap;
+  align-items: flex-end;
+}
+
+.back .line .item {
+  display: inline-block;
+}
+
+.back .line .item:nth-child(1) {
+  width: 345rpx;
+  height: 20rpx;
+  background-color: #18aaac;
+  z-index: 1;
+}
+
+.back .line .item:nth-child(2) {
+  width: 0rpx;
+  height: 0rpx;
+  border-top: 20rpx solid rgba(0, 0, 0, 0);
+  border-right: 20rpx solid rgba(0, 0, 0, 0);
+  border-bottom: 20rpx solid #18aaac;
+  border-left: 20rpx solid rgba(0, 0, 0, 0);
+  transform: translate(-20rpx, 0rpx);
+  z-index: 2;
+}
+
+.back .line .item:nth-child(3) {
+  width: 425rpx;
+  height: 16rpx;
+  background: #f1dfa0;
+  margin-left: -100rpx;
+  z-index: 0;
+}
+
+.remark .tit {
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row nowrap;
+}
+
+.remark .tit .tt {
+  color: #333;
+  flex: 1;
+  font-size: 30rpx;
+}
+
+.remark .tit image {
+  width: 20rpx;
+  height: 20rpx;
+}
+
+.remark .desc input {
+  color: #808080;
+  font-size: 24rpx;
+}
+
+
+.botnav {
+  padding: 0;
+}
+
+.botnav .img_nav {
+  width: 45rpx;
+  height: 40rpx;
+  text-align: center;
+  margin:0 auto;
+}
+.botnav .img_nav image{
+  vertical-align: middle;
+  display: inline-block;
+}
+.botnav .lx {
+  width: 170rpx;
+  float: left;
+  text-align: center;
+  line-height: 32rpx;
+  padding: 10rpx 0;
+  border-right: 1rpx solid #eee;
+}
+.botnav .lx image{
+  width:39rpx;
+  height: 36rpx;
+}
+.botnav .lx .txt {
+  font-size: 24rpx;
+  color: #7a7e83;
+}
+
+.botnav .cart {
+  width: 170rpx;
+  float: left;
+  text-align: center;
+  line-height: 32rpx;
+  padding: 10rpx 0;
+  position: relative;
+}
+.botnav .cart image{
+  width:45rpx;
+  height: 36rpx;
+}
+
+.botnav .cart .txt {
+  font-size: 24rpx;
+  color: #7a7e83;
+}
+
+.botnav .cart .num {
+  font-size: 18rpx;
+  color: #fff;
+  background-color: #f0189d;
+  border-radius: 50%;
+  position: absolute;
+  top: 10rpx;
+  right: 20rpx;
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  text-align: center;
+}
+
+.botnav .btbuy {
+  float: left;
+  text-align: center;
+  line-height: 32rpx;
+  padding: 24rpx 0;
+  border: 1rpx solid #f00;
+  margin: 7rpx 16rpx 0 0;
+  font-size: 32rpx;
+  width: 190rpx;
+  color: #f0189d;
+  border-radius: 10rpx;
+}
+
+.botnav .btcart {
+  float: left;
+  text-align: center;
+  line-height: 32rpx;
+  padding: 20rpx 0;
+  border: 1rpx solid #00b00f;
+  vertical-align: middle;
+  margin: 7rpx 0 0 0;
+  font-size: 32rpx;
+  width: 390rpx;
+  border-radius: 10rpx;
+  background-color: #00b00f;
+  color: #fff;
+}

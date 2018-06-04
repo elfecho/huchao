@@ -1,0 +1,35 @@
+<!--pages/news/list.wxml-->
+<view class="container">
+  <view class="page-body">
+    <view class="prolist">
+      <block wx:if="{{column.length<2}}"></block>
+      <view class="classlist" wx:else>
+        <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+          <view class="item scroll-view-item_H {{proclass=='' ? 'on':''}}" bindtap="tapClass" data-code="">全部</view>
+          <block wx:for="{{column}}" wx:key="">
+            <view class="item scroll-view-item_H {{proclass==item.ClassCode ? 'on':''}}" bindtap="tapClass" data-code="{{item.ClassCode}}">{{item.DisplayName}}</view>
+          </block>
+        </scroll-view>
+      </view>
+      <view class="list">
+        <view class="fall">
+          <block wx:for="{{list}}" wx:key="">
+            <navigator url="/pages/news/detail?id={{item.ID}}" class="item">
+              <image src="{{wxappimg}}{{item.NvrFd9}}" mode="aspectFill"></image>
+              <view class="con">
+                <view class="title">{{item.NvrFd1}}</view>
+                <view class="desc">
+                  <view class="date">{{item.time2}}</view>
+                </view>
+                <view class="pro_con">
+                  {{item.NvrFd3}}
+                </view>
+              </view>
+            </navigator>
+          </block>
+        </view>
+      </view>
+      <!-- <view class="pustdowntishi">{{dataend==0 ? '数据加载中':''}}</view> -->
+    </view>
+  </view>
+</view>

@@ -1,0 +1,54 @@
+<!--pages/case/detail.wxml-->
+<import src="/wxParse/wxParse.wxml" />
+<view class="container">
+  <view class="page-body">
+    <view class="banner">
+      <image src="{{wxappimg}}{{info.NvrFd9}}" data-src="{{wxappimg}}{{info.NvrFd9}}" bindtap="BannerImgTap"></image>
+      <view class="tit">{{info.NvrFd1}}</view>
+    </view>
+    <view class="type">
+      <view class="item">
+        <image src="{{wxappimg}}/wxappimg/Case-icon-Product@2x.png"></image>
+        <view class="txt">{{info.NvrFd4}}</view>
+      </view>
+      <view class="item">
+        <image src="{{wxappimg}}/wxappimg/Case-icon-time@2x.png"></image>
+        <view class="txt">{{info.NvrFd3}}工作日</view>
+      </view>
+      <view class="item">
+        <image src="{{wxappimg}}/wxappimg/Case-icon-Workingdays@2x.png"></image>
+        <view class="txt">{{info.TextFd2}}</view>
+      </view>
+    </view>
+    <view class="main">
+      <view class="wxParse">
+        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+      </view>
+      <view class="introduce">
+        <view class="tit">项目介绍</view>
+        <view class="desc">{{info.NvrFd17}}</view>
+      </view>
+      <view class="resemble">
+        <view class="tit">相似项目</view>
+        <view class="con">
+          <block wx:for="{{rlist}}" wx:key="">
+            <navigator url="/pages/case/detail?id={{item.ID}}" class="item">
+              <view class="wrap">
+                <view class="wrap_tit">{{item.NvrFd1}}</view>
+                <view class="date">{{item.time2}}</view>
+              </view>
+              <image src="{{wxappimg}}{{item.NvrFd10}}" mode="aspectFill"></image>
+            </navigator>
+          </block>
+        </view>
+      </view>
+    </view>
+    <navigator url="/pages/index/newindex" class="shortcut_nav" open-type="reLaunch">
+      <image src="/images/home.png"></image>
+    </navigator>
+    <button class="kfbt mybtn" open-type="share">
+      <image src="{{wxappimg}}/wxappimg/new-icon-sharing@2x.png"></image>
+      <view class="txt">分享案例</view>
+    </button>
+  </view>
+</view>

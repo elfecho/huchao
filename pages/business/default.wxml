@@ -1,0 +1,34 @@
+<!--pages/mine/default.wxml-->
+<view class="container">
+  <view class="page-body">
+    <view class="info">
+      <image src="{{headimg==''?wxappimg+'/images/m_default.png':headimg}}"></image>
+      <view class="desc">
+        <view class="name">{{nickname}}</view>
+      </view>
+      <view class="navigator-arrow"></view>
+    </view>
+    <view class="weui-cells">
+      <navigator url="/pages/index/newindex" class="item weui-cell weui-cell_access">
+        <view class="weui-cell__bd">
+          <view class="img_nav">
+            <image src="/images/my-icon-applet@2x.png"></image>
+          </view>
+          <view class="txt">虎超小程序</view>
+        </view>
+        <view class="navigator-arrow"></view>
+      </navigator>
+      <button class="item weui-cell weui-cell_access kfbt" open-type='contact'>
+        <view class="weui-cell__bd">
+          <view class="img_nav">
+            <image src="/images/my-icon-service@2x.png"></image>
+          </view>
+          <view class="txt">联系客服</view>
+        </view>
+        <view class="navigator-arrow"></view>
+      </button>
+    </view>
+    <include src="/pages/common/card_bottom.wxml" />
+  </view>
+  
+</view>

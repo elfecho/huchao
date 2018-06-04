@@ -1,0 +1,7 @@
+{
+  "backgroundTextStyle": "#333333",
+  "navigationBarBackgroundColor": "#ffffff",
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "受邀用户",
+  "navigationBarTextStyle": "black"
+}

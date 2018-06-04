@@ -1,0 +1,92 @@
+/* pages/card/share.wxss */
+@import "/pages/common/front.wxss";
+
+.main {
+  padding: 0 20rpx;
+}
+
+swiper {
+  height: 980rpx;
+}
+
+.back {
+  margin: 30rpx 0rpx;
+  height: 415rpx;
+  background: #fff;
+  border-radius: 15rpx;
+  position: relative;
+  box-shadow: 0 0 30rpx #e6e6e6;
+}
+
+.back .code {
+  width: 206rpx;
+  height: 206rpx;
+  padding-top: 30rpx;
+  margin: 0rpx auto;
+}
+
+.back .code image {
+  width: 206rpx;
+  height: 206rpx;
+}
+
+.back .txt {
+  font-size: 22rpx;
+  text-align: center;
+  color: #808080;
+  line-height: 60rpx;
+}
+
+.back .line {
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row nowrap;
+  align-items: flex-end;
+}
+
+.back .line .item {
+  display: inline-block;
+}
+
+.back .line .item:nth-child(1) {
+  width: 345rpx;
+  height: 20rpx;
+  background-color: #18aaac;
+  z-index: 1;
+}
+
+.back .line .item:nth-child(2) {
+  width: 0rpx;
+  height: 0rpx;
+  border-top: 20rpx solid rgba(0, 0, 0, 0);
+  border-right: 20rpx solid rgba(0, 0, 0, 0);
+  border-bottom: 20rpx solid #18aaac;
+  border-left: 20rpx solid rgba(0, 0, 0, 0);
+  transform: translate(-20rpx, 0rpx);
+  z-index: 2;
+}
+
+.back .line .item:nth-child(3) {
+  width: 425rpx;
+  height: 16rpx;
+  background: #f1dfa0;
+  margin-left: -100rpx;
+  z-index: 0;
+}
+
+.sub {
+  padding: 0 40rpx;
+}
+
+.sub .mybtn {
+  width: 100%;
+  height: 80rpx;
+  background: #00b00f;
+  font-size: 30rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 80rpx;
+  margin: 10rpx 0 0;
+  border-radius: 10rpx;
+  box-shadow: 0 0 30rpx #e6e6e6;
+}

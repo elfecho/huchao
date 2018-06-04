@@ -1,0 +1,121 @@
+/* pages/member/technical.wxss */
+
+.main {
+  padding: 0 20rpx;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+}
+
+.tit {
+  font-weight: 700;
+  color: #000;
+  font-size: 36rpx;
+  margin: 50rpx 0 20rpx;
+  text-align: center;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.con_p {
+  font-size: 28rpx;
+  color: #000;
+  margin-top: 40rpx;
+}
+
+.btn {
+  width: 70%;
+  height: 80rpx;
+  margin: 50rpx auto;
+  line-height: 80rpx;
+  display: block;
+  background-color: #f0189d;
+  color: #fff;
+  font-size: 32rpx;
+  letter-spacing: 15rpx;
+  text-align: center;
+}
+
+.info {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 5;
+  
+}
+
+.make {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.info .con {
+  position: absolute;
+  width: 630rpx;
+  left: 0;
+  top: -350rpx;
+  background: #fff;
+  margin: 0 30rpx;
+  padding: 30rpx;
+  z-index: 1000;
+  transition: all 0.5s;
+  -moz-transition:all .5s; 
+  -webkit-transition:all .5s; 
+  -o-transition:all .5s;
+   transform: translateY(0); 
+}
+.info.on{
+  visibility: visible;
+}
+.info.on .con{
+   transform: translateY(500rpx); 
+}
+.info .con .item {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #000;
+}
+
+.info .con .item input {
+  width: 600rpx;
+  font-size: 30rpx;
+  color: #808080;
+  line-height: 100rpx;
+}
+
+.info .con .sub {
+  margin-top: 30rpx;
+}
+
+.info .con .sub button {
+  width: 120rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  display: block;
+  font-size: 28rpx;
+  color: #fff;
+}
+.info .con .sub button-hover,.info .con .sub button[loading] {
+  color: #000;
+}
+.info .con .sub .reset {
+  float: left;
+  background: #808080;
+}
+
+.info .con .sub .submit {
+  background: #f0189d;
+  float: right;
+}

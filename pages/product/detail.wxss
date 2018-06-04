@@ -1,0 +1,448 @@
+@import "/wxParse/wxParse.wxss";
+
+swiper {
+  height: 750rpx;
+}
+
+.prodetail {
+}
+
+image {
+width:365px;
+height:500px;
+}
+
+.prodetail .title {
+  padding: 15rpx;
+  line-height: 40rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+  margin-top: 10rpx;
+}
+
+.prodetail .pricep {
+  padding: 15rpx;
+  line-height: 60rpx;
+}
+
+.prodetail .price {
+  display: inline-block;
+  font-size: 40rpx;
+  color: red;
+}
+
+.prodetail .oldprice {
+  display: inline-block;
+  font-size: 28rpx;
+  color: #999;
+  text-decoration: line-through;
+  margin-left: 20rpx;
+}
+
+.prodetail .sale {
+  float: right;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.prodetail .cx {
+  border-top: 2rpx #999 dotted;
+  padding: 20rpx;
+  height: auto;
+  overflow: hidden;
+}
+
+.prodetail .cx .left {
+  float: left;
+  width: 80rpx;
+  text-align: center;
+}
+
+.prodetail .cx .list {
+  float: right;
+  width: 620rpx;
+  font-size: 22rpx;
+}
+
+.prodetail .cx .list .item {
+  line-height: 46rpx;
+}
+
+.prodetail .cx .list .icon {
+  display: inline-block;
+  padding: 4rpx 8rpx;
+  background-color: #f0189d;
+  color: #fff;
+  border-radius: 8rpx;
+  margin-right: 10rpx;
+  line-height: 30rpx;
+}
+
+.prodetail .cx .list .txt {
+  display: inline-block;
+  line-height: 34rpx;
+}
+
+.prodetail .protxt {
+  margin-top: 40rpx;
+  height: auto;
+  overflow: hidden;
+}
+
+.prodetail .tab .tabtit {
+  float: left;
+  width: 50%;
+  text-align: center;
+  line-height: 60rpx;
+}
+
+.prodetail .tab .tabtit.on {
+  color: #f0189d;
+  border-bottom: 6rpx solid #f0189d;
+}
+
+.prodetail .tab .tabcontent {
+  min-height: 200rpx;
+}
+
+.bigWrap {
+}
+
+.com-widget-goTop {
+  position: fixed;
+  bottom: 125px;
+  right: 5px;
+  background: rgba(0, 0, 0, 0.48);
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 500;
+}
+
+.com-widget-goTop .icon-gotop {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 68px;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.com-widget-goTop .icon-gotop image {
+  width: 30rpx;
+  height: 32rpx;
+  position: absolute;
+  top: 16rpx;
+  left: 36rpx;
+}
+
+.botnav {
+  padding: 0;
+}
+
+.botnav image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.botnav .lx {
+  width: 166rpx;
+  float: left;
+  text-align: center;
+  line-height: 32rpx;
+  padding: 10rpx 0;
+  border-right: 1rpx solid #eee;
+}
+
+.botnav .lx .txt {
+  font-size: 24rpx;
+  color: #7a7e83;
+}
+
+.botnav .cart {
+  width: 120rpx;
+  float: left;
+  text-align: center;
+  line-height: 32rpx;
+  padding: 10rpx 0;
+  position: relative;
+}
+
+.botnav .cart .txt {
+  font-size: 24rpx;
+  color: #7a7e83;
+}
+
+.botnav .cart .num {
+  font-size: 18rpx;
+  color: #fff;
+  background-color: #f0189d;
+  border-radius: 50%;
+  position: absolute;
+  top: 10rpx;
+  right: 20rpx;
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  text-align: center;
+}
+
+.botnav .btbuy {
+  float: left;
+  text-align: center;
+  line-height: 32rpx;
+  padding: 24rpx 0;
+  border: 1rpx solid #f00;
+  margin: 7rpx 16rpx 0 0;
+  font-size: 32rpx;
+  width: 190rpx;
+  color: #f0189d;
+  border-radius: 10rpx;
+}
+
+.botnav .btcart {
+  float: left;
+  text-align: center;
+  line-height: 32rpx;
+  padding: 24rpx 0;
+  border: 1rpx solid #f0189d;
+  vertical-align: middle;
+  margin: 7rpx 0 0 0;
+  font-size: 32rpx;
+  width: 230rpx;
+  border-radius: 10rpx;
+  background-color: #f0189d;
+  color: #fff;
+}
+
+.commentlist {
+  padding: 20rpx;
+}
+
+.commentlist .item {
+  position: relative;
+  padding: 20rpx 0 20rpx 20rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.commentlist .item:last-child {
+  border-bottom: none;
+}
+
+.commentlist .img {
+  position: absolute;
+  left: 0rpx;
+  top: 30rpx;
+}
+
+.commentlist .img image {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  background-color: #eee;
+}
+
+.commentlist .demo {
+  padding-left: 70rpx;
+}
+
+.commentlist .time {
+  position: absolute;
+  right: 0rpx;
+  top: 20rpx;
+  color: #999;
+}
+
+.xing image {
+  width: 30rpx;
+  height: 30rpx;
+  padding-right: 4rpx;
+}
+
+.replay {
+  border: 1rpx solid #eee;
+  background-color: #efefef;
+  padding: 10rpx;
+  margin: 10rpx 0;
+}
+
+.emcomment {
+  text-align: center;
+  line-height: 200rpx;
+}
+
+.pustdowntishi {
+  text-align: center;
+  color: #999;
+  clear: both;
+  font-size: 24rpx;
+  line-height: 60rpx;
+}
+
+.prodetail .tb {
+  border-top: 2rpx #999 dotted;
+  padding: 20rpx 0 0 15rpx;
+  height: auto;
+  overflow: hidden;
+}
+
+.prodetail .tb .item {
+  display: inline-block;
+}
+
+.prodetail .tb .item .icon {
+  display: inline-block;
+  border-radius: 8rpx;
+  line-height: 30rpx;
+}
+
+.prodetail .tb .item .icon image {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.prodetail .tb .item .txt {
+  display: inline-block;
+  line-height: 50rpx;
+  margin-right: 40rpx;
+}
+
+.commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden; 
+  z-index: 1000;
+  color: #fff;
+}
+
+.commodity_attr_box {
+  width: 100%;
+  /* overflow: hidden; */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background: #fff;
+}
+/* .mybox{
+  height:90%;
+  overflow: hidden;
+} */
+.selXm {
+  padding: 40rpx 20rpx 40rpx;
+  position: relative;
+  z-index: 2000;
+  top: 0px;
+}
+
+.selXm .goods {
+  position: absolute;
+  /* float: left; */
+  overflow: hidden;
+  top:15rpx;
+  left: 20rpx;
+  width: 180rpx;
+  height: 180rpx;
+  z-index: 8888;
+}
+
+.selXm .goods image {
+  width: 180rpx;
+  height: 180rpx;
+}
+
+.selXm .title {
+  float:left;
+  margin-left:200rpx;
+  padding-right: 40rpx;
+}
+
+.selXm .price {
+  font-size: 40rpx;
+  color: red;
+}
+
+.selXm .list {
+  clear: both;
+  border-top: 1rpx solid #eee;
+  max-height: 600rpx;
+}
+
+.selXm .xmtitle {
+  padding-bottom: 10rpx;
+  clear: both;
+  padding-top: 20rpx;
+}
+
+.selXm .list .item {
+  float: left;
+  margin-right: 20rpx;
+  padding: 5rpx 10rpx;
+  background-color: #eee;
+  margin-top: 14rpx;
+}
+
+.selXm .list .item.on {
+  background-color: #f0189d;
+  color: #fff;
+}
+
+.selXm .list .item.num {
+  background: none;
+  margin-right: 10rpx;
+  height: 54rpx;
+  line-height: 54rpx;
+  padding: 0rpx;
+}
+
+.selXm .list .item.op {
+  margin-right: 10rpx;
+  font-size: 40rpx;
+  height: 54rpx;
+  line-height: 54rpx;
+  padding: 0rpx;
+  width: 40rpx;
+  text-align: center;
+}
+
+.selXm .close {
+  position: absolute;
+  top: 6rpx;
+  right: 6rpx;
+  z-index: 2000;
+}
+
+.selXm .close image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.cccc {
+  margin-top: 1000rpx;
+  padding-top: 200rpx;
+}
+
+.wxParse-img {
+  vertical-align: top;
+}
+.em .icon {
+  text-align: center;
+  padding-top: 200rpx;
+}
+
+.em .icon image {
+  width: 240rpx;
+  height: 236rpx;
+}
+
+.em .icon .txt {
+  color: #888;
+  margin-top: 20rpx;
+}

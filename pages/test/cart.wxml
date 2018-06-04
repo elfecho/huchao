@@ -1,0 +1,92 @@
+<view class="container cart">
+
+  <block wx:if="{{tempitem.ttnum == ''||tempitem.ttnum == '0'}}">
+    <view class="cart_em">
+      <view class="page-body bgw">
+        <view class="em">
+          <image src="{{wxappimg}}/wxappimg/icon_emcart.png" />
+          <view class="txt">购物车里什么都没有Σ( ° △ °|||)︴</view>
+          <navigator url="/pages/index/newindex" class="gobuy" open-type="redirect">去秒杀几件</navigator>
+        </view>
+      </view>
+      <view class="page-footer">
+        <view class="guess">
+          <view class="title">
+            <view class="line"></view>
+            <view class="name">猜你喜欢</view>
+            <view class="line"></view>
+          </view>
+        </view>
+        <view class="bgw">
+          <view class="classlist">
+            <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+
+              <block wx:for="{{commend}}" wx:key="">
+                <navigator class="item scroll-view-item_H" url="/pages/product/detail?id={{item.ID}}">
+                  <view class="img">
+                    <image src="{{wxappimg}}{{item.Img}}"></image>
+                  </view>
+                  <view class="ptitle">{{item.Title}}</view>
+                  <view class="price">¥{{item.Price}}</view>
+                </navigator>
+              </block>
+
+            </scroll-view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </block>
+
+
+  <block wx:if="{{tempitem.ttnum != ''&&tempitem.ttnum != '0'}}">
+    <view class="car_list">
+
+      <view class="tishi">购物满39包邮，支持货到付款</view>
+
+      <view class="itemlist">
+
+        <block wx:for="{{list}}" wx:key="">
+          <view class="item">
+            <view class="check" data-index="{{index}}"  bindtap="selectList">
+                <icon wx:if="{{item.IsSelected}}" type="success" color="#f0189d" data-index="{{index}}"  class="cart-pro-select" />
+                <icon wx:else type="circle" class="cart-pro-select" data-index="{{index}}"  />
+            </view>
+            <view class="img"  data-index="{{index}}"  bindtap="selectList">
+              <image src="{{wxappimg}}{{item.ProImg}}"></image>
+            </view>
+            <view class="right">
+              <view class="ptitle">{{item.ProName}}</view>
+              <view class="pcolor">{{item.NvrFd2}}</view>
+              <view class="price">¥{{item.ProPrice}}</view>
+              <view class="op">
+                <view class="de" bindtap="minusCount" data-index="{{index}}">-</view>
+                <view class="num">{{item.Num}}</view>
+                <view class="add" bindtap="addCount" data-index="{{index}}">+</view>
+              </view>
+              <text class="cart-del" bindtap="deleteList" data-index="{{index}}">×</text>
+            </view>
+          </view>
+        </block>
+
+      </view>
+
+      <view class="bottom">
+        <icon wx:if="{{selectAllStatus}}" type="success_circle" color="#f0189d" class="total-select" bindtap="selectAll" />
+        <icon wx:else type="circle" class="total-select" bindtap="selectAll" />
+        <text class="seltxt" bindtap="selectAll">全选</text>
+        <view class="bt" bindtap="btJsClick">结算（{{counts}}）</view>
+        <view class="info">
+          <view class="ttnum">{{counts}}</view>
+          件商品，合计
+          <view class="ttprice">¥{{totalPrice}}</view>
+        </view>
+      </view>
+
+    </view>
+  </block>
+
+      <include src="/pages/common/bottom.wxml" />
+
+</view>

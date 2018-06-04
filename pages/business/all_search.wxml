@@ -1,0 +1,43 @@
+<!--pages/business/all_search.wxml-->
+<view class="container">
+  <view class="page-body">
+    <view class="header">
+      <view class="search">
+        <view class="content">
+          <view class="pike">
+            <picker bindchange="bindPickerChange" value="{{type_index}}" range="{{column}}" range-key="{{Name}}">
+              <view class="txt">
+                {{column[type_index]}}
+              </view>
+              <image src="/images/icon_down.png"></image>
+            </picker>
+          </view>
+          <view class="wrap_con">
+            <input type="text" placeholder='搜索地区/姓名' confirm-type="搜索" bindconfirm="search" bindinput='searchChange'></input>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="con" wx:if="{{data_have}}">
+      <block wx:for="{{users}}" wx:for-item="user" wx:key="">
+        <navigator url="/pages/business/detail" class="wrap_item">
+          <view class="headimg">
+            <image src="{{user.imgurl}}"></image>
+          </view>
+          <view class="info">
+            <view class="name">{{user.name}}</view>
+            <view class="tt">{{user.post}}</view>
+            <view class="tt">{{user.company}}</view>
+          </view>
+          <view class="time">
+            <view class="date">2017-12-09</view>
+          </view>
+        </navigator>
+      </block>
+    </view>
+    <view class="no_data" wx:else>
+      <view class="txt">暂无数据</view>
+    </view>
+  </view>
+</view>

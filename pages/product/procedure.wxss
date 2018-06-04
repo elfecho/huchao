@@ -1,0 +1,120 @@
+/* pages/product/procedure.wxss */
+
+/* .procedure{
+  padding-top: 25rpx;
+  padding-left: 20rpx;
+  background: #fff;
+} */
+/* 
+.procedure .tit {
+  padding-left: 20rpx;
+  font-size: 34rpx;
+  line-height: 34rpx;
+  color: #008fee;
+  border-left: 4rpx solid #008fee;
+}
+
+.procedure .desc {
+  font-size: 26rpx;
+  color: #333;
+  margin-top: 30rpx;
+} */
+.page-body{
+  display: flex;
+  flex-flow: column nowrap;
+}
+.con {
+  margin-top: 30rpx;
+  padding: 0 20rpx;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  flex:1;
+}
+
+.con .item {
+  width: 295rpx;
+  padding: 25rpx 25rpx;
+  border-right: 1rpx solid #e6e6e6;
+  border-bottom: 1rpx solid #e6e6e6;
+}
+
+.con .item:nth-child(even) {
+  border-right: none;
+}
+
+.con .item:nth-last-child(1), .con .item:nth-last-child(2) {
+  border-bottom: none;
+}
+.con .item .img_nav{
+  width: 75rpx;
+  height: 70rpx;
+  line-height: 67rpx;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+.con .item image {
+  width: 67rpx;
+  height: 67rpx;
+  text-align: center;
+  vertical-align: middle;
+}
+.con .item:nth-child(1) image{
+  width: 68rpx;
+  height: 65rpx;
+}
+.con .item:nth-child(2) image{
+  width: 56rpx;
+  height: 67rpx;
+}
+.con .item:nth-child(3) image{
+  width: 75rpx;
+  height: 65rpx;
+}
+.con .item:nth-child(4) image{
+  width: 67rpx;
+  height: 67rpx;
+}
+.con .item:nth-child(5) image{
+  width: 59rpx;
+  height: 65rpx;
+}
+.con .item:nth-child(6) image{
+  width: 52rpx;
+  height: 64rpx;
+}
+.con .item .txt {
+  color: #333333;
+  font-size: 32rpx;
+  margin-top: 17rpx;
+  text-align: center;
+}
+
+.con .item .ms {
+  font-size: 24rpx;
+  color: #333333;
+  margin-top: 10rpx;
+  text-align: center;
+}
+
+.con .item .price {
+  font-size: 24rpx;
+  margin-top: 5rpx;
+  text-align: center;
+  font-weight: bolder;
+  background: -webkit-linear-gradient(left, #56ccf2, #2f80ed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.mybtn {
+  width: 100%;
+  height: 100rpx;
+  font-size: 36rpx;
+  line-height: 100rpx;
+  text-align: center;
+  margin-top: 50rpx;
+  color: #fff;
+  background: -webkit-linear-gradient(left, #56ccf2, #2f80ed);
+}

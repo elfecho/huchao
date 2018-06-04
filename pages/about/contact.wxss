@@ -1,0 +1,169 @@
+/* pages/about/contact.wxss */
+.page-body {
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: column nowrap;
+}
+
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  background: #fff;
+  height: 100rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+
+.header .item {
+  width: 25%;
+  font-size: 30rpx;
+  color: #333;
+  text-align: center;
+  height: 94rpx;
+  line-height: 94rpx;
+}
+
+.header .item.on {
+  font-size: 30rpx;
+  color: #199af0;
+  border-bottom: 6rpx solid #199af0;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.warn {
+  padding-left: 20rpx;
+  background: #fff;
+}
+
+.warn .item .wrap_tit {
+  font-size: 28rpx;
+  color: #000;
+}
+
+.warn .item .desc {
+  font-size: 26rpx;
+  color: #333;
+}
+
+.warn .item {
+  padding: 30rpx 20rpx 20rpx 0;
+  border-bottom: 1rpx solid #e6e6e6;
+}
+
+.contact {
+  padding: 30rpx 20rpx;
+}
+
+.mybtn {
+  width: 100%;
+  height: 100rpx;
+  background: -webkit-linear-gradient(left, #56ccf2, #4e91ec);
+  color: #fff;
+  font-size: 36rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+.delegate{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height: 100%;
+  display: none;
+  z-index: 55;
+}
+.delegate.on{
+  display: block;
+}
+.delegate .content{
+  position: absolute; 
+  top:260rpx;
+  left:20rpx;
+  width: 710rpx;
+  height:640rpx;
+  z-index: 100000;
+  background: #fff;
+  border-radius: 10rpx;
+
+}
+.delegate .content {
+  text-align: center;
+}
+.delegate .content .logo {
+  width:370rpx;
+  height: 370rpx;
+  padding:30rpx 0;
+  margin:0 auto;
+}
+.delegate .content .logo image{
+  width:370rpx;
+  height: 370rpx;
+}
+.delegate .content .desc{
+  font-size: 30rpx;
+  color:#333333;
+  text-align: center;
+}
+.delegate .content .desc text{
+  display: block;
+}
+.delegate .content .close{
+  position: absolute;
+  top:-70rpx;
+  right:0;
+}
+.delegate .content .close image{
+  width:44rpx;
+  height:44rpx;
+}
+.delegate .make2{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 88888;
+}
+
+.make {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 55;
+}
+
+.make.on {
+  display: block;
+}
+
+.tel_way {
+  position: absolute;
+  box-shadow: 0 0 20rpx #e5e5e5;
+  background: #fff;
+  display: none;
+  z-index: 88;
+}
+
+.tel_way.on {
+  display: block;
+}
+
+.tel_way .li {
+  width: 200rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  padding: 0 10rpx;
+  border-bottom: 2rpx solid #cfcfcf;
+}
+
+.tel_way .li:nth-last-child(1) {
+  border-bottom: none;
+}
+

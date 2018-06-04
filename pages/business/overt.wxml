@@ -1,0 +1,52 @@
+<!--pages/business/overt.wxml-->
+<view class="container">
+  <view class="page-body">
+    <view class="header">
+      <view class="search" bindsubmit="searchSub">
+        <view class="content">
+          <view class="pike">
+            <picker bindchange="bindPickerChange" value="{{type_index}}" range="{{column}}" range-key="{{Name}}">
+              <view class="txt">
+                {{column[type_index]}}
+              </view>
+              <image src="/images/icon_down.png"></image>
+            </picker>
+          </view>
+          <view class="wrap_con">
+            <input type="text" placeholder='搜索公司/姓名' confirm-type="搜索" bindconfirm="search" bindinput='searchChange' value='{{kw}}' ></input>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="con" wx:if="{{list.length>0}}">
+      <block wx:for="{{list}}" wx:key="">
+        <navigator url="/pages/business/detail?id={{item.ID}}" class="wrap_item">
+          <view class="headimg">
+            <image src="{{item.HeadImg}}"></image>
+          </view>
+          <view class="info">
+            <view class="name">{{item.firstName}}</view>
+            <view class="tt">{{item.Title}}</view>
+            <view class="tt">{{item.Organization}}</view>
+          </view>
+          <view class="time">
+            <view class="date">{{item.NvrFd1}}</view>
+          </view>
+        </navigator>
+      </block>
+
+    </view>
+    <view class="no_data" wx:else>
+      <view class="txt">没有符合条件的名片</view>
+    </view>
+
+    <view class="com-widget-goTop" bindtap="goTop" wx:if="{{floorstatus}}">
+      <view class="icon-gotop">
+        <image src="/images/icon_top.png"></image>
+        顶部
+      </view>
+    </view>
+  </view>
+  <include src="/pages/common/card_bottom.wxml" />
+</view>

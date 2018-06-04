@@ -1,0 +1,2 @@
+/* pages/invitation/delivery.wxss */
+@import '/pages/invitation/add_enlist.wxss';

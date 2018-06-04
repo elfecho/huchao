@@ -1,0 +1,10 @@
+<!--pages/invitation/guide.wxml-->
+<view class="container">
+  <view class="page-body">
+    <view class="bg">
+      <image src="{{wxappimg}}/wxappimg/invitation/guide_bg.jpg"></image>
+      <!-- <navigator url="/pages/invitation/index" class="entry">立即看看</navigator> -->
+      <!-- <view class="time">2018/01/14</view> -->
+    </view>
+  </view>
+</view>

@@ -1,0 +1,81 @@
+/* pages/invitation/lucky.wxss */
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background: url(https://hc.fakejie.com/wxappimg/invitation/img_bg@2x.png);
+  background-size: 100% 100vh;
+}
+
+.main .header {
+  text-align: center;
+  padding-top: 60rpx;
+}
+
+.main .header image {
+  width: 322rpx;
+  height: 97rpx;
+}
+
+.main .header .txt {
+  font-size: 24rpx;
+  color: #ff4d58;
+}
+
+.content .input {
+  display: flex;
+  display: -webkit-flex;
+  height: 90rpx;
+  align-items: center;
+  justify-content: center;
+}
+
+.content .input input {
+  width: 120rpx;
+  height: 90rpx;
+  font-size: 52rpx;
+  color: #ff4d58;
+  text-align: center;
+  border: 5rpx solid #e04635;
+  border-radius: 10rpx;
+}
+
+.content .input image {
+  width: 320rpx;
+  height: 47rpx;
+  margin: 0 30rpx;
+}
+
+.content .desc {
+  text-align: center;
+  font-size: 32rpx;
+  color: #ff4d58;
+  margin: 38rpx 0 20rpx;
+}
+
+.content .down {
+  text-align: center;
+}
+
+.content .down image {
+  width: 22rpx;
+  height: 45rpx;
+}
+
+.fruit {
+  width: 376rpx;
+  margin: 280rpx auto 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.fruit .txt {
+  font-size: 170rpx;
+  color: #ff4d58;
+  line-height: 180rpx;
+}
+
+.fruit image {
+  width: 182rpx;
+  height: 200rpx;
+}

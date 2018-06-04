@@ -1,0 +1,60 @@
+<!--pages/about/introduce.wxml-->
+<view class="container">
+  <view class="page-body">
+    <view class="header">
+      <navigator url="/pages/about/introduce" open-type="redirect" class="item on">公司介绍</navigator>
+      <navigator url="/pages/about/culture" open-type="redirect" class="item">企业文化</navigator>
+      <navigator url="/pages/about/course" open-type="redirect" class="item">发展历程</navigator>
+      <navigator url="/pages/about/contact" open-type="redirect" class="item">联系我们</navigator>
+    </view>
+    <view class="introduce">
+      <view class="img_nav">
+        <image src="{{wxappimg}}/wxappimg/Aboutus-img-content@2x.png"></image>
+        <view class="bg"></view>
+      </view>
+      <view class="con">
+        <view class="tit">
+          广州虎超网络科技有限公司
+        </view>
+        <view class="desc">
+          <view class="con_p">2012年，几个合伙人创立虎超网络品牌，并以工作室的方式来开发项目。直至2014年应公司发展的需求，正式注册了广州虎超网络科技有限公司。广州虎超网络科技有限公司总部位于广州，秉承实现全网价值营销的理念，以数据为核心，结合营销、内容、创意、技术研发等多维度，为帮助传统企业实现“互联网+”转型升级。</view>
+          <view class="con_p">以互联网、移动互联网、物联网为载体，通过精准数字营销和用户数据分析，深入到客户技术建设及运维营销的方方面面，协助其构建互联网运作体系有效对接BAT，形成企业用户、平台三者高效互通的枢纽，并利用大数据，制定精准营销策略。</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="office">
+      <view class="img_nav">
+        <image src="{{wxappimg}}/wxappimg/Aboutus-img-content2@2x.png"></image>
+        <view class="bg"></view>
+      </view>
+      <view class="con">
+        <view class="tit">办公环境</view>
+        <view class="desc">广州虎超网络科技有限公司广州总部位于天安科技园总部一号楼19层，2012年初搬入至今全网价值营销之路全面开启并顺势延展，在许多行业都留下足迹。</view>
+        <view class="area">
+          <text>700㎡</text>总办公面积</view>
+      </view>
+    </view>
+
+    <view class="team">
+      <view class="con">
+        <view class="item">
+          <view class="t1">开发经验</view>
+          <view class="t2">8+</view>
+          <view class="t3">Year</view>
+        </view>
+        <view class="item">
+          <view class="t1">设计团队</view>
+          <view class="t2">10+</view>
+          <view class="t3">design team</view>
+        </view>
+        <view class="item">
+          <view class="t1">客户满意度</view>
+          <view class="t2">98%</view>
+          <view class="t3">Satisfaction</view>
+        </view>
+      </view>
+      <view class="desc">我们的团队：凭借8年开发经验，为客人完美解决问题！</view>
+    </view>
+  </view>
+</view>

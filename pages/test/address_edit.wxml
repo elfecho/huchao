@@ -1,0 +1,66 @@
+<view class="container login">
+
+  <view class="page-body prodetail">
+
+    <view class="tabcc1">
+      <view class="weui-cells weui-cells_form">
+        <view class="weui-cell">
+          <view class="weui-cell__hd">
+            <label class="weui-label">收货人</label>
+          </view>
+          <view class="weui-cell__bd">
+            <input placeholder="请输入收货人姓名" value="{{info.Receiver}}" bindinput="ReceiverChange" />
+          </view>
+        </view>
+        <view class="weui-cell weui-cells_form">
+          <view class="weui-cell__hd">
+            <label class="weui-label">手机号码</label>
+          </view>
+          <view class="weui-cell__bd">
+            <input type="number" placeholder="请输入手机号码" value="{{info.Mobile}}" bindinput="MobileChange" />
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cells_form" style="display:none;">
+          <view class="weui-cell__hd">
+            <label class="weui-label">省市地区</label>
+          </view>
+          <view class="weui-cell__bd">
+            <view class="classname">{{selcity}}</view>
+          </view>
+          <view class="navigator-arrow"></view>
+        </view>
+
+        <view class="weui-cell weui-cells_form">
+          <view class="weui-cell__hd">
+            <label class="weui-label">省市地区</label>
+          </view>
+          <view class="weui-cell__bd">
+            <input placeholder="请选择省市" value="{{city}}" bindinput="cityChange"  disabled bindtap="choosearea" style="display:none;" />
+            <view class="selcity {{city==''?'em':''}}" bindtap="choosearea">{{city==''?'请选择省市':city}}</view>
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cells_form">
+          <view class="weui-cell__hd">
+            <label class="weui-label">详细地址</label>
+          </view>
+          <view class="weui-cell__bd">
+            <input placeholder="请输入详细地址" value="{{info.Address}}" bindinput="AddressChange" />
+          </view>
+        </view>
+
+      </view>
+
+      <view class="btn-areaH"></view>
+      <view class="btn-area">
+        <button type="warn" bindtap="saveClick">保存</button>
+      </view>
+      <include src="/selectarea/selectarea.wxml" />
+
+    </view>
+
+  </view>
+
+
+</view>

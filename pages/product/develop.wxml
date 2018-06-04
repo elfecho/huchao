@@ -1,0 +1,138 @@
+<!--pages/product/develop.wxml-->
+<view class="container">
+  <view class="page-body">
+    <view class="prolist">
+      <view class="classlist">
+        <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+          <view class="item scroll-view-item_H {{proclass=='' ? 'on':''}}" bindtap="tapClass" data-code="">小程序入口</view>
+          <view class="item scroll-view-item_H {{proclass=='1' ? 'on':''}}" bindtap="tapClass" data-code="1">小程序优势</view>
+          <view class="item scroll-view-item_H {{proclass=='2' ? 'on':''}}" bindtap="tapClass" data-code="2">定制开发</view>
+        </scroll-view>
+      </view>
+      <view class="content">
+        <view class="list {{proclass=='' ? 'on':''}}">
+          <view class="superiority">
+            <view class="tit">
+              小程序五大入口
+            </view>
+            <view class="item">
+              <view class="wrap_tit">1.线下扫码</view>
+              <view class="desc">小程序最基础的获取方式，是二维码。大家可以打开扫一扫，通过微信扫描线下二维码的方式进入小程序。</view>
+            </view>
+            <view class="item">
+              <view class="wrap_tit">2.微信搜索</view>
+              <view class="desc">
+                在微信客户端最上方的搜索窗口，你可以通过搜索获取一个小程序。 </view>
+            </view>
+            <view class="item">
+              <view class="wrap_tit">3.公众号关联</view>
+              <view class="desc">
+                <view class="con_p">同一主体的小程序和公众号可以进行关联，并相互跳转，该功能需要经开发者自主设置后使用。</view>
+                <view class="con_p">一个公众号可以绑五个小程序，但一个小程序只能被一个公众号绑定。你可以通过公众号查看并进入所绑定的小程序，反之，也可以通过小程序查看并进入所关联的公众号</view>
+              </view>
+            </view>
+            <view class="item">
+              <view class="wrap_tit">4.好友推荐</view>
+              <view class="desc">当你发现一个好玩的或者实用的小程序，可以将这个小程序，或者它的某一个页面转发给好友或群聊。</view>
+            </view>
+            <view class="item">
+              <view class="wrap_tit">5.历史记录</view>
+              <view class="desc">
+                <view class="con_p">当你使用过某个小程序后，在微信客户端的“发现-小程序”里的列表，就可以看到这个小程序，想要再次使用它时，通过列表中的历史记录就可以进入。</view>
+                <view class="con_p">
+                  在“发现-小程序”中，也可以通过搜索进入小程序。
+                </view>
+              </view>
+            </view>
+          </view>
+          <button class="mybtn kfbt" open-type='contact'>立即咨询</button>
+        </view>
+        <view class="list {{proclass=='1' ? 'on':''}}">
+          <view class="superiority">
+            <view class="tit">
+              小程序六大优势
+            </view>
+            <view class="item">
+              <view class="wrap_tit">1.快速体验，用完即走</view>
+              <view class="desc">快速体验，在用户使用上来说，方便快捷要用的时候打开，不用的时候关掉，即用即走。这点比需要下载，还要占用手机内存空间的APP要好。</view>
+            </view>
+            <view class="item">
+              <view class="wrap_tit">2.功能丰富</view>
+              <view class="desc">
+                功能丰富，可以开发出更多的应用功能，共有100多个功能点。例如GPS定位、录音、拍视频、重力感应等更丰富的使用场景将会激发用户的使用频率。</view>
+            </view>
+            <view class="item">
+              <view class="wrap_tit">3.推广优势</view>
+              <view class="desc">
+                推广迅速，深化了中小企业的营销布局，有了小程序加上订阅号和服务号，就能合力发挥更大的作用将会以更加个性化的服务形式，进一步增强用户的黏性。用户扫一扫或者搜一下即可打开应用。
+              </view>
+            </view>
+            <view class="item">
+              <view class="wrap_tit">4.开发成本低，周期短</view>
+              <view class="desc">
+                <view class="con_p">开发成本低，传统APP开发难度高，开发成本高，小程序开发简单技术门槛低，可以大大节约人力和推广成本，用户只需要扫描二维码就可以使用。</view>
+                <view class="con_p">开发周期短，传统APP开发周期需要2-3个月满足不了互联网快速迭代的时代，小程序5-7天就可以实现90%以上的功能，大大降低了门槛。</view>
+              </view>
+            </view>
+            <view class="item">
+              <view class="wrap_tit">5.人流量大，带来潜在客户</view>
+              <view class="desc">
+                <view class="con_p">人流量大，微信月活用户近9亿，微信是个巨大的流量池，微信已经开放二维码、搜索、发现、公众号、关联小程序等多方面入口。</view>
+                <view class="con_p">
+                  潜在客户，微信小程序的运营初期，很多用户都会抱有好奇心理，企业需要抓住这一时间，在这段时间内借助小程序开发一些有趣味性的应用，很容易吸引用户前来关注。
+                </view>
+              </view>
+            </view>
+            <view class="item">
+              <view class="wrap_tit">6.坐等盈利</view>
+              <view class="desc">
+                用户购物更方便 卖货商家不用愁 支持微信多渠道推广 微信便捷支付快。在家坐着就可收钱。小程序非常适合轻量级的服务场景，比如张小龙在演讲中提及的订餐、买票。小团队、轻产品应该主动使用小程序。
+              </view>
+            </view>
+          </view>
+          <button class="mybtn kfbt" open-type='contact'>立即咨询</button>
+        </view>
+        <view class="list {{proclass=='2' ? 'on':''}}">
+          <view class="develop">
+            <view class="tit">小程序定制开发</view>
+            <view class="desc">纯定制开发，根据您的需求量身定制小程序，每个项目，无论大小都由产品经理亲自参与设计，找到核心功能，切忌大而全浪费资金和机会成本。</view>
+            <view class="con">
+              <view class="item">
+                <view class="img_nav">
+                  <image src="{{wxappimg}}/wxappimg/preconcert-icon-display@2x.png"></image>
+                </view>
+                <view class="txt">展示型小程序</view>
+                <view class="ms">业务介绍、联系方式、地图导航等信息展示</view>
+                <view class="price">1000元起</view>
+              </view>
+              <view class="item">
+                <view class="img_nav">
+                  <image src="{{wxappimg}}/wxappimg/preconcert-icon-Interactive@2x.png"></image>
+                </view>
+                <view class="txt">交互型小程序 </view>
+                <view class="ms">表单、图片、视频提交等数据交互功能</view>
+                <view class="price">5000元起</view>
+              </view>
+              <view class="item">
+                <view class="img_nav">
+                  <image src="{{wxappimg}}/wxappimg/preconcert-icon-trading@2x.png"></image>
+                </view>
+                <view class="txt">交易型小程序</view>
+                <view class="ms">登录、支付、订单、会员、管理后台等模块</view>
+                <view class="price">9800元起</view>
+              </view>
+              <view class="item">
+                <view class="img_nav">
+                  <image src="{{wxappimg}}/wxappimg/preconcert-icon-information@2x.png"></image>
+                </view>
+                <view class="txt">更多请咨询</view>
+                <view class="ms">了解更多请自咨询虎超网络科技公司</view>
+              </view>
+            </view>
+          </view>
+          <button class="mybtn kfbt" open-type='contact'>立即咨询</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

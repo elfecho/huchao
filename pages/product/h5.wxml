@@ -1,0 +1,124 @@
+<!--pages/product/h5.wxml-->
+<view class="container">
+  <view class="page-body">
+    <view class="banner">
+      <image src="{{wxappimg}}/wxappimg/H5-img-banner@2x.png"></image>
+      <view class="con">
+        <view class="tit">
+          <text>全新时代</text> 开启移动营销未来</view>
+        <view class="desc">
+          <view class="con_p">虎超科技H5手机网站建设服务</view>
+          <view class="con_p">以技术实现平台革新，开创移动营销新格</view>
+        </view>
+      </view>
+    </view>
+    <view class="superiority">
+      <view class="tit">
+        虎超手机建站优势
+      </view>
+      <view class="item">
+        <view class="wrap_tit">舒适移动视觉体验</view>
+        <view class="desc">自动适应终端屏幕，网页展现清晰，1s加载完毕，定制特色栏目列表，塑造品牌感针对性布局、字体、颜色、背景，全面提升浏览体验。</view>
+      </view>
+      <view class="item">
+        <view class="wrap_tit">虎超H5活动站定制</view>
+        <view class="desc">最新Html5+CSS3，PHP/.net后台对接，PC+手机网页同时开发。</view>
+      </view>
+      <view class="item">
+        <view class="wrap_tit">移动互联网营销利器</view>
+        <view class="desc">二维扫码查看网站，牢牢把握移动流量,全站SEO优化，便于移动搜索引擎收录留言、地图、电话，让客户“一键”找到你,整合信息通知平台，邮件、短信第一时间通知到位，不遗漏任何商机。</view>
+      </view>
+    </view>
+    <view class="easy">
+      <view class="tit">
+        虎超H5定制好处多
+      </view>
+      <view class="prolist">
+        <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+          <view class="item">
+            <view class="title">活动类型多</view>
+            <view class="con">
+              <view class="wrap_list">
+                <view class="img_nav">
+                  <image src="{{wxappimg}}/wxappimg/H5-icon-advertising@2x.png"></image>
+                </view>
+                <view class="txt">广告宣言</view>
+              </view>
+              <view class="wrap_list">
+                <view class="img_nav">
+                  <image src="{{wxappimg}}/wxappimg/H5-icon-Offlineactivities@2x.png"></image>
+                </view>
+                <view class="txt">线下活动</view>
+              </view>
+              <view class="wrap_list">
+                <view class="img_nav">
+                  <image src="{{wxappimg}}/wxappimg/H5-icon-Interactivegames@2x.png"></image>
+                </view>
+                <view class="txt">互动游戏</view>
+              </view>
+              <view class="wrap_list">
+                <view class="img_nav">
+                  <image src="{{wxappimg}}/wxappimg/H5-icon-panorama@2x.png"></image>
+                </view>
+                <view class="txt">3D全景展示</view>
+              </view>
+            </view>
+          </view>
+          <view class="item">
+            <view class="title">传播渠道多</view>
+            <view class="con">
+              <view class="wrap_list">
+                <view class="img_nav">
+                  <image src="{{wxappimg}}/wxappimg/H5-icon-Activitypagedisplay@2x.png"></image>
+                </view>
+                <view class="txt">活动页展示</view>
+              </view>
+              <view class="wrap_list">
+                <view class="img_nav">
+                  <image src="{{wxappimg}}/wxappimg/Product-icon-Scanqrcode@2x.png"></image>
+                </view>
+                <view class="txt">扫描二维码</view>
+              </view>
+              <view class="wrap_list">
+                <view class="img_nav">
+                  <image src="{{wxappimg}}/wxappimg/H5-icon-push@2x.png"></image>
+                </view>
+                <view class="txt">公众号推送</view>
+              </view>
+              <view class="wrap_list">
+                <view class="img_nav">
+                  <image src="{{wxappimg}}/wxappimg/H5-icon-WeChat@2x.png"></image>
+                </view>
+                <view class="txt">微信群推广</view>
+              </view>
+            </view>
+          </view>
+          <view class="item">
+            <view class="title">营销渠道多</view>
+             <view class="wrap_con">
+              <view class="wrap_list">
+                <view class="img_nav">
+                  <image src="{{wxappimg}}/wxappimg/H5-icon-planet@2x.png"></image>
+                </view>
+                <view class="txt">病毒式营销，快速 渗透传播</view>
+              </view>
+              <view class="wrap_list">
+                <view class="img_nav">
+                  <image src="{{wxappimg}}/wxappimg/H5-icon-entertainment@2x.png"></image>
+                </view>
+                <view class="txt">娱乐化宣传，塑造 品牌形象</view>
+              </view>
+              <view class="wrap_list">
+                <view class="img_nav">
+                  <image src="{{wxappimg}}/wxappimg/H5-icon-lightning@2x.png"></image>
+                </view>
+                <view class="txt">互动型展现，吸引 用户眼球</view>
+              </view>
+            </view> 
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+    <button class="kfbt mybtn" open-type="contact">立即咨询</button>
+  </view>
+</view>

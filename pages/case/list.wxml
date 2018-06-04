@@ -1,0 +1,54 @@
+<!--pages/case/list.wxml-->
+
+<view class="container">
+  <view class="page-body">
+    <view class="prolist">
+      <!-- <block wx:if="{{column.length<0}}"></block>  -->
+      <view class="header">
+        <view class="classlist box">
+          <view class="tit">分类</view>
+          <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+            <view class="item scroll-view-item_H {{proclass=='' ? 'on':''}}" bindtap="tapClass" data-code="">全部</view>
+            <block wx:for="{{column}}" wx:key="">
+              <view class="item scroll-view-item_H {{proclass==item.ClassCode ? 'on':''}}" bindtap="tapClass" data-code="{{item.ClassCode}}">商城</view>
+              <view class="item scroll-view-item_H {{proclass==item.ClassCode ? 'on':''}}" bindtap="tapClass" data-code="{{item.ClassCode}}">分类信息</view>
+              <view class="item scroll-view-item_H {{proclass==item.ClassCode ? 'on':''}}" bindtap="tapClass" data-code="{{item.ClassCode}}">社交</view>
+            </block>
+          </scroll-view>
+        </view>
+        <view class="classlist box">
+          <view class="tit">行业</view>
+          <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+            <view class="item scroll-view-item_H {{proclass=='' ? 'on':''}}" bindtap="tapClass" data-code="">全部</view>
+            <block wx:for="{{column}}" wx:key="">
+              <view class="item scroll-view-item_H {{proclass==item.ClassCode ? 'on':''}}" bindtap="tapClass" data-code="{{item.ClassCode}}">服装</view>
+              <view class="item scroll-view-item_H {{proclass==item.ClassCode ? 'on':''}}" bindtap="tapClass" data-code="{{item.ClassCode}}">餐饮</view>
+            </block>
+          </scroll-view>
+        </view>
+      </view>
+
+      
+      <view class="list">
+        <view class="fall">
+          <block wx:for="{{list}}" wx:key="">
+            <navigator url="/pages/case/detail?id={{item.ID}}" class="item">
+              <image src="{{wxappimg}}{{item.NvrFd9}}" mode="aspectFill"></image>
+              <view class="con">
+                <view class="title">{{item.NvrFd1}}</view>
+                <view class="desc">
+                  <view class="type">开发周期：{{item.NvrFd3}}工作日</view>
+                  <view class="txt">{{item.NvrFd4}}</view>
+                </view>
+                <view class="pro_con">
+                  {{item.NvrFd16}}
+                </view>
+              </view>
+            </navigator>
+          </block>
+        </view>
+      </view>
+    </view>
+  </view>
+  <include src="/pages/common/bottom.wxml" />
+</view>
